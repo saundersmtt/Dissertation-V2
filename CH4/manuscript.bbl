@@ -1,0 +1,397 @@
+\providecommand{\latin}[1]{#1}
+\makeatletter
+\providecommand{\doi}
+  {\begingroup\let\do\@makeother\dospecials
+  \catcode`\{=1 \catcode`\}=2 \doi@aux}
+\providecommand{\doi@aux}[1]{\endgroup\texttt{#1}}
+\makeatother
+\providecommand*\mcitethebibliography{\thebibliography}
+\csname @ifundefined\endcsname{endmcitethebibliography}
+  {\let\endmcitethebibliography\endthebibliography}{}
+\begin{mcitethebibliography}{41}
+\providecommand*\natexlab[1]{#1}
+\providecommand*\mciteSetBstSublistMode[1]{}
+\providecommand*\mciteSetBstMaxWidthForm[2]{}
+\providecommand*\mciteBstWouldAddEndPuncttrue
+  {\def\EndOfBibitem{\unskip.}}
+\providecommand*\mciteBstWouldAddEndPunctfalse
+  {\let\EndOfBibitem\relax}
+\providecommand*\mciteSetBstMidEndSepPunct[3]{}
+\providecommand*\mciteSetBstSublistLabelBeginEnd[3]{}
+\providecommand*\EndOfBibitem{}
+\mciteSetBstSublistMode{f}
+\mciteSetBstMaxWidthForm{subitem}{(\alph{mcitesubitemcount})}
+\mciteSetBstSublistLabelBeginEnd
+  {\mcitemaxwidthsubitemform\space}
+  {\relax}
+  {\relax}
+
+\bibitem[Israelachvili(2011)]{israelachvili:2011:intermol}
+Israelachvili,~J.~N. \emph{Intermolecular and surface forces}; Academic press,
+  2011\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kurakin \latin{et~al.}(2022)Kurakin, Ivankov, Skoi, Kuklin,
+  Uhr{\'\i}kov{\'a}, and Ku{\v{c}}erka]{kurakin:2022:cations}
+Kurakin,~S.; Ivankov,~O.; Skoi,~V.; Kuklin,~A.; Uhr{\'\i}kov{\'a},~D.;
+  Ku{\v{c}}erka,~N. Cations Do Not Alter the Membrane Structure of POPC—A
+  Lipid With an Intermediate Area. \emph{Frontiers in Molecular Biosciences}
+  \textbf{2022}, \emph{9}, 926591\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kurakin \latin{et~al.}(2021)Kurakin, Ermakova, Ivankov, Smerdova, and
+  Ku{\v{c}}erka]{kurakin:2021:effect}
+Kurakin,~S.; Ermakova,~E.; Ivankov,~A.; Smerdova,~S.; Ku{\v{c}}erka,~N. The
+  Effect of Divalent Ions on the Structure of Bilayers in the
+  Dimyristoylphosphatidylcholine Vesicles. \emph{Journal of Surface
+  Investigation: X-ray, Synchrotron and Neutron Techniques} \textbf{2021},
+  \emph{15}, 211--220\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Saunders \latin{et~al.}(2022)Saunders, Wineman-Fisher, Jakobsson,
+  Varma, and Pandit]{saunders:2022}
+Saunders,~M.; Wineman-Fisher,~V.; Jakobsson,~E.; Varma,~S.; Pandit,~S.~A.
+  High-dimensional parameter search method to determine force field mixing
+  terms in molecular simulations. \emph{Langmuir} \textbf{2022}, \emph{38},
+  2840--2851\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Romani and Scarpa(1992)Romani, and Scarpa]{romani:1992:regulation}
+Romani,~A.; Scarpa,~A. Regulation of cell magnesium. \emph{Archives of
+  biochemistry and biophysics} \textbf{1992}, \emph{298}, 1--12\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Neely and Connick(1970)Neely, and Connick]{neely:1970}
+Neely,~J.; Connick,~R. Rate of water exchange from hydrated magnesium ion.
+  \emph{Journal of the American Chemical Society} \textbf{1970}, \emph{92},
+  3476--3478\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Pálinkás and Radnai(1982)Pálinkás, and Radnai]{Palinkas:1982}
+Pálinkás,~G.; Radnai,~T. Hydration Shell Structures in an MgCl2 Solution from
+  X-Ray and MD Studies. \emph{Zeitschrift für Naturforschung A} \textbf{1982},
+  \emph{37}, 1049--1060, Provides structural evidence of a highly rigid,
+  octahedral hydration shell around Mg2+, consistent with very long water
+  residence times, though no explicit value is given.\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Bleuzen \latin{et~al.}(1997)Bleuzen, Pittet, Helm, and
+  Merbach]{bleuzen:1997}
+Bleuzen,~A.; Pittet,~P.-A.; Helm,~L.; Merbach,~A.~E. Water exchange on
+  magnesium (II) in aqueous solution: a variable temperature and pressure 17O
+  NMR study. \emph{Magnetic resonance in chemistry} \textbf{1997}, \emph{35},
+  765--773\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Sachs \latin{et~al.}(2004)Sachs, Nanda, Petrache, and
+  Woolf]{sachs:2004}
+Sachs,~J.~N.; Nanda,~H.; Petrache,~H.~I.; Woolf,~T.~B. Changes in
+  phosphatidylcholine headgroup tilt and water order induced by monovalent
+  salts: molecular dynamics simulations. \emph{Biophysical journal}
+  \textbf{2004}, \emph{86}, 3772--3782\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Melcr \latin{et~al.}(2018)Melcr, Martinez-Seara, Nencini, Kolafa,
+  Jungwirth, and Ollila]{melcr:2018}
+Melcr,~J.; Martinez-Seara,~H.; Nencini,~R.; Kolafa,~J.; Jungwirth,~P.;
+  Ollila,~O.~S. Accurate binding of sodium and calcium to a POPC bilayer by
+  effective inclusion of electronic polarization. \emph{The Journal of Physical
+  Chemistry B} \textbf{2018}, \emph{122}, 4546--4557\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Jurkiewicz \latin{et~al.}(2012)Jurkiewicz, Cwiklik,
+  Vojt{\'\i}{\v{s}}kov{\'a}, Jungwirth, and Hof]{jurkiewicz:2012}
+Jurkiewicz,~P.; Cwiklik,~L.; Vojt{\'\i}{\v{s}}kov{\'a},~A.; Jungwirth,~P.;
+  Hof,~M. Structure, dynamics, and hydration of POPC/POPS bilayers suspended in
+  NaCl, KCl, and CsCl solutions. \emph{Biochimica et Biophysica Acta
+  (BBA)-Biomembranes} \textbf{2012}, \emph{1818}, 609--616\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kruczek \latin{et~al.}(2017)Kruczek, Chiu, Jakobsson, and
+  Pandit]{kruczek:2017}
+Kruczek,~J.; Chiu,~S.-W.; Jakobsson,~E.; Pandit,~S.~A. Effects of Lithium and
+  Other Monovalent Ions on Palmitoyl Oleoyl Phosphatidylcholine Bilayer.
+  \emph{Langmuir} \textbf{2017}, \emph{33}, 1105--1115\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Pabst \latin{et~al.}(2007)Pabst, Hodzic, {\v{S}}trancar, Danner,
+  Rappolt, and Laggner]{pabst:2007:rigidification}
+Pabst,~G.; Hodzic,~A.; {\v{S}}trancar,~J.; Danner,~S.; Rappolt,~M.; Laggner,~P.
+  Rigidification of neutral lipid bilayers in the presence of salts.
+  \emph{Biophysical journal} \textbf{2007}, \emph{93}, 2688--2696\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Petrache \latin{et~al.}(2006)Petrache, Tristram-Nagle, Harries,
+  Ku{\v{c}}erka, Nagle, and Parsegian]{petrache:2006:swelling}
+Petrache,~H.~I.; Tristram-Nagle,~S.; Harries,~D.; Ku{\v{c}}erka,~N.;
+  Nagle,~J.~F.; Parsegian,~V.~A. Swelling of phospholipids by monovalent salt.
+  \emph{Journal of lipid research} \textbf{2006}, \emph{47}, 302--309\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Delgado \latin{et~al.}(2023)Delgado, Nagy, and Varma]{julian:2023:mg}
+Delgado,~J.~M.; Nagy,~P.~R.; Varma,~S. Polarizable AMOEBA Model for Simulating
+  Mg2+{\textperiodcentered} Protein{\textperiodcentered} Nucleotide Complexes.
+  \emph{Journal of Chemical Information and Modeling} \textbf{2023}, \emph{64},
+  378--392\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Delgado \latin{et~al.}(2025)Delgado, Klein, and Varma]{JACS2025}
+Delgado,~J.~M.; Klein,~P.~S.; Varma,~S. ATP-Ion Complexation and Lithium’s
+  Bioactive Form in Cellular Solutions. \emph{Journal of the American Chemical
+  Society} \textbf{2025}, \emph{147}, 19061--19072, PMID: 40405352\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Saunders \latin{et~al.}(2024)Saunders, Adekoya-Olowofela, Downing, and
+  Pandit]{saunders:2024}
+Saunders,~M.; Adekoya-Olowofela,~A.; Downing,~S.; Pandit,~S.~A. Adsorption
+  Modes of Na+, Li+, and Mg2+ to a Model Zwitterionic Lipid Bilayer.
+  \emph{Langmuir} \textbf{2024}, \emph{40}, 25892--25901\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Grotz \latin{et~al.}(2021)Grotz, Cruz-Le{\'o}n, and
+  Schwierz]{grotz:2021:optimized}
+Grotz,~K.~K.; Cruz-Le{\'o}n,~S.; Schwierz,~N. Optimized magnesium force field
+  parameters for biomolecular simulations with accurate solvation, ion-binding,
+  and water-exchange properties. \emph{Journal of Chemical Theory and
+  Computation} \textbf{2021}, \emph{17}, 2530--2540\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Grotz and Schwierz(2021)Grotz, and Schwierz]{micro}
+Grotz,~K.~K.; Schwierz,~N. Optimized magnesium force field parameters for
+  biomolecular simulations with accurate solvation, ion-binding, and
+  water-exchange properties in SPC/E, TIP3P-fb, TIP4P/2005, TIP4P-Ew, and
+  TIP4P-D. \emph{Journal of Chemical Theory and Computation} \textbf{2021},
+  \emph{18}, 526--537\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Li \latin{et~al.}(2013)Li, Roberts, Chakravorty, and Merz~Jr]{merzhfe}
+Li,~P.; Roberts,~B.~P.; Chakravorty,~D.~K.; Merz~Jr,~K.~M. Rational design of
+  particle mesh Ewald compatible Lennard-Jones parameters for+ 2 metal cations
+  in explicit solvent. \emph{Journal of chemical theory and computation}
+  \textbf{2013}, \emph{9}, 2733--2748\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Adamo and Barone(1999)Adamo, and Barone]{adamo:1999:toward}
+Adamo,~C.; Barone,~V. Toward reliable density functional methods without
+  adjustable parameters: The PBE0 model. \emph{The Journal of chemical physics}
+  \textbf{1999}, \emph{110}, 6158--6170\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Tkatchenko and Scheffler(2009)Tkatchenko, and
+  Scheffler]{tkatchenko:2009}
+Tkatchenko,~A.; Scheffler,~M. Accurate molecular van der Waals interactions
+  from ground-state electron density and free-atom reference data.
+  \emph{Physical review letters} \textbf{2009}, \emph{102}, 073005\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Blum \latin{et~al.}(2009)Blum, Gehrke, Hanke, Havu, Havu, Ren, Reuter,
+  and Scheffler]{fhiaims}
+Blum,~V.; Gehrke,~R.; Hanke,~F.; Havu,~P.; Havu,~V.; Ren,~X.; Reuter,~K.;
+  Scheffler,~M. Ab initio molecular simulations with numeric atom-centered
+  orbitals. \emph{Computer Physics Communications} \textbf{2009}, \emph{180},
+  2175--2196\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Fogarty \latin{et~al.}(2014)Fogarty, Chiu, Kirby, Jakobsson, and
+  Pandit]{fogarty:2014:paropt}
+Fogarty,~J.~C.; Chiu,~S.-W.; Kirby,~P.; Jakobsson,~E.; Pandit,~S.~A. Automated
+  optimization of water--water interaction parameters for a coarse-grained
+  model. \emph{The Journal of Physical Chemistry B} \textbf{2014}, \emph{118},
+  1603--1611\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Chiu \latin{et~al.}(2009)Chiu, Pandit, Scott, and
+  Jakobsson]{chiu:2009}
+Chiu,~S.-W.; Pandit,~S.~A.; Scott,~H.; Jakobsson,~E. An improved united atom
+  force field for simulation of mixed lipid bilayers. \emph{The Journal of
+  Physical Chemistry B} \textbf{2009}, \emph{113}, 2748--2763\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Abraham \latin{et~al.}(2015)Abraham, Murtola, Schulz, P{\'a}ll, Smith,
+  Hess, and Lindahl]{gromacs}
+Abraham,~M.~J.; Murtola,~T.; Schulz,~R.; P{\'a}ll,~S.; Smith,~J.~C.; Hess,~B.;
+  Lindahl,~E. GROMACS: High performance molecular simulations through
+  multi-level parallelism from laptops to supercomputers. \emph{SoftwareX}
+  \textbf{2015}, \emph{1}, 19--25\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Nos{\'e} and Klein(1983)Nos{\'e}, and Klein]{nose:1983}
+Nos{\'e},~S.; Klein,~M. Constant pressure molecular dynamics for molecular
+  systems. \emph{Molecular Physics} \textbf{1983}, \emph{50}, 1055--1076\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Parrinello and Rahman(1981)Parrinello, and Rahman]{parrinello:1981}
+Parrinello,~M.; Rahman,~A. Polymorphic transitions in single crystals: A new
+  molecular dynamics method. \emph{Journal of Applied physics} \textbf{1981},
+  \emph{52}, 7182--7190\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Michaud-Agrawal \latin{et~al.}(2011)Michaud-Agrawal, Denning, Woolf,
+  and Beckstein]{mdanalysis1}
+Michaud-Agrawal,~N.; Denning,~E.~J.; Woolf,~T.~B.; Beckstein,~O. MDAnalysis: a
+  toolkit for the analysis of molecular dynamics simulations. \emph{Journal of
+  computational chemistry} \textbf{2011}, \emph{32}, 2319--2327\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Gowers \latin{et~al.}(2019)Gowers, Linke, Barnoud, Reddy, Melo,
+  Seyler, Domanski, Dotson, Buchoux, Kenney, \latin{et~al.}
+  others]{mdanalysis2}
+Gowers,~R.~J.; Linke,~M.; Barnoud,~J.; Reddy,~T. J.~E.; Melo,~M.~N.;
+  Seyler,~S.~L.; Domanski,~J.; Dotson,~D.~L.; Buchoux,~S.; Kenney,~I.~M.;
+  others \emph{MDAnalysis: a Python package for the rapid analysis of molecular
+  dynamics simulations}; 2019\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Petrache \latin{et~al.}(1997)Petrache, Feller, and
+  Nagle]{petrache:1997}
+Petrache,~H.~I.; Feller,~S.~E.; Nagle,~J.~F. Determination of component volumes
+  of lipid bilayers from simulations. \emph{Biophysical Journal} \textbf{1997},
+  \emph{72}, 2237--2242\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Fogarty \latin{et~al.}(2015)Fogarty, Arjunwadkar, Pandit, and
+  Pan]{fogarty:2015}
+Fogarty,~J.~C.; Arjunwadkar,~M.; Pandit,~S.~A.; Pan,~J. Atomically detailed
+  lipid bilayer models for the interpretation of small angle neutron and X-ray
+  scattering data. \emph{Biochimica et Biophysica Acta (BBA)-Biomembranes}
+  \textbf{2015}, \emph{1848}, 662--672\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Grotz(2022)]{grotz:thesis}
+Grotz,~K. K.~M. Development of optimized magnesium force field parameters for
+  improved simulations of magnesium-RNA interactions. Ph.D.\ thesis,
+  Universit{\"a}tsbibliothek Johann Christian Senckenberg, 2022\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Alln{\'e}r \latin{et~al.}(2012)Alln{\'e}r, Nilsson, and
+  Villa]{villaparams}
+Alln{\'e}r,~O.; Nilsson,~L.; Villa,~A. Magnesium ion--water coordination and
+  exchange in biomolecular simulations. \emph{Journal of chemical theory and
+  computation} \textbf{2012}, \emph{8}, 1493--1502\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Dudev \latin{et~al.}(2003)Dudev, Lin, Dudev, and Lim]{dudev:2003}
+Dudev,~T.; Lin; Dudev,~M.; Lim,~C. First- second shell interactions in metal
+  binding sites in proteins: A PDB survey and DFT/CDM calculations.
+  \emph{Journal of the American Chemical Society} \textbf{2003}, \emph{125},
+  3168--3180\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rul{\'\i}{\v{s}}ek and {\v{S}}poner(2003)Rul{\'\i}{\v{s}}ek, and
+  {\v{S}}poner]{rulivsek:2003:outer}
+Rul{\'\i}{\v{s}}ek,~L.; {\v{S}}poner,~J. Outer-shell and inner-shell
+  coordination of phosphate group to hydrated metal ions (Mg2+, Cu2+, Zn2+,
+  Cd2+) in the presence and absence of nucleobase. The role of nonelectrostatic
+  effects. \emph{The Journal of Physical Chemistry B} \textbf{2003},
+  \emph{107}, 1913--1923\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[P{\"o}rschke(1979)]{porschke:1979:mode}
+P{\"o}rschke,~D. The mode of Mg++ binding to oligonucleotides. Inner sphere
+  complexes as markers for recognition? \emph{Nucleic Acids Research}
+  \textbf{1979}, \emph{6}, 883--898\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Bowman \latin{et~al.}(2012)Bowman, Lenz, Hud, Williams, \latin{et~al.}
+  others]{bowman:2012}
+Bowman,~J.~C.; Lenz,~T.~K.; Hud,~N.~V.; Williams,~L.~D.; others Cations in
+  charge: magnesium ions in RNA folding and catalysis. \emph{Current opinion in
+  structural biology} \textbf{2012}, \emph{22}, 262\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Fingerhut \latin{et~al.}(2021)Fingerhut, Schauss, Kundu, and
+  Elsaesser]{fingerhut:2021:contact}
+Fingerhut,~B.~P.; Schauss,~J.; Kundu,~A.; Elsaesser,~T. Contact pairs of RNA
+  with magnesium ions-electrostatics beyond the Poisson-Boltzmann equation.
+  \emph{Biophysical Journal} \textbf{2021}, \emph{120}, 5322--5332\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Puyo-Fourtine \latin{et~al.}(2022)Puyo-Fourtine, Juill{\'e},
+  H{\'e}nin, Clavagu{\'e}ra, and Dubou{\'e}-Dijon]{puyo:2022:consistent}
+Puyo-Fourtine,~J.; Juill{\'e},~M.; H{\'e}nin,~J.; Clavagu{\'e}ra,~C.;
+  Dubou{\'e}-Dijon,~E. Consistent Picture of Phosphate--Divalent Cation Binding
+  from Models with Implicit and Explicit Electronic Polarization. \emph{The
+  Journal of Physical Chemistry B} \textbf{2022}, \emph{126}, 4022--4034\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\end{mcitethebibliography}

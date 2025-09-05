@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{rotating}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{flafter}
+%\usepackage{floatflt}
+\usepackage{placeins}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{{./figures/}}% Include figure files
+%\usepackage{epstopdf}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{cases}
+\usepackage{calc}
+\usepackage{amssymb}
+\usepackage[dvips]{color}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{soul}
+\usepackage{indentfirst}
+\usepackage{hyphenat}
+\usepackage{xspace}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{lineno}
+\usepackage{setspace}
+\newcommand{\tbxmulticol}[3]
+    {\multicolumn{#1}
+                 {>{\centering\hsize=\dimexpr#1\hsize+#1\tabcolsep+\arrayrulewidth\relax}#2}
+                 {#3}}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+%\newcommand{\cmpersec}{$\frac{\text{cm}}{\text{s}}$~}
+\newcommand{\cmpersec}{cm/s~}
+\newcommand{\etal}{\textit{et al.}}
+\newcommand{\na}{Na\textsuperscript{+}}
+\newcommand{\cl}{Cl\textsuperscript{-}}
+\newcommand{\PM}{$\pm$~}
+\newcommand{\invnm}{$\text{\si{\nm}}^{-1}$~}
+\newcommand{\nmeter}{\si{\nm}~}
+\renewcommand{\arraystretch}{1.8}
+\newcommand{\TODO}{\hl{TODO}~}
+\newcommand{\about}{$\sim$}
+\newcommand{\aangstroms}{{\aa}ngstr{\"o}ms}
+\newcommand{\aangstrom}{{\aa}ngstr{\"o}m}
+\newcommand{\sigmaij}{$\sigma_{ij}$}
+\newcommand{\epsilonij}{$\epsilon_{ij}$}
+\newcommand{\db}{$\text{D}_\text{B}$}
+\newcommand{\dhh}{$\text{D}_\text{hh}$}
+\newcommand{\dc}{$\text{2D}_\text{C}$}
+\newcommand{\beginsupplemental}{%
+    \setcounter{table}{0}
+    \renewcommand{\thetable}{S\arabic{table}}%
+    \setcounter{figure}{0}
+    \renewcommand{\thefigure}{S\arabic{figure}}%
+}
+%\documentclass[10pt,p\begin{document}
+\begin{document}
+\section*{Reviewer 2}
+\paragraph{Reviewer Comment 1:}
+The revised manuscript is substantially improved;  the authors responded 
+in a positive way to all the comments I made.  
+The manuscript can be published now, but before the publication the 
+authors should pay attention to the following issues:
+Line 66: “strongly” used twice.
+\paragraph{Response:}
+The authors thank the reviewer for this note, it has been fixed in the manuscript.
+\paragraph{Reviewer Comment 2:}
+Lines 396-397: I do not understand what the authors mean by the sentence 
+“This was found by fitting an exponential function to this region and taking the timescale 
+from this fit as the boundary with bulk solvent”.  Something is wrong here.
+\paragraph{Response:}
+We agree with the reviewer, this was a mistake in the language. We have changed the word 'timescale' to 
+'scale parameter' in this statement.
+\paragraph{Reviewer Comment 3:}
+Line 459: The value of D for the system with optimized parameters is twice 
+the value for the system with LB parameters.  Does this make sense?
+\paragraph{Response:}
+The authors apologize for the lack of clarity in the manuscript. The value of D is measured as the distance
+between the hydration boundaries of each leaflet of the bilayer, across the solvent-occupied region of the
+simulation box. Since the system simulated with optimized parameters has twice as much solvent as the LB simulation, 
+this larger distance across the solvent-occupied region is expected. We have added a statement elaborating on
+this to the manuscript.
+
+\end{document}

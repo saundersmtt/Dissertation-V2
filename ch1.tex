@@ -1,0 +1,56 @@
+\section{Molecular Simulations}
+\subsection{Classical Molecular Dynamics}
+Molecular Dynamics utilizes computers to simulate systems of molecules in order to study how structure changes
+with time, and the specific ways that different atomic and molecular species interact. This is done
+by first creating a model for the Hamiltonian of the system -- a "force-field". This consists firstly of the terms for how atoms
+bond to each other, how these bonds move and stretch, and how they rotate around each other; classical models
+usually use harmonic potentials for bond and angle stretching and bending, and dihedrals 
+are described using periodic functions~\cite{gromacsmanual}.
+In addition to the bonded terms, we have the non-bonded terms — energy from 
+electrostatic interactions, typically described by Coulomb's law, and dispersion 
+interactions (Van der Waals, or VdW) which arise from instantaneous dipole–induced dipole effects~\cite{gromacsmanual}. These are 
+most often modeled using a Lennard–Jones (LJ) potential~\cite{Jones:1924,gromacsmanual}, though other forms are 
+also common, such as the Buckingham (exp–6) potential~\cite{Buckingham:1938,gromacsmanual}, which replaces the steep 
+\(r^{-12}\) repulsive wall with a short-range exponential. In addition to these two, there are many other
+functional forms used to describe VdW and dispersion interactions, but they are far less common. An example of this Hamiltonian
+can be seen here:
+\begin{align}
+E_{\mathrm{total}} &= E_{\mathrm{bonded}} + E_{\mathrm{nonbonded}} \\
+E_{\mathrm{bonded}} &= \sum_{\text{bonds}} k_r (r - r_0)^2
++ \sum_{\text{angles}} k_\theta (\theta - \theta_0)^2
++ \sum_{\text{dihedrals}} V_n \left[ 1 + \cos\left( n\phi - \gamma \right) \right] \\
+E_{\mathrm{nonbonded}} &= \sum_{i<j} \left[ 4\epsilon_{ij} \left( \left( \frac{\sigma_{ij}}{r_{ij}} \right)^{12}
+- \left( \frac{\sigma_{ij}}{r_{ij}} \right)^{6} \right)
++ \frac{q_i q_j}{4\pi\epsilon_0 r_{ij}} \right]
+\end{align}
+
+By using this set of terms one can compute the potential energy of a particular configuration of particles. 
+The forces obtained from the potential energy are used in Newton’s equations of motion, 
+which are numerically integrated — most often with algorithms such as the velocity-Verlet method — 
+to update positions and velocities at each time step~\cite{gromacsmanual}.
+The energy of the new configuration
+can be computed, and the simulation continues. Thus, the careful development and improvement of a force-field is critical to 
+reproduce valid results that can help us understand what is seen in experiments.
+
+\subsection{\emph{Ab initio} calculations and Density Functional Theory}
+
+Do we really want to get into this? Just enough to understand why we are doing this at all... especially since this is our target data! We
+can talk briefly about the methods and things, enough to introduce pbe0+vdw...
+\section{Comparing Molecular Simulations with Experimental Results}
+\subsection{SAXS (and SANS) -- and other properties obtained from density distributions}
+Systems of crystals are often studied using diffraction or scattering experiments. 
+In the case of lipid bilayers, we often use Small-Angle scattering of x-rays (SAXS) or neutrons (SANS) 
+to study the bilayer structure. Lipid bilayers are smectic crystals, and thus give scattering
+patterns that look like concentric circles -- these circles are the bilayer form-factor. This form-factor
+is the reciprocal-space structure of the bilayer, but phase information of each lobe is lost. 
+Thus, a simple reverse-transformation cannot be perfomed.
+In order to produce the appropriate density distribution, one can approximate the number density of bilayer parts as gaussian functions, and 
+compute the appropriate scattering density from that. This can then be transformed via a cosine transform
+into a form-factor. The gaussians are then adjusted
+until the resulting form-factor fits the data from the experiment.
+\subsection{Electrostatic and dynamic results... such as GC-theory!}
+
+\subsection{Diffusion coefficients}
+
+\subsection{Order parameters}
+

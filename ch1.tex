@@ -31,11 +31,69 @@ to update positions and velocities at each time step~\cite{gromacsmanual}.
 The energy of the new configuration
 can be computed, and the simulation continues. Thus, the careful development and improvement of a force-field is critical to 
 reproduce valid results that can help us understand what is seen in experiments.
+\subsubsection{MD methods utilized in this dissertation}
+In the following dissertation, unless otherwise specified, I perform all molecular dynamics simulations with the GROMACS software 
+package~\cite{abraham:2015,pall:2014,van:2005,lindahl:2001,berendsen:1995,gromacs}.
+I use the SPC/E model for all waters~\cite{spce}, and I describe lipid interactions
+with the gromos43A1-S3 parameter set developed by our group in previous work~\cite{chiu:2009}.
+System temperature is maintained at 300~K using the Nos\`e--Hoover thermostat
+with a coupling constant of 0.5~ps~\cite{nose:1983}, and pressure is maintained
+at 1~atm with the Parrinello--Rahman semiisotropic barostat using a coupling constant of 1.5~ps~\cite{parrinello:1981}.
+All bonds are constrained with the P--LINCS algorithm, which allows the use of a 4~fs integration timestep~\cite{lincs}.
+Equations of motion are integrated with the Verlet scheme, and neighbor lists are updated every 2 steps.
+Electrostatic interactions are treated with the particle--mesh Ewald (PME) method~\cite{essmann:1995},
+using a real--space cutoff of 1.6~nm and reciprocal grids of either
+$56 \times 56 \times 224$ or $52 \times 52 \times 240$ cells,
+together with 4th order B--spline interpolation.
+Van der Waals interactions are calculated with a single cutoff of 1.6~nm.
+\subsubsection{Simulation system construction}
+All simulations systems unless otherwise noted are constructed by first creating a leaflet of 100 POPC lipids arranged
+on a $10 \times 10$ grid with sufficient spacing to avoid chain overlap.
+This leaflet is then reflected along the $z$--axis to generate the second
+leaflet, producing a bilayer of 200 lipids. A solvent block is added by
+placing 60,000 water molecules on a three--dimensional grid with excess spacing,
+and a subset of water molecules is randomly replaced with ions to achieve a
+starting concentration of 200~mM (see Table~\ref{tabch3:ions}).
+
+Energy minimization is performed using the steepest--descents algorithm with a
+force tolerance of 50~kJ~mol$^{-1}$~nm$^{-1}$. Electrostatic interactions are
+treated with the particle--mesh Ewald (PME) method~\cite{essmann:1995}, using a
+real--space cutoff of 1.6~nm, reciprocal grid spacing of 0.12~nm$^{-1}$, and
+6th order B--spline interpolation. Van der Waals interactions are calculated
+with a single cutoff of 1.6~nm. Neighbor searching is performed every 2 steps.
+
+Following energy minimization, I relax the system with a constant--pressure
+simulation at 290~K for 200~ps. Simulation systems are then annealled by heating the system above the
+simulation run temperature, and then cooling down to the production temperature following the
+specific procedure outlined in each following chapter.
 
 \subsection{\emph{Ab initio} calculations and Density Functional Theory}
-
 Do we really want to get into this? Just enough to understand why we are doing this at all... especially since this is our target data! We
 can talk briefly about the methods and things, enough to introduce pbe0+vdw...
+\subsubsection{\emph{Ab initio} methods utilized in this work}
+\subsection{Quantum Mechanical Calculations}
+I generate target data for parameter optimization from geometry
+optimizations and substitution energies of small ion–ligand clusters
+using density functional theory (DFT) as implemented in
+FHI-aims~\cite{fhiaims}. Initial cluster geometries are produced with
+the molecular mechanics force field developed in our previous
+work~\cite{kruczek:2017,saunders:2019} and then optimized at the DFT
+level. I use the PBE0 functional~\cite{perdew:1996:generalized,adamo:1999:toward}
+with Tkatchenko–Scheffler dispersion corrections~\cite{tkatchenko:2009},
+a combination that has been benchmarked for ion–ligand clusters and shown
+to reproduce experimental data and high-level quantum methods across a
+range of chemistries~\cite{wineman:2019,wineman:2020:transferable,wineman:2020:improved}.
+Geometry optimizations are first performed with the ``light'' basis set
+and then refined with the ``really tight'' basis set provided in
+FHI-aims. Optimizations are converged to 0.005~eV/\AA{} in forces and
+$10^{-6}$~eV in total energy.  
+
+Energies of optimized clusters are then used to compute substitution
+energies, defined as the energy of exchanging water molecules
+with headgroup analog ligands. The specific cluster sets and substitution
+energy targets used for parameterization are described in the relevant
+chapters.
+
 \section{Comparing Molecular Simulations with Experimental Results}
 \subsection{SAXS (and SANS) -- and other properties obtained from density distributions}
 Systems of crystals are often studied using diffraction or scattering experiments. 

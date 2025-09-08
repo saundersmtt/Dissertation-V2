@@ -102,26 +102,27 @@ This search is performed using target
 \mg~clusters containing water molecules and ligands that represent the major cation binding sites in phospholipid headgroups. 
 The clusters contain exactly 6 \mg~coordinators, representing a full first-shell coordination shell of \mg.
 
-These target clusters are geometry optimized at the DFT level using PBE0~\cite{adamo:1999:toward}, 
-with the Tkatchenko–Scheffler 
-dispersion corrections~\cite{tkatchenko:2009} as implemented in FHI-aims~\cite{fhiaims}. 
-Geometry optimizations are first performed with the ``light'' basis set as provided in the 
-FHI-aims software package, and then with the ``really-tight'' basis. Both
-geometry optimizations are performed with a force 
-convergence threshold of 0.005 eV/\AA. Energies of these optimized clusters are used to compute substitution energies, and
-geometries are computed as an array of distances between all particles in the cluster and the cation.
-As before~\cite{saunders:2022}, we do not target the interaction energies of \mg in clusters. Instead we target substitution energy, that is the energy associated with replacing water molecules with ligands (X) representing the POPC headgroup:
+These clusters are geometry optimized following the general procedure
+described in Chapter~1, and substitution energies are computed as the
+target data for parameter optimization. As before~\cite{saunders:2022},
+we do not use the absolute interaction energies of \mg{} clusters. Instead,
+we target the substitution energy associated with replacing water molecules
+with ligands $X$ representing POPC headgroup fragments (methyl acetate or
+diethyl phosphate):
 \begin{equation}
-(\mathrm{Mg} \mathrm{W}_{6})^{2+} + n\mathrm{X} \longleftrightarrow (\mathrm{Mg} \mathrm{W}_{6-n} \mathrm{X}_n)^{2+} + n\mathrm{W}.
+(\mathrm{Mg} \mathrm{W}_{6})^{2+} + n\mathrm{X} \longleftrightarrow (\mathrm{Mg} \mathrm{W}_{6-n} \mathrm{X}_n)^{2+} + n\mathrm{W},
 \end{equation}
-The substitution energy associated with this reaction is
+with
 \begin{equation}
-\Delta E_{sub} = E_{MgWX} + nE_{W} - E_{MgW} - nE_{X}
+\Delta E_{sub} = E_{MgWX} + nE_{W} - E_{MgW} - nE_{X}\text{,}
 \label{equ_2}
 \end{equation}
-where $E_{MgW}$ is the energy of the optimized geometry of \mg~cluster with 6 waters and $E_{MgWX}$ is the energy of optimized geometry the mixed cluster of \mg~consisting of $n$ X ligands and $6-n$ waters. We use two different ligands, methyl acetate that represents the ester-fragment 
-connecting the lipid acyl chains to the glycerol backbone, diethyl phosphate that represents the
-phosphate fragment in the lipid headgroups. $E_{W}$ and $E_X$ are, respectively, the energies of the optimized geometries of the isolated water and isolated ligands.
+where $E_{MgW}$ is the energy of the fully hydrated \mg{} cluster,
+$E_{MgWX}$ is the energy of the mixed cluster with $n$ ligands and $6-n$
+waters, and $E_W$ and $E_X$ are the isolated water and ligand energies,
+respectively. The substitution energies and corresponding optimized
+geometries for these clusters are reported in figure~\label{figch4:optres} and table~\label{tabch4:subenergies}.
+
 
 Parameter optimizations were performed using the ParOpt software package developed by our group~\cite{fogarty:2014:paropt}. We used the Nelder-Mead optimizer to simultaneously optimize
 the 14 LJ cross terms for each atom type in our target clusters. Constraints are detailed in Table~\ref{tabch4:constrain}. 
@@ -346,34 +347,30 @@ mean more stabilizing than LB.}
 \end{table}
 \end{landscape}
 
-
 \subsection{Bilayer Construction}
-Simulation systems are prepared following the procedure in Saunders \etal 2024~\cite{saunders:2024},
-by creating a bilayer leaflet of 100 POPC lipids along a 10 by 10 grid. This leaflet is reflected along the z-axis to produce the second leaflet. Then
-60,000 waters are added along the box z-dimension. \mgcl is added by randomly replacing 216 waters with \mg{}, and 432 waters with \cl{} for a starting concentration of 200 mM \mgcl. The resulting simulation box
-is used in both \mg{ 2025} HFE and micro simulations -- energy minimization and annealing were done under the matching parameter set for the simulation.
-Systems are energy minimized using the steepest-descents algorithm to remove bad-contacts. Following energy
-minimization, both systems are allowed to settle in an NPT dynamic
-run at a temperature of 250 K for 1 ns. Systems are then annealed by
-heating to 350 K, and cooling in steps of 10 K to the simulation run temperature of 300 K in steps of 155 ps. 
+
+I prepare simulation systems following the procedure of Saunders \etal~\cite{saunders:2024},
+by arranging 100 POPC lipids on a $10 \times 10$ grid and reflecting this leaflet
+along the $z$--axis to generate the second leaflet. A solvent block of 60,000 waters
+is then added along the box $z$--dimension. To achieve a starting concentration of
+200~mM \mgcl, 216 waters are randomly replaced with \mg{} and 432 waters with \cl{}.
+The resulting simulation boxes are used in both the \mg{ 2025} HFE and micro simulations.
+Each system is energy minimized with the steepest--descents algorithm to remove
+bad contacts, followed by a 1~ns NPT equilibration at 250~K. Systems are then annealed
+by heating to 350~K and cooling in 10~K steps to the production temperature of 300~K,
+with each step lasting 155~ps.
 
 \subsection{Molecular Dynamics}
-The \mg{ 2025} parameters are used in
-two 1 $\mu$s long simulations of POPC with \mgcl{}, one using the water--\mg~interaction term computed using \mg~HFE model of Li \etal~\cite{merzhfe}, and
-one using the \mg~micro from Grotz \etal~\cite{grotz:2021:optimized,micro}. 
-Lipid bonded and non-bonded interactions are described using the gromos 43-a1s3 force-field~\cite{chiu:2009}.
-Simulations were performed using Gromacs version 
-2024.0~\cite{gromacs}
-with an integration time step of 4 fs.
-Neighbor searching is performed every 2 steps using Verlet neighbor-lists.
-The PME algorithm is used for electrostatic interactions.
-with a cut-off of 1.6 nm.
-A reciprocal grid of 52 x 52 x 240 cells is used with 4th order B-spline interpolation.
-A single cut-off of 1.6 nm is used for Van der Waals interactions.
-Temperature coupling is done with the Nose-Hoover algorithm holding the system temperature at 300 K~\cite{nose:1983}.
-Pressure coupling is done with the Parrinello-Rahman algorithm holding the system pressure at 1 atm~\cite{parrinello:1981}.
 
-Trajectories are analyzed using tools provided in the Gromacs software package~\cite{gromacs}, in-house code developed using the Gromacs API, and using the MDanalysis python package~\cite{mdanalysis1,mdanalysis2}.
+I perform two 1~$\mu$s simulations of POPC bilayers with \mgcl{} using the \mg{ 2025}
+parameters: one with the water--\mg{} interaction term from the HFE model of Li
+\etal~\cite{merzhfe}, and one with the \mg{} micro model from Grotz
+\etal~\cite{grotz:2021:optimized,micro}. Lipid bonded and non-bonded interactions
+are described with the gromos43A1-S3 force field~\cite{chiu:2009}.
+
+Trajectory analysis is performed with a combination of GROMACS built--in tools,
+in--house code developed on the GROMACS API, and the MDAnalysis Python package~\cite{mdanalysis1,mdanalysis2}.
+
 
 \section{Results and Discussion}
 

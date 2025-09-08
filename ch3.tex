@@ -155,26 +155,26 @@ version 5.1.6~\cite{abraham:2015,pall:2014,van:2005,lindahl:2001,berendsen:1995}
 GROMACS built--in analysis tools and in--house software developed
 on the gromacs API or using the MDanalysis python package~\cite{gromacsmanual,mdanalysis1,mdanalysis2}.
 \subsection{Bilayer Construction}
-Lipid bilayers in solvent are constructed by placing POPC lipids on a 10 x 10 grid,
-and reflecting to create the second bilayer leaflet. 60,000 solvent molecules are then placed 
-into the box above the bilayer grid, with random solvent molecules replaced to 
-add ions (see table~\ref{tabch3:ions} for numbers of ions and types in each system).
-Systems are energy minimized using the steepest-descents algorithm to remove bad-contacts.
-Following energy-minimization, both systems are allowed to settle in an NPT dynamic
-run at a temperature of 250K for 1~ns. Systems are then annealed by heating to 350K, and
-cooling in steps of 10K to the simulation run temperature of 300K in steps of 
-155~ps. The final annealed configurations for each system are used as the initial
-configuration for the production molecular dynamics simulations.
-\subsection{Molecular dynamics}
-For total length of simulation runs, see table~\ref{tabch3:ions}.
-All systems are simulated with a time step of 4 fs.
-Neighbor searching is performed every 2 steps.
-The PME algorithm is used for electrostatic interactions~\cite{essmann:1995}.
-with a cut-off of 1.6 nm.
-A reciprocal grid of $56 \times 56 \times 224$ cells is used with 4th order B-spline interpolation.
-A single cut-off of 1.6 nm is used for Van der Waals interactions.
-Temperature coupling is imposed with the Nose-Hoover algorithm~\cite{nose:1983}.
-Pressure coupling is imposed with the Parrinello-Rahman algorithm~\cite{parrinello:1981}.
+
+I construct the bilayers by arranging 100 POPC lipids on a $10 \times 10$ grid
+and reflecting this leaflet along the $z$--axis to generate the second leaflet.
+A solvent block of 60,000 waters is then added, and a subset of water molecules
+is randomly replaced with ions to achieve the desired system compositions
+(see Table~\ref{tabch3:ions}). 
+
+Following energy minimization with the steepest--descents algorithm to remove
+bad contacts, I relax each system with a 1~ns NPT simulation at 250~K.
+Systems are then annealed by heating to 350~K and cooling in 10~K steps to the
+production temperature of 300~K, with each step lasting 155~ps.
+The final annealed configurations are used as the initial structures for
+production molecular dynamics simulations.
+
+\subsection{Molecular Dynamics}
+
+Production simulations are run with lengths given in Table~\ref{tabch3:ions}.
+Trajectory analysis is performed using a combination of GROMACS built--in
+tools and in--house software developed on the GROMACS API.
+
 
 \subsection{Force-field parameters}
 
@@ -183,40 +183,29 @@ gromos43a1-s3 model~\cite{chiu:2009},
 which is calibrated to work with the SPC/E water model~\cite{spce}. 
 Li$^+$-water interactions 
 are described using Joung and Cheatham parameters~\cite{joung:2008}. 
-We use the method described in Saunders \etal{} 2022~\cite{saunders:2022} to compute non-aqueous
-cross-terms for \li{} (see table~\ref{tabch3:params},and figures~\ref{figch3:energies} and~\ref{figch3:distances} for details).
-% \begin{table}
-%     \caption[Lennard-Jones cross-terms per \li{} simulation]{Lennard-Jones cross-terms used in each simulation. We have computed LB-terms using Lorentz-Berthelot (LB) mixing rules,
-%     starting with the self-terms for \li{} from Joung and Chetatham III\etal{}~\cite{joung:2008}. \eps~are presented in
-%     units of / Kj/mol and \sig~are presented in units of /nm.}
-%     \label{tabch3:params}\tiny{
-%     \begin{tabularx}{\textwidth}{|X|X|X|X|X|}\hline
-%         \multirow{3}{*}{Atom type} & \multicolumn{4}{c|}{\li{}} \\\cline{2-5}
-%                   &\multicolumn{2}{c|}{LB-Rules}&\multicolumn{2}{c|}{\mbnbfix}\\\cline{2-5}
-%                   & \eps    & \sig    & \eps    & \sig    \\\hline
-%             CH3   & 1.07485 & 0.25797 & 0.99872 & 0.30898 \\\hline
-%             CH2   & 0.75411 & 0.27432 & 1.05729 & 0.20001 \\\hline
-%             OA    & 1.09408 & 0.21821 & 2.91925 & 0.20020 \\\hline
-%             P     & 1.85667 & 0.23975 & 6.99324 & 0.21844 \\\hline
-%             OM*   & 1.19328 & 0.21400 & 0.23749 & 0.20015 \\\hline
-%             CO*   & 0.35344 & 0.29727 & 0.48204 & 0.35920 \\\hline
-%             O*    & 1.19328 & 0.21400 & 0.06248 & 0.20068 \\\hline
-%             OW    & 0.95709 & 0.22875 & 0.95709 & 0.22875 \\\hline
-%     \end{tabularx}}
-% \end{table}
+Target data are computed using the method described in Saunders \etal~\cite{saunders:2022} and in the first chapter of this dissertation
+to compute non-aqueous cross-terms for \li{}. Target data consist of substitution
+energies and optimized geometries of \li{} clusters with water, methyl acetate,
+and diethyl phosphate ligands. The substitution energies from DFT calculations
+serve as benchmarks for parameter optimization, and are compared against
+Lorentz–Berthelot mixing rules and the optimized parameters
+(see Table~\ref{tabch3:params} and Figures~\ref{figch3:energies}--\ref{figch3:distances}).
+
 \begin{figure}
-    \caption[Substitution energies of \li{} from solvent to ligands]{Substitution energies of \li{} from clusters of solvent to clusters of methyl-acetate and diethyl-phosphate. The \emph{ab initio} substitution energies in black
-    were used as the target for the optimization of the non-aqueous ion cross-terms. The blue line is the result of the Lorentz-Berthelot mixing rules, and the red line
-    is the result of our optimized parameters. We see a substantial improvement in the substitution energies for both methyl-acetate clusters and diethyl-phosphate clusters.}
+    \caption[Substitution energies of \li{} from solvent to ligands]{Substitution energies of \li{} clusters with methyl acetate and diethyl phosphate ligands.
+    Black points are \emph{ab initio} values, blue is the Lorentz--Berthelot prediction, and red is the result of the optimized parameters.}
     \label{figch3:energies}
     \includegraphics[width=\textwidth]{Figure_S1.eps}
 \end{figure}
+
 \begin{figure}
-    \caption[Geometries of clusters of small molecules]{Distances of all ligand atoms from ion, for each cluster. Lorentz-Berthelot parameters result in geometries that are very similar to the target data -- in general, the
-    optimized parameters result in the ion being slightly closer to the electronegative oxygens in each cluster.}
+    \caption[Geometries of \li{} clusters with ligands]{Distances of all ligand atoms from \li{} for each cluster. 
+    Lorentz--Berthelot parameters give geometries close to the target data, while the optimized parameters
+    bring the ion slightly closer to electronegative oxygens.}
     \label{figch3:distances}
     \includegraphics[width=\textwidth]{Figure_S2.eps}
 \end{figure}
+
 Describing the interactions of \mg with water presents several challenges, and there are numerous
 models developed to describe \mg--water interaction~\cite{merzparams,villaparams,microparams}.
 These models are optimized to improve the hydration free energies as well as

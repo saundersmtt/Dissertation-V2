@@ -24,6 +24,115 @@ R.~A. Buckingham, The classical equation of state of gaseous helium, neon and
 \newblock \href {https://doi.org/10.1098/rspa.1938.0173}
   {\path{doi:10.1098/rspa.1938.0173}}.
 
+\bibitem{abraham:2015}
+M.~J. Abraham, T.~Murtola, R.~Schulz, S.~P{\'a}ll, J.~C. Smith, B.~Hess,
+  E.~Lindahl, Gromacs: High performance molecular simulations through
+  multi-level parallelism from laptops to supercomputers, SoftwareX 1 (2015)
+  19--25.
+
+\bibitem{pall:2014}
+S.~Pall, M.~J. Abraham, C.~Kutzner, B.~Hess, E.~Lindahl, Tackling exascale
+  software challenges in molecular dynamics simulations with gromacs, in:
+  International Conference on Exascale Applications and Software, Springer,
+  2014, pp. 3--27.
+
+\bibitem{van:2005}
+D.~V.~D. Spoel, E.~Lindahl, B.~Hess, G.~Groenhof, A.~Mark, H.~Berendsen,
+  Gromacs: fast, flexible, free, J. Comput. Chem. 26 (2005) 1701.
+
+\bibitem{lindahl:2001}
+E.~Lindahl, B.~Hess, D.~Van Der~Spoel, Gromacs 3.0: a package for molecular
+  simulation and trajectory analysis, Molecular modeling annual 7~(8) (2001)
+  306--317.
+
+\bibitem{berendsen:1995}
+H.~J. Berendsen, D.~van~der Spoel, R.~van Drunen, Gromacs: a message-passing
+  parallel molecular dynamics implementation, Computer Physics Communications
+  91~(1-3) (1995) 43--56.
+
+\bibitem{gromacs}
+M.~J. Abraham, T.~Murtola, R.~Schulz, S.~P{\'a}ll, J.~C. Smith, B.~Hess,
+  E.~Lindahl, Gromacs: High performance molecular simulations through
+  multi-level parallelism from laptops to supercomputers, SoftwareX 1 (2015)
+  19--25.
+
+\bibitem{spce}
+H.~Berendsen, J.~Grigera, T.~Straatsma, The missing term in effective pair
+  potentials, Journal of Physical Chemistry 91~(24) (1987) 6269--6271.
+
+\bibitem{chiu:2009}
+S.-W. Chiu, S.~A. Pandit, H.~Scott, E.~Jakobsson, An improved united atom force
+  field for simulation of mixed lipid bilayers, The Journal of Physical
+  Chemistry B 113~(9) (2009) 2748--2763.
+
+\bibitem{nose:1983}
+S.~Nos{\'e}, M.~Klein, Constant pressure molecular dynamics for molecular
+  systems, Molecular Physics 50~(5) (1983) 1055--1076.
+
+\bibitem{parrinello:1981}
+M.~Parrinello, A.~Rahman, Polymorphic transitions in single crystals: A new
+  molecular dynamics method, Journal of Applied physics 52~(12) (1981)
+  7182--7190.
+
+\bibitem{lincs}
+B.~Hess, H.~Bekker, H.~J.~C. Berendsen, J.~G. E.~M. Fraaije,
+  \href{http://dx.doi.org/10.1002/(SICI)1096-987X(199709)18:12<1463::AID-JCC4>3.0.CO;2-H}{Lincs:
+  A linear constraint solver for molecular simulations}, Journal of
+  Computational Chemistry 18~(12) (1997) 1463--1472.
+\newline\urlprefix\url{http://dx.doi.org/10.1002/(SICI)1096-987X(199709)18:12<1463::AID-JCC4>3.0.CO;2-H}
+
+\bibitem{essmann:1995}
+U.~Essmann, L.~Perera, M.~L. Berkowitz, T.~Darden, H.~Lee, L.~G. Pedersen, A
+  smooth particle mesh ewald method, The Journal of chemical physics 103~(19)
+  (1995) 8577--8593.
+
+\bibitem{fhiaims}
+V.~Blum, R.~Gehrke, F.~Hanke, P.~Havu, V.~Havu, X.~Ren, K.~Reuter,
+  M.~Scheffler, Ab initio molecular simulations with numeric atom-centered
+  orbitals, Computer Physics Communications 180~(11) (2009) 2175--2196.
+
+\bibitem{kruczek:2017}
+J.~Kruczek, S.-W. Chiu, E.~Jakobsson, S.~A. Pandit,
+  \href{http://dx.doi.org/10.1021/acs.langmuir.6b04166}{Effects of lithium and
+  other monovalent ions on palmitoyl oleoyl phosphatidylcholine bilayer},
+  Langmuir 33~(4) (2017) 1105--1115.
+\newline\urlprefix\url{http://dx.doi.org/10.1021/acs.langmuir.6b04166}
+
+\bibitem{saunders:2019}
+M.~Saunders, M.~Steele, W.~Lavigne, S.~Varma, S.~A. Pandit, Interaction of salt
+  with ether-and ester-linked phospholipid bilayers, Biochimica et Biophysica
+  Acta (BBA)-Biomembranes 1861~(5) (2019) 907--915.
+
+\bibitem{perdew:1996:generalized}
+J.~P. Perdew, K.~Burke, M.~Ernzerhof, Generalized gradient approximation made
+  simple, Physical review letters 77~(18) (1996) 3865.
+
+\bibitem{adamo:1999:toward}
+C.~Adamo, V.~Barone, Toward reliable density functional methods without
+  adjustable parameters: The pbe0 model, The Journal of chemical physics
+  110~(13) (1999) 6158--6170.
+
+\bibitem{tkatchenko:2009}
+A.~Tkatchenko, M.~Scheffler, Accurate molecular van der waals interactions from
+  ground-state electron density and free-atom reference data, Physical review
+  letters 102~(7) (2009) 073005.
+
+\bibitem{wineman:2019}
+V.~Wineman-Fisher, Y.~Al-Hamdani, I.~Addou, A.~Tkatchenko, S.~Varma,
+  Ion-hydroxyl interactions: From high-level quantum benchmarks to transferable
+  polarizable force fields, Journal of chemical theory and computation 15~(4)
+  (2019) 2444--2453.
+
+\bibitem{wineman:2020:transferable}
+V.~Wineman-Fisher, J.~M. Delgado, P.~R. Nagy, E.~Jakobsson, S.~A. Pandit,
+  S.~Varma, Transferable interactions of li+ and mg2+ ions in polarizable
+  models, The Journal of Chemical Physics 153~(10) (2020) 104113.
+
+\bibitem{wineman:2020:improved}
+V.~Wineman-Fisher, Y.~Al-Hamdani, P.~R. Nagy, A.~Tkatchenko, S.~Varma, Improved
+  description of ligand polarization enhances transferability of ion--ligand
+  interactions, The Journal of Chemical Physics 153~(9) (2020) 094115.
+
 \bibitem{berkowitz:2019}
 M.~L. Berkowitz, Biomembrane Simulations: Computational Studies of Biological
   Membranes, CRC Press, 2019.
@@ -33,22 +142,10 @@ S.~A. Pandit, H.~L. Scott, Simulations and models of lipid bilayers, in: Soft
   Matter: Lipid Bilayers and Red Blood Cells, Vol.~4, Wiley Online Library,
   2008, Ch.~1, pp. 1--82.
 
-\bibitem{kruczek:2017}
-J.~Kruczek, S.-W. Chiu, E.~Jakobsson, S.~A. Pandit,
-  \href{http://dx.doi.org/10.1021/acs.langmuir.6b04166}{Effects of lithium and
-  other monovalent ions on palmitoyl oleoyl phosphatidylcholine bilayer},
-  Langmuir 33~(4) (2017) 1105--1115.
-\newline\urlprefix\url{http://dx.doi.org/10.1021/acs.langmuir.6b04166}
-
 \bibitem{kruczek:2019}
 J.~Kruczek, S.-W. Chiu, S.~Varma, E.~Jakobsson, S.~A. Pandit, Interactions of
   monovalent and divalent cations at palmitoyl-oleoyl-phosphatidylcholine
   interface, Langmuir 35~(32) (2019) 10522--10532.
-
-\bibitem{saunders:2019}
-M.~Saunders, M.~Steele, W.~Lavigne, S.~Varma, S.~A. Pandit, Interaction of salt
-  with ether-and ester-linked phospholipid bilayers, Biochimica et Biophysica
-  Acta (BBA)-Biomembranes 1861~(5) (2019) 907--915.
 
 \bibitem{Bockmann:2003}
 R.~A. B{\"o}ckmann, A.~Hac, T.~Heimburg, H.~Grubm{\"u}ller, Effect of sodium
@@ -97,20 +194,9 @@ I.~S. Joung, T.~E. Cheatham~III, Determination of alkali and halide monovalent
   ion parameters for use in explicitly solvated biomolecular simulations, The
   journal of physical chemistry B 112~(30) (2008) 9020--9041.
 
-\bibitem{chiu:2009}
-S.-W. Chiu, S.~A. Pandit, H.~Scott, E.~Jakobsson, An improved united atom force
-  field for simulation of mixed lipid bilayers, The Journal of Physical
-  Chemistry B 113~(9) (2009) 2748--2763.
-
 \bibitem{varma:2010}
 S.~Varma, S.~B. Rempe, Multibody effects in ion binding and selectivity,
   Biophysical journal 99~(10) (2010) 3394--3401.
-
-\bibitem{wineman:2019}
-V.~Wineman-Fisher, Y.~Al-Hamdani, I.~Addou, A.~Tkatchenko, S.~Varma,
-  Ion-hydroxyl interactions: From high-level quantum benchmarks to transferable
-  polarizable force fields, Journal of chemical theory and computation 15~(4)
-  (2019) 2444--2453.
 
 \bibitem{vacha:2010}
 R.~V{\'a}cha, P.~Jurkiewicz, M.~Petrov, M.~L. Berkowitz, R.~A. Bockmann,
@@ -230,86 +316,6 @@ J.~Timko, D.~Bucher, S.~Kuyucak, Dissociation of nacl in water from ab initio
 P.~Smirnov, Structure of the nearest environment of na+, k+, rb+, and cs+ ions
   in oxygen-containing solvents, Russian Journal of General Chemistry 90~(9)
   (2020) 1693--1702.
-
-\bibitem{fhiaims}
-V.~Blum, R.~Gehrke, F.~Hanke, P.~Havu, V.~Havu, X.~Ren, K.~Reuter,
-  M.~Scheffler, Ab initio molecular simulations with numeric atom-centered
-  orbitals, Computer Physics Communications 180~(11) (2009) 2175--2196.
-
-\bibitem{perdew:1996:generalized}
-J.~P. Perdew, K.~Burke, M.~Ernzerhof, Generalized gradient approximation made
-  simple, Physical review letters 77~(18) (1996) 3865.
-
-\bibitem{adamo:1999:toward}
-C.~Adamo, V.~Barone, Toward reliable density functional methods without
-  adjustable parameters: The pbe0 model, The Journal of chemical physics
-  110~(13) (1999) 6158--6170.
-
-\bibitem{tkatchenko:2009}
-A.~Tkatchenko, M.~Scheffler, Accurate molecular van der waals interactions from
-  ground-state electron density and free-atom reference data, Physical review
-  letters 102~(7) (2009) 073005.
-
-\bibitem{wineman:2020:transferable}
-V.~Wineman-Fisher, J.~M. Delgado, P.~R. Nagy, E.~Jakobsson, S.~A. Pandit,
-  S.~Varma, Transferable interactions of li+ and mg2+ ions in polarizable
-  models, The Journal of Chemical Physics 153~(10) (2020) 104113.
-
-\bibitem{wineman:2020:improved}
-V.~Wineman-Fisher, Y.~Al-Hamdani, P.~R. Nagy, A.~Tkatchenko, S.~Varma, Improved
-  description of ligand polarization enhances transferability of ion--ligand
-  interactions, The Journal of Chemical Physics 153~(9) (2020) 094115.
-
-\bibitem{abraham:2015}
-M.~J. Abraham, T.~Murtola, R.~Schulz, S.~P{\'a}ll, J.~C. Smith, B.~Hess,
-  E.~Lindahl, Gromacs: High performance molecular simulations through
-  multi-level parallelism from laptops to supercomputers, SoftwareX 1 (2015)
-  19--25.
-
-\bibitem{pall:2014}
-S.~Pall, M.~J. Abraham, C.~Kutzner, B.~Hess, E.~Lindahl, Tackling exascale
-  software challenges in molecular dynamics simulations with gromacs, in:
-  International Conference on Exascale Applications and Software, Springer,
-  2014, pp. 3--27.
-
-\bibitem{van:2005}
-D.~V.~D. Spoel, E.~Lindahl, B.~Hess, G.~Groenhof, A.~Mark, H.~Berendsen,
-  Gromacs: fast, flexible, free, J. Comput. Chem. 26 (2005) 1701.
-
-\bibitem{lindahl:2001}
-E.~Lindahl, B.~Hess, D.~Van Der~Spoel, Gromacs 3.0: a package for molecular
-  simulation and trajectory analysis, Molecular modeling annual 7~(8) (2001)
-  306--317.
-
-\bibitem{berendsen:1995}
-H.~J. Berendsen, D.~van~der Spoel, R.~van Drunen, Gromacs: a message-passing
-  parallel molecular dynamics implementation, Computer Physics Communications
-  91~(1-3) (1995) 43--56.
-
-\bibitem{spce}
-H.~Berendsen, J.~Grigera, T.~Straatsma, The missing term in effective pair
-  potentials, Journal of Physical Chemistry 91~(24) (1987) 6269--6271.
-
-\bibitem{nose:1983}
-S.~Nos{\'e}, M.~Klein, Constant pressure molecular dynamics for molecular
-  systems, Molecular Physics 50~(5) (1983) 1055--1076.
-
-\bibitem{parrinello:1981}
-M.~Parrinello, A.~Rahman, Polymorphic transitions in single crystals: A new
-  molecular dynamics method, Journal of Applied physics 52~(12) (1981)
-  7182--7190.
-
-\bibitem{lincs}
-B.~Hess, H.~Bekker, H.~J.~C. Berendsen, J.~G. E.~M. Fraaije,
-  \href{http://dx.doi.org/10.1002/(SICI)1096-987X(199709)18:12<1463::AID-JCC4>3.0.CO;2-H}{Lincs:
-  A linear constraint solver for molecular simulations}, Journal of
-  Computational Chemistry 18~(12) (1997) 1463--1472.
-\newline\urlprefix\url{http://dx.doi.org/10.1002/(SICI)1096-987X(199709)18:12<1463::AID-JCC4>3.0.CO;2-H}
-
-\bibitem{essmann:1995}
-U.~Essmann, L.~Perera, M.~L. Berkowitz, T.~Darden, H.~Lee, L.~G. Pedersen, A
-  smooth particle mesh ewald method, The Journal of chemical physics 103~(19)
-  (1995) 8577--8593.
 
 \bibitem{petrache:1997}
 H.~I. Petrache, S.~E. Feller, J.~F. Nagle,
@@ -556,12 +562,6 @@ P.~Li, B.~P. Roberts, D.~K. Chakravorty, K.~M. Merz~Jr, Rational design of
   particle mesh ewald compatible lennard-jones parameters for+ 2 metal cations
   in explicit solvent, Journal of chemical theory and computation 9~(6) (2013)
   2733--2748.
-
-\bibitem{gromacs}
-M.~J. Abraham, T.~Murtola, R.~Schulz, S.~P{\'a}ll, J.~C. Smith, B.~Hess,
-  E.~Lindahl, Gromacs: High performance molecular simulations through
-  multi-level parallelism from laptops to supercomputers, SoftwareX 1 (2015)
-  19--25.
 
 \bibitem{petrache:2000:nmrarea}
 H.~I. Petrache, S.~W. Dodd, M.~F. Brown, Area per lipid and acyl length

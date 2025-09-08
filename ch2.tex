@@ -173,61 +173,45 @@ by water molecules~\cite{kruczek:2017}.
 
 \subsection{Quantum Mechanical Calculations}
 
-Target data for our parameter optimization consisted of energies and geometries 
-computed using a benchmarked density functional theory as implemented in  
-the FHI-Aims software package~\cite{fhiaims}. 
-Geometry optimizations were performed on the \na--(Water)$_{n}$,
-\na--(MeAc)$_{n}, n\leq4$, and \na--(DePh)$_m, m\leq2$ clusters.
-These clusters were first optimized using the MM force field used in 
-Kruczek \etal and Saunders \etal~\cite{kruczek:2017,saunders:2019}. 
-MM optimized structures were then further
-optimized using the PBE0 functional~\cite{perdew:1996:generalized,adamo:1999:toward} 
-with self-consistent vdW corrections~\cite{tkatchenko:2009}. 
-We used the \emph{really tight} basis sets included in the FHI--aims software. 
-This functional and basis set combination 
-has been shown to perform well compared to
-experiment and high-level quantum methods for many different chemistries of ion-ligand clusters~\cite{wineman:2019,wineman:2020:transferable,wineman:2020:improved}. 
-Optimizations were performed with a force 
-maxima of $10^{-3}$ $\text{eV}/\text{\AA}$~, with total energies converged
-to within $10^{-6}$~eV. 
-We computed substitution energies of these clusters as:
+For this work, I compute target data for parameter optimization from
+geometry optimizations and substitution energies of
+\na--(Water)$_n$, \na--(MeAc)$_n$ ($n \leq 4$), and
+\na--(DePh)$_m$ ($m \leq 2$) clusters. Substitution energies are defined
+as the energy cost of replacing water molecules with methyl acetate
+(MeAc) or diethyl phosphate (DePh) ligands:
 \begin{equation}
     \begin{split}
         E^{n}_\text{MeAc}&=E_{\text{\na--(MeAc)}_n}-nE_\text{MeAc}-E_{\text{\na--(Water)}_n}+nE_\text{Water}\\ 
-        E^{n}_\text{DePh}&=E_{\text{\na--(DePh)}_n}-nE_\text{DePh}-E_{\text{\na--(Water)}_{2n}}+2nE_\text{Water}\text{,}
+        E^{n}_\text{DePh}&=E_{\text{\na--(DePh)}_n}-nE_\text{DePh}-E_{\text{\na--(Water)}_{2n}}+2nE_\text{Water}\text{.}
     \end{split}
     \label{eq:substitution}
 \end{equation}
-where $n$ is the number of solvent molecules
-(see tables~\ref{tabch2:qmbinding} and table~\ref{tabch2:qmself} for all of the QM
-data used for this computation).  These substitution energies and
-corresponding configurations were used as targets for the parameter
-optimization.
-\begin{table}[h!tb]
+The QM total energies and self-energies used in these calculations are
+reported in Tables~\ref{tabch2:qmbinding} and~\ref{tabch2:qmself}.
+\begin{table}[h!tb] 
     \caption[QM Total energies of small molecules]{Total energies of systems of small molecules from QM calculations. 
-These energies are computed by taking the total energy from the final step of geometry optimization 
-on clusters of our selected small molecules around a single \na following
-the procedure outlined in the methods section. We computed binding energies using these values.}
-\label{tabch2:qmbinding}
-\begin{tabularx}{\textwidth}{X|X|X|X}
-    Cluster Size & Water (kJ/mol)& MeAc (kJ/mol) & DePh (kJ/mol)\\\hline
-    1&$-9.048\times10^{5}$&$-1.130\times10^{6}$&$-2.528\times10^{6}$\\ \hline
-    2&$-1.609\times10^{6}$&$-1.834\times10^{6}$&$-4.630\times10^{6}$\\\hline
-    3&$-2.313\times10^{6}$&$-2.538\times10^{6}$& N/A \\\hline
-    4&$-3.018\times10^{6}$&$-3.243\times10^{6}$& N/A \\\hline
-\end{tabularx}
+    These energies are computed by taking the total energy from the final step of geometry optimization on clusters of our selected small molecules 
+    around a single \na following the procedure outlined in the methods section. We computed binding energies using these values.} 
+    \label{tabch2:qmbinding} 
+    \begin{tabularx}{\textwidth}{X|X|X|X} Cluster Size & Water (kJ/mol)& MeAc (kJ/mol) & DePh (kJ/mol)\\\hline 
+        1&$-9.048\times10^{5}$&$-1.130\times10^{6}$&$-2.528\times10^{6}$\\ \hline 
+        2&$-1.609\times10^{6}$&$-1.834\times10^{6}$&$-4.630\times10^{6}$\\\hline 
+        3&$-2.313\times10^{6}$&$-2.538\times10^{6}$& N/A \\\hline 
+        4&$-3.018\times10^{6}$&$-3.243\times10^{6}$& N/A \\\hline 
+    \end{tabularx} 
+\end{table} 
+\begin{table}[h!tb] 
+    \caption[Self energies of isolated molecules]{Self energies of isolated molecules. These are computed by performing 
+    geometry optimization on an isolated molecule following the procedure outlined in the methods.} 
+    \label{tabch2:qmself} 
+    {\footnotesize \begin{tabularx}{\textwidth}{X|X|X|X|X} 
+        & Water & \na & MeAc & DePh \\\hline 
+        Energy (kJ/mol)&-2.006E+05&-4.253E+05&-7.042E+05&-2.102E+06 
+    \end{tabularx} } 
 \end{table}
+These values, together with the corresponding optimized configurations,
+serve as the target data for the parameter optimization in this chapter.
 
-\begin{table}[h!tb]
-    \caption[Self energies of isolated molecules]{Self energies of isolated molecules. These are computed by performing geometry optimization on an isolated molecule following the procedure outlined in the methods.}
-    \label{tabch2:qmself}
-    {\footnotesize
-\begin{tabularx}{\textwidth}{X|X|X|X|X}
-               & Water         & \na           & MeAc          & DePh \\\hline
-    Energy (kJ/mol)&-2.006E+05&-4.253E+05&-7.042E+05&-2.102E+06
-\end{tabularx}
-}
-\end{table}
 
 \subsection{Parameter Optimization}
 
@@ -312,66 +296,28 @@ chosen to perform MD simulations of a POPC bilayer.
 
 \subsection{Bilayer Construction}
 
-We first constructed a monolayer of POPC lipids by placing 100 lipids on
-a 10 nm by 10 nm grid, with excess space between the lipids to avoid overlaps in the lipid chains. 
-Then we reflected this grid to create the second 
-leaflet of the bilayer, resulting in a bilayer of 200 lipids. 
+I construct the bilayer by arranging 100 POPC lipids on a $10 \times 10$ grid
+with sufficient spacing to avoid chain overlap. This leaflet is then reflected
+along the $z$--axis to create the second leaflet, producing a bilayer of
+200 lipids. Based on a conservative estimate of one binding site per lipid,
+at least 200 \na~ ions are required in bulk solvent to avoid depletion during
+equilibration. To achieve this, I double the solvent block size used in our
+previous work~\cite{kruczek:2017,kruczek:2019}, adding 60,000 waters to the
+system on a three--dimensional grid and randomly replacing water molecules with
+216 \na and 216 \cl. This corresponds to an initial concentration of 200~mM,
+similar to our previous simulations, and yields a simulation box with initial
+dimensions of $9.75 \times 9.75 \times 59.84$~nm$^3$.
 
-Assuming a conservative estimate of one binding site per lipid, we
-need at least 200 \na~ ions in bulk solvent at the beginning of the simulation
-to avoid complete depletion of bulk ions after equilibration. 
-In order to do this we constructed a system with
-double the size of the solvent block used in our previous
-works~\cite{kruczek:2017,kruczek:2019}.  This larger system was
-constructed by adding 60,000 waters to the system on a 3-D grid with
-    excess space between waters, and randomly
-replacing water molecules with 216 \na and 216 \cl. 
-This results in an initial concentration of 200~mM, similar to our previous simulations.
-This process resulted in a simulation box with dimensions $9.75  \text{~nm}\times9.75  \text{~nm}\times59.84 \text{~nm}$.
+Following relaxation and annealing, the box dimensions shrink to
+$7.97 \times 7.97 \times 32.14$~nm$^3$. This final structure is used as the
+starting point for production simulations.
 
-We energy-minimized the simulation box using the steepest descent
-algorithm with a force tolerance of 50 $\text{kJ mol}^{-1}\text{nm}^{-1}$. 
-Neighbor searching was performed every 2 steps. 
-The PME algorithm was used for electrostatic interactions with a cut-off of 1.6~nm. 
-A reciprocal grid with a spacing of 0.12~nm$^{-1}$ was used with 6th order B--spline interpolation. 
-A single cut-off of 1.6~nm was used for van der Waals interactions.
+\subsection{Molecular Dynamics}
 
-We then performed a 200~ps constant pressure simulation at 290~K to
-ensure the system was relaxed enough for further annealing. 
-The box dimensions at the end of this were $7.86\text{~nm}\times7.86\text{~nm}\times32.90$\text{~nm}.
-Annealing was started at 400~K, and the system was cooled to the production
-simulation temperature of 300~K in steps of 10~K. 
-Each step was simulated for 150~ps, giving a total annealing time of 1.5~ns. 
-The annealing process shrunk the box dimensions to $7.97\text{~nm}\times7.97\text{~nm}\times32.14\text{~nm}$.
-This final structure 
-was used as the starting point for production run.
+For this system, I simulate trajectories continuously for 0.7~$\mu$s to match the simulation length of Kruczek \etal{}\cite{kruczek:2017,kruczek:2019}.
+Trajectory analysis is performed using a combination of GROMACS built--in
+tools and in--house software developed on the GROMACS API.
 
-\subsection{Molecular dynamics}
-
-All molecular dynamics simulations were performed with the GROMACS software package, 
-version 5.1.6~\cite{abraham:2015,pall:2014,van:2005,lindahl:2001,berendsen:1995}.
-We have utilized the SPC/E model for all waters~\cite{spce}. Lipid interaction
-terms are described using the parameters in the gromos43A1-S3
-parameter set developed by our group in previous work~\cite{chiu:2009}. 
-The system temperature was held constant at the production run 
-temperature of 300K using the Nos\`e--Hoover thermostat
-with a coupling constant of 0.5~ps~\cite{nose:1983}. 
-Pressure coupling was performed using the Parrinello-Rahman semiisotropic barostat,
-which held the system pressure constant at 1 atm with a coupling
-constant of 1.5~ps~\cite{parrinello:1981}. 
-The P--LINCS algorithm was used to constrain all bonds in the system to allow for a 4~fs
-integration timestep~\cite{lincs}. 
-Integration was carried out using the Verlet scheme, 
-with neighbor-list updates taken on every other integration step. 
-We used a cutoff of 16~\AA for short--range electrostatics. 
-Beyond this cutoff, we have used the smooth particle--mesh 
-Ewald summation method to describe electrostatics~\cite{essmann:1995}. 
-LJ interactions were calculated with a cutoff of 16~\AA. 
-For all systems described, we have simulated continuously for 0.7~$\mu$s.
-
-Simulated trajectories were analyzed using a combination of GROMACS
-built--in analysis tools and in--house software developed on the
-GROMACS API.
 
 \section{Results and Discussion}
 

@@ -1,3 +1,20 @@
+\section{Phospholipid bilayers}
+Phospholipid bilayers are the primary component of the major delimiting boundary between cells and their environment.
+These membranes are not static walls so much as liquid-crystalline, rapidly exploring their conformational
+space and adjusting to the external and internal cellular environment. Cells, through the 
+diversity of chemistry of headgroups and acyl-chain selections, tailor the dynamic structure of their membrane to further
+adapt to the environment around them. 
+Understanding the way that individual lipid species contribute to the structure of a lipid bilayer is critical to understand
+why a cell might choose one lipid or another in their cell membrane. Additionally, because these lipids are exposed to complex
+mixtures of ions on either side of the membrane, the interactions with ions in solution cannot be ignored when discussing the bilayer structure. 
+Experimentally observed ion behavior at an interface in solution has been explained using a mean-field model nearly 100 years ago~\cite{israelachvilli:2011:intermol}.
+However, this ignores specific chemical interactions between lipid molecules and the ions in the solvent, that are critical for understanding
+the effect of changing headgroup species in a membrane. 
+Computational models can enable researchers to observe the specific ion-lipid interactions are critical for understanding of 
+why cells might choose certain lipids to manipulate their membrane structure under varied ion mixtures in their environment. Furthermore, this 
+changing membrane structure also affects the behavior of membrane protiens embedded in the bilayer. Thus, this manipulation of the lipid mixture
+presents itself as an important regulatory mechanism for cells.
+
 \section{Molecular Simulations}
 \subsection{Classical Molecular Dynamics}
 Molecular Dynamics utilizes computers to simulate systems of molecules in order to study how structure changes
@@ -31,6 +48,32 @@ to update positions and velocities at each time step~\cite{gromacsmanual}.
 The energy of the new configuration
 can be computed, and the simulation continues. Thus, the careful development and improvement of a force-field is critical to 
 reproduce valid results that can help us understand what is seen in experiments.
+
+\subsection{Mixing rules, and NB-fix}
+Focusing in particular on the non-bonded terms of the hamiltonian, and specifically the Lennard-Jones (LJ) function, we note that there are two
+free parameters \sigmaij{} and \epsilonij{} between a particular pair of particles $i$ and $j$:
+\begin{equation}
+E_{\mathrm{LJ}_{ij}} = 4\epsilon_{ij} \left( \left( \frac{\sigma_{ij}}{r_{ij}} \right)^{12}
+- \left( \frac{\sigma_{ij}}{r_{ij}} \right)^{6} \right)
+\end{equation}
+Where $r_{ij}$ is the distance between the two particles, \sigmaij{} is the characteristic distance of the Van der Waals interaction between the two species,
+and \epsilonij{} is the characteristic energy of the interaction.
+These parameters are generally determined for a particular species for the case of the self-interaction, or $\sigma_{ii}$ and $\epsilon_{ii}$.
+In this case, they represent roughly the atomic radius, and the ``stickyness'' of the particle. These can then be combined with the 
+$\sigma_{jj}$ and $\epsilon_{jj}$ from another species by using what are called mixing rules, developed to 
+model the interaction radii and energy well-depth for interacting species~\cite{lorentz:1881,berthelot:1898}.
+The Lorentz rule for computing the \sigmaij{} is simply the arithmetic mean of the self terms from the two species, and 
+the Berthelot rule for computing the \epsilonij{} is the geometric mean of the self terms.
+Modern works have often reported that these mixing rules fail
+or behave unpredicatbly for more complicated species than the noble gases~\cite{fyta:2012,boda:2008:effects},
+and abandonment of the mixing rules for specifically selected cross-terms can be beneficial to improving
+force-fields~\cite{baker:2010:accurate,yoo:2012:improved,fyta:2012:ionic,mamatkulov:2013:force,venable:2013,
+savelyev:2014:balancing,li:2015:representation,savelyev:2015:competition,jing:2017:study,reif:2017,wineman:2019}. This 
+kind of correction is often called a "non-bonded fix" or NB-fix, which is a correction to the cross-terms of the species of interest 
+in order to improve the reproduction of some experimental result.
+In this dissertation, I expand on the idea of a NB-fix method to improve the modeling of the interactions of ions and phospholipid species.
+However, the method proposed and characterize is general, and can be applied to other chemically diverse systems of interest.
+
 \subsubsection{MD methods utilized in this dissertation}
 In the following dissertation, unless otherwise specified, I perform all molecular dynamics simulations with the GROMACS software 
 package~\cite{abraham:2015,pall:2014,van:2005,lindahl:2001,berendsen:1995,gromacs}.
@@ -68,11 +111,20 @@ simulation run temperature, and then cooling down to the production temperature 
 specific procedure outlined in each following chapter.
 
 \subsection{\emph{Ab initio} calculations and Density Functional Theory}
-Do we really want to get into this? Just enough to understand why we are doing this at all... especially since this is our target data! We
-can talk briefly about the methods and things, enough to introduce pbe0+vdw...
-\subsubsection{\emph{Ab initio} methods utilized in this work}
-\subsection{Quantum Mechanical Calculations}
-I generate target data for parameter optimization from geometry
+Classical force-fields are effective for simulating large-systems of particles where an explicit description of 
+the electronic behavior is not critical to the understanding of how the particles behave -- while this is a major 
+approximation, it turns out to often be useful in studying biological structures like lipid membranes~\cite{berkowitz:2019}.
+However, when preparing these classical models, we need to refer to more complicated theory in the form 
+of quantum mechanical calculations to set terms like the 
+charge per particle in a molecule and to compare to the molecular structure predicted by our bonded-parameters.
+\emph{Ab initio} quantum mechanical calculations include chemistry by explicitly describing the behavior of electrons to varied 
+levels of accuracy depending on the kind of functional form used, and then the basis vectors used to describe the space.
+Pertubation theory methods include electron correlation, which can be useful for assigning electrons to parts of a molecule. 
+However, these methods quickly become expensive for systems with many electrons. Density functional theory, which treats the electrons 
+with a mean-field approximation is often more computationally efficient and can thus be applied to larger systems.
+
+\emph{Ab initio} methods are used in the works included in this dissertation to generate target data for 
+model parameter optimization from geometry
 optimizations and substitution energies of small ion–ligand clusters
 using density functional theory (DFT) as implemented in
 FHI-aims~\cite{fhiaims}. Initial cluster geometries are produced with
@@ -99,13 +151,44 @@ chapters.
 Systems of crystals are often studied using diffraction or scattering experiments. 
 In the case of lipid bilayers, we often use Small-Angle scattering of x-rays (SAXS) or neutrons (SANS) 
 to study the bilayer structure. Lipid bilayers are smectic crystals, and thus give scattering
-patterns that look like concentric circles -- these circles are the bilayer form-factor. This form-factor
+patterns that look like concentric circles -- these circles are the bilayer form-factor~\cite{nagle:2000}. This form-factor
 is the reciprocal-space structure of the bilayer, but phase information of each lobe is lost. 
 Thus, a simple reverse-transformation cannot be perfomed.
 In order to produce the appropriate density distribution, one can approximate the number density of bilayer parts as gaussian functions, and 
-compute the appropriate scattering density from that. This can then be transformed via a cosine transform
+compute the appropriate scattering density from that~\cite{nagle:2000,fogarty:2015}. This can then be transformed via a cosine transform
 into a form-factor. The gaussians are then adjusted
-until the resulting form-factor fits the data from the experiment.
+until the resulting continuous form-factor fits the data from the experiment~\cite{nagle:2000,fogarty:2015}.
+In simulations, we can compute the number density histograms of the system components
+directly from the trajectories, and thus the electron densities directly. Once we have the electron density of our system
+per nanosecond, we determine the lipid bilayer centerpoint by locating the minimum at the center of the 
+histogram. We symmetrize the histogram around the minimum at the center, and then take an average over many nanoseconds.
+We subtract the bulk solvent value of the electron density from the average histogram, and then use a cosine transform
+to obtain the bilayer SAXS form-factor. This can be compared with the experimental data directly.
+We also use the electron density to directly obtain the peak-to-peak distance of the bilayer, \dhh{}, as one measure
+of the bilayer thickness.
+\subsection{Number density histograms}
+The number density histograms are also used to compute the various bilayer thicknesses via probability densities
+of the various system components. We compute 
+\subsection{Lipid component volumes}
+Phospholipid headgroup and chain occupied volumes are computed using the method of Petrache \etal{} for computing the
+volume of immiscible liquids~\cite{petrache:1997}.
+In the work outlined in this dissertation, we identify lipid chains are as starting 
+at the first carbon attached to the lipid chain carbonyl oxygen, including the oxygen.
+The atom groups not part of the lipid
+chains are partitioned into the headgroup volume. 
+The number--density of these component groups along with that of the solvent are taken 
+and used to optimize the objective function:
+\begin{equation}
+    \label{eq:volumeobj}
+    \Omega(v_i)=\sum^{\rho_s}_{z_j}(1-\sum^{N_{\text{Groups}}}_{i=1}{(\rho_i(z_j)v_i)^2})\text{,}
+\end{equation}
+In the equation above, $\rho_i(z_j)$ is the number density of the $i$ component in the
+$z_j$ slice of the box and $v_i$ is the corresponding component volume. 
+The component volumes are then multiplied by the corresponding
+number of particles per molecule per group -- 32 for the chain
+particles, and 20 for the headgroup. 
+This gives us the total volume per molecule for each group, defined as \Vh{} and \Vc{}. These are then
+added together to make the total \Vl{}.
 \subsection{Electrostatic and dynamic results... such as GC-theory!}
 
 \subsection{Diffusion coefficients}

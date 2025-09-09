@@ -219,16 +219,16 @@ Parameter optimization is performed using our ParOpt software package~
 \cite{fogarty:2014:paropt,fogarty:2014:thesis}.
 This software is available for download at
 \texttt{https://csmlabfs1.cas.usf.edu/Sites}.
-We utilized the Nelder-Meade method to perform a search to simultaneously optimize 
+We utilized the Nelder-Mead method to perform a search to simultaneously optimize 
 all \sigmaij~and \epsilonij~ cross terms of \na~ions with MeAc and DePh molecules. 
-Specifically, there are seven atom types in these two small molecules (table~\ref{tabch2:paropt}), and so we optimized
-14 cross terms for the 6-12 LJ potential.
+Specifically, there are seven atom types in these two small molecules (table~\ref{tabch2:paropt}), and so
+all 14 cross terms for the 6-12 LJ potential are optimized.
 Error was
 determined by comparing the optimized
 geometries and substitution energies of each new parameter set to the
 reference data from QM.  
 
-Boundary constraints were imposed on \epsilonij~and \sigmaij~ to keep
+Boundary constraints are imposed on \epsilonij~and \sigmaij~ to keep
 the search space finite.  Table~\ref{tabch2:constraints} shows all of the
 constraints placed on the parameter search. 
 \begin{table}
@@ -244,17 +244,16 @@ constraints placed on the parameter search.
     \end{tabularx}
     }
 \end{table}
-Additionally, we
-constrained the NA--OM\* \sigmaij~ to be smaller than the \sigmaij~ for
+Additionally, constraints are applied to keep the NA--OM\* \sigmaij~ to be smaller than the \sigmaij~ for
 NA--P to avoid unphysical conformations of DePh.  Boundary constraints are enforced 
 by reassigning \sigmaij~or \epsilonij~ values that violate the bound to the boundary value. 
-Throughout optimization we monitored constraint
-violations and ensured that we did not select a final parameter set
-that is the result of a constraint violation.  High--dimensional optimizations of
-this nature may not have a unique solution; thus, we performed 200
-independent optimizations with random initial parameter values. We
-compared the parameter sets that best improved the substitution energy
-without significantly compromising the conformational geometries.
+Throughout optimization, constraint violations are monitored
+to ensure that a final parameter set 
+that is the result of a constraint violation is not selected.  High--dimensional optimizations of
+this nature may not have a unique solution; thus, 200 independant optimizations are performed,
+each initialized with random initial parameter values. Parameter sets that best improved the substitution energy
+without significantly compromising the conformational geometries are compared to select the final parameters that are
+used in the present work.
 
 Figure~\ref{figch2:nmerror}a illustrates a representative
 NM--trajectory that follows NM--error as a function of optimization step. 
@@ -296,28 +295,28 @@ chosen to perform MD simulations of a POPC bilayer.
 
 \subsection{Bilayer Construction}
 
-I construct the bilayer by arranging 100 POPC lipids on a $10 \times 10$ grid
-with sufficient spacing to avoid chain overlap. This leaflet is then reflected
-along the $z$--axis to create the second leaflet, producing a bilayer of
-200 lipids. Based on a conservative estimate of one binding site per lipid,
+Simulation systems are constructed following the method outlined in chapter 1.
+Based on a conservative estimate of one binding site per lipid,
 at least 200 \na~ ions are required in bulk solvent to avoid depletion during
 equilibration. To achieve this, I double the solvent block size used in our
 previous work~\cite{kruczek:2017,kruczek:2019}, adding 60,000 waters to the
 system on a three--dimensional grid and randomly replacing water molecules with
 216 \na and 216 \cl. This corresponds to an initial concentration of 200~mM,
 similar to our previous simulations, and yields a simulation box with initial
-dimensions of $9.75 \times 9.75 \times 59.84$~nm$^3$.
+dimensions of $9.75 \times 9.75 \times 59.84$~nm$^3$. Following energy minimization as described in Chapter~1, 
+the system is relaxed with a short NPT equilibration
+at 290~K and annealed by heating to 350~K and cooling in 10~K steps to the
+production temperature of 300~K (155~ps per step).
 
-Following relaxation and annealing, the box dimensions shrink to
+Following energy minimization and annealing, the box dimensions shrink to
 $7.97 \times 7.97 \times 32.14$~nm$^3$. This final structure is used as the
 starting point for production simulations.
 
 \subsection{Molecular Dynamics}
-
-For this system, I simulate trajectories continuously for 0.7~$\mu$s to match the simulation length of Kruczek \etal{}\cite{kruczek:2017,kruczek:2019}.
+Trajectories are simulated continuously for 0.7~$\mu$s to match the 
+simulation length of Kruczek \etal{}\cite{kruczek:2017,kruczek:2019}.
 Trajectory analysis is performed using a combination of GROMACS built--in
 tools and in--house software developed on the GROMACS API.
-
 
 \section{Results and Discussion}
 
@@ -343,17 +342,30 @@ on the search space can be seen in figure~\ref{tabch2:constraints}}
               \end{tabularx}
           }
 \end{table} 
-We immediately note a general trend of an increase in the value of \epsilonij~ for the
-non-carbon atom types. With our constraints on the carbon atoms, we have nudged the optimization
+One can Immediately note a general trend of an increase in the value of \epsilonij~ for the
+non-carbon atom types. With the constraints on the carbon atoms, parameters have been nudged 
 into gaining the binding energy by increasing the \epsilonij~ for the specifically electronegative atoms.
 Values of \sigmaij~ have changed, but remained 
 close to the original values in general, suggesting that the optimum 
 distance to the minimum energy of the LJ potential is estimated well by LB rules. 
 We can also see that no values of \sigmaij~ or \epsilonij~ violate the 
-constraints described in table S3 in supporting information. 
-We examined substitution energies and corresponding conformational geometries by running energy
+constraints described in table~\ref{tabch2:constraints}.
+ \begin{table}
+    \caption{Nelder--Meade constraints. These values were used to constrain the parameter search space during the NM--optimization.}
+    \label{tabch2:constraints}
+    {\tiny
+    \begin{tabularx}{\textwidth}{X|X|X|X|X|X|X|X|X|X|}
+            &\tbxmulticol{2}{X|}{NA-CH3}&\tbxmulticol{2}{X|}{NA-CH2}&\tbxmulticol{2}{X|}{NA-CO*}&\tbxmulticol{2}{X|}{NA-OA,-OM*,-O*,-P}&Additional Constraints\\\hline
+        &Min&Max&Min&Max&Min&Max&Min&Max&N/A\\\hline
+    \sigmaij (nm)&0.2&0.5&0.2&0.5&0.2&0.5&0.2&0.5&$\sigma_{ij}^{\text{NA-OM*}}
+        \leq \sigma_{ij}^{\text{NA-P}}$ \\\hline
+    \epsilonij (kJ/mol) &0&0.79&0&0.81&0&0.83&0.05&7&N/A\\\hline
+    \end{tabularx}
+    }
+\end{table}
+Substitution energies and corresponding conformational geometries are examined by running energy
 minimization of the QM--optimized structures using the final parameter set. 
-These were then analyzed using the GROMACS built--in energy and distance tools. 
+These are then analyzed using the GROMACS built--in energy and distance tools. 
 The substitution energies and the conformations for
 this parameter set are shown in figure~\ref{figch2:energies} 
 and in figure~\ref{figch2:distances}, respectively. 
@@ -361,11 +373,11 @@ and in figure~\ref{figch2:distances}, respectively.
     \includegraphics[width=0.7\textwidth]{figure_1.eps}
     \caption[Substitution energies for \na~clusters]{Substitution energies for \na~clusters computed as described
 in equation~\ref{eq:substitution}. 
-In black we see the energies of systems computed using the standard 
-mixing rules, in red we have the energies from benchmarked DFT, 
-and in blue the optimized results. 
-We see a significant
-error with the standard LB mixing rules, which is substantially improved with our new optimized cross terms. 
+The energies of systems computed using the standard 
+mixing rules are shown in black, the energies from benchmarked DFT are in red, 
+and in blue are the optimized results. 
+There is a significant
+error with the standard LB mixing rules, which is substantially improved with the new optimized cross terms. 
 The insert shows an diagram of POPC, and
 the small molecules Methyl-Acetate (MeAc) and Diethyl-Phosphate (DePh) 
 that were used to represent the major \na~interaction sites on the POPC molecule.}
@@ -381,9 +393,9 @@ error for the NM optimization.}
     %\includegraphics[width=0.8\textheight]{distances_combined_final.eps}
     \includegraphics[width=0.8\textheight]{figure_s1.eps}
 \end{sidewaysfigure}
-We can see that for MeAc we have substantially improved substitution
+It can be noted that for MeAc we have substantially improved substitution
 energies relative to those obtained from using LB mixing rules, 
-which started with an discrepancy of around 30--80~kJ/mol. We have also
+which started with an discrepancy of around 30--80~kJ/mol. The optimization has also
 improved the relative substitution between the clusters of various sizes. 
 The substitution energies for DePh have also improved by a similar magnitude. 
 The conformational geometries are largely unchanged, 
@@ -392,7 +404,7 @@ This shrinkage is common when optimizing both energies and conformations
 with the relatively small number of free parameters corresponding to
 the LJ cross terms~\cite{wineman:2019}.
 
-We also note that the substitution energies for both molecule types improve more in the
+Notably, the substitution energies for both molecule types improve more in the
 larger cluster sizes. Larger clusters are more relevant to the dense
 environment in the lipid headgroup region of the bilayer, 
 as few, if any, ions bind to a single lipid at a time~\cite{kruczek:2017}. 
@@ -411,15 +423,15 @@ cannot be captured properly by a non--polarizable model~\cite{varma:2010}.
 \subsection{Validation of Parameters}
 
 In order to characterize our new parameter set in a bilayer, 
-we generated a 700~ns simulation of a bilayer of POPC lipids in NaCl salt solution, 
-and we compared the results against a similar system that we simulated using
-LB rules in our previous works~\cite{kruczek:2017,kruczek:2019}. 
+I generated a 700~ns simulation of a bilayer of POPC lipids in NaCl salt solution, 
+and the results are compared against a similar system simulated using
+LB rules in previous work~\cite{kruczek:2017,kruczek:2019}. 
 These older trajectories for systems both with salt and without will be referred to, 
 respectively, as  LB and `without salt.'  
-We simulated our system with optimized cross terms, 
+New simulations are performed with optimized cross terms, 
 hence forth will be referred to as the `optimized' system, 
 long enough to equilibrate the number of bound ions (see figure~\ref{figch2:ioncoodcount}). 
-We will further characterize this ion binding in a subsequent section.
+This ion binding is further characterized in a subsequent section.
 
 \subsubsection{Bilayer Structure}
 
@@ -456,22 +468,7 @@ Bilayer structural parameters can be seen in table~\ref{tabch2:struc}.
           }
 \end{table}
 The phospholipid component volumes $V_H$ and $V_C$ (lines 1 and 2) are
-computed following the procedure outlined by Petrache \etal~\cite{petrache:1997}. 
-The lipid chains are identified as starting at the first carbon attached to the lipid chain carbonyl oxygen, including the oxygen.
-The atom groups not part of the lipid
-chains are partitioned into the headgroup volume. 
-We take the number--density of these component groups along with that of the solvent, 
-and use them to optimize the objective function:
-\begin{equation}
-    \label{eq:volumeobj}
-    \Omega(v_i)=\sum^{\rho_s}_{z_j}(1-\sum^{N_{\text{Groups}}}_{i=1}{(\rho_i(z_j)v_i)^2})\text{,}
-\end{equation}
-In the equation above, $\rho_i(z_j)$ is the number density of the $i$ component in the
-$z_j$ slice of the box and $v_i$ is the corresponding component volume. 
-The component volumes are then multiplied by the corresponding
-number of particles per molecule per group -- 32 for the chain
-particles, and 20 for the headgroup. 
-This gives us the total volume per molecule for each group. 
+computed following the procedure outlined by Petrache \etal~\cite{petrache:1997}, and described at length in chapter 1 of this dissertation. 
 The total lipid volume $V_L$ (line 3 in table~\ref{tabch2:struc}) 
 is taken to be the sum of these two values. 
 These remain relatively similar in all three systems, 

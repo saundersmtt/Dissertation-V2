@@ -131,50 +131,31 @@ with LiCl and MgCl$_{2}$ salt. Configurations for each simulation are listed in 
    \renewcommand{\footnoterule}{}
 \end{minipage}
 \end{table}
-{Bilayers are constructed of 200 lipids, with 100 lipids per leaflet.}
-Simulations are all performed with 
-60,000 water molecules to ensure that the simulation box
-was large enough to have no long-range dipole moment, 
-and have a significant 
-sampling of bulk water. The inclusion of ions substantially increases the region of ordered 
-waters in the system~\cite{kruczek:2019,saunders:2022}.
-We simulate these systems with a starting concentration of 200~mM salt, in order to ensure
-that the equilibrium bulk concentration is physiologically relevant and 
-{yet} statistically viable.
-Systems with \mg are simulated with twice the number of 
-anions to counter the +2 charge of the cation. All the systems are simulated for 1~$\mu$s of simulated time. 
-The \mgmbnbfix system is extended to 2.5~$\mu$s to confirm the 
-long residence time of waters in the first coordination shell of \mg\cite{grotz:2021:optimized}. 
-It is observed that ions in the bilayer still do not
-exchange of waters from their first coordination shell, 
-so another 1~$\mu$s simulation is performed using the water-\mg 
-interaction model developed by Grotz \etal{}, which significantly increase the water-exchange rate to be closer 
-to the value observed experimentally~\cite{grotz:2021:optimized}.
-{All the} simulations are performed using the GROMACS molecular dynamics software package, 
-version 5.1.6~\cite{abraham:2015,pall:2014,van:2005,lindahl:2001,berendsen:1995}, and analysis is performed using 
-GROMACS built--in analysis tools and in--house software developed
-on the gromacs API or using the MDanalysis python package~\cite{gromacsmanual,mdanalysis1,mdanalysis2}.
 \subsection{Bilayer Construction}
+Bilayers are constructed as described in Chapter~1, with 200 POPC lipids
+(100 per leaflet) and 60,000 waters to provide sufficient bulk solvent.
+A subset of waters is randomly replaced with ions to achieve the desired
+system compositions (Table~\ref{tabch3:ions}), corresponding to an initial
+salt concentration of 200~mM. Systems containing \mg include twice the
+number of counter--ions to balance charge.
 
-I construct the bilayers by arranging 100 POPC lipids on a $10 \times 10$ grid
-and reflecting this leaflet along the $z$--axis to generate the second leaflet.
-A solvent block of 60,000 waters is then added, and a subset of water molecules
-is randomly replaced with ions to achieve the desired system compositions
-(see Table~\ref{tabch3:ions}). 
-
-Following energy minimization with the steepest--descents algorithm to remove
-bad contacts, I relax each system with a 1~ns NPT simulation at 250~K.
-Systems are then annealed by heating to 350~K and cooling in 10~K steps to the
-production temperature of 300~K, with each step lasting 155~ps.
-The final annealed configurations are used as the initial structures for
-production molecular dynamics simulations.
+Following energy minimization with the steepest--descents algorithm,
+each system is equilibrated with a 1~ns NPT simulation at 250~K and then
+annealed by heating to 350~K and cooling in 10~K steps to 300~K, with each
+step lasting 155~ps. The final annealed configurations serve as starting
+points for production simulations.
 
 \subsection{Molecular Dynamics}
 
-Production simulations are run with lengths given in Table~\ref{tabch3:ions}.
-Trajectory analysis is performed using a combination of GROMACS built--in
-tools and in--house software developed on the GROMACS API.
-
+Production simulations are run for the lengths listed in
+Table~\ref{tabch3:ions}. Most systems are simulated for 1~$\mu$s, with the
+\mgmbnbfix system extended to 2.5~$\mu$s to assess slow water--exchange
+dynamics in the first coordination shell. An additional 1~$\mu$s trajectory
+is generated using the \mg--water interaction model of Grotz \etal{}
+\cite{grotz:2021:optimized}, which yields water--exchange rates in closer
+agreement with experiment. Trajectory analysis is carried out with
+GROMACS built--in tools, in--house software using the GROMACS API, and the
+MDAnalysis Python package~\cite{gromacsmanual,mdanalysis1,mdanalysis2}.
 
 \subsection{Force-field parameters}
 

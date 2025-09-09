@@ -24,6 +24,85 @@ R.~A. Buckingham, The classical equation of state of gaseous helium, neon and
 \newblock \href {https://doi.org/10.1098/rspa.1938.0173}
   {\path{doi:10.1098/rspa.1938.0173}}.
 
+\bibitem{lorentz:1881}
+H.~A. Lorentz, Ueber die anwendung des satzes vom virial in der kinetischen
+  theorie der gase, Annalen der Physik 248~(1) (1881) 127--136.
+\newblock \href {https://doi.org/10.1002/andp.18812480110}
+  {\path{doi:10.1002/andp.18812480110}}.
+
+\bibitem{berthelot:1898}
+D.~Berthelot, Sur le mélange des gaz, Comptes Rendus de l’Académie des
+  Sciences 126 (1898) 1703--1855.
+
+\bibitem{fyta:2012}
+M.~Fyta, R.~R. Netz, Ionic force field optimization based on single-ion and
+  ion-pair solvation properties: Going beyond standard mixing rules, The
+  Journal of chemical physics 136~(12) (2012) 124103.
+
+\bibitem{boda:2008:effects}
+D.~Boda, D.~Henderson, The effects of deviations from lorentz--berthelot rules
+  on the properties of a simple mixture, Molecular Physics 106~(20) (2008)
+  2367--2370.
+
+\bibitem{baker:2010:accurate}
+C.~M. Baker, P.~E. Lopes, X.~Zhu, B.~Roux, A.~D. MacKerell~Jr, Accurate
+  calculation of hydration free energies using pair-specific lennard-jones
+  parameters in the charmm drude polarizable force field, Journal of chemical
+  theory and computation 6~(4) (2010) 1181--1198.
+
+\bibitem{yoo:2012:improved}
+J.~Yoo, A.~Aksimentiev, Improved parametrization of li+, na+, k+, and mg2+ ions
+  for all-atom molecular dynamics simulations of nucleic acid systems, The
+  journal of physical chemistry letters 3~(1) (2012) 45--50.
+
+\bibitem{fyta:2012:ionic}
+M.~Fyta, R.~R. Netz, Ionic force field optimization based on single-ion and
+  ion-pair solvation properties: Going beyond standard mixing rules, The
+  Journal of chemical physics 136~(12) (2012) 124103.
+
+\bibitem{mamatkulov:2013:force}
+S.~Mamatkulov, M.~Fyta, R.~R. Netz, Force fields for divalent cations based on
+  single-ion and ion-pair properties, The Journal of chemical physics 138~(2)
+  (2013) 024505.
+
+\bibitem{venable:2013}
+R.~M. Venable, Y.~Luo, K.~Gawrisch, B.~Roux, R.~W. Pastor, Simulations of
+  anionic lipid membranes: development of interaction-specific ion parameters
+  and validation using nmr data, The journal of physical chemistry B 117~(35)
+  (2013) 10183--10192.
+
+\bibitem{savelyev:2014:balancing}
+A.~Savelyev, A.~D. MacKerell~Jr, Balancing the interactions of ions, water, and
+  dna in the drude polarizable force field, The Journal of Physical Chemistry B
+  118~(24) (2014) 6742--6757.
+
+\bibitem{li:2015:representation}
+H.~Li, V.~Ngo, M.~C. Da~Silva, D.~R. Salahub, K.~Callahan, B.~Roux, S.~Y.
+  Noskov, Representation of ion--protein interactions using the drude
+  polarizable force-field, The Journal of Physical Chemistry B 119~(29) (2015)
+  9401--9416.
+
+\bibitem{savelyev:2015:competition}
+A.~Savelyev, A.~D. MacKerell~Jr, Competition among li+, na+, k+, and rb+
+  monovalent ions for dna in molecular dynamics simulations using the additive
+  charmm36 and drude polarizable force fields, The Journal of Physical
+  Chemistry B 119~(12) (2015) 4428--4440.
+
+\bibitem{jing:2017:study}
+Z.~Jing, R.~Qi, C.~Liu, P.~Ren, Study of interactions between metal ions and
+  protein model compounds by energy decomposition analyses and the amoeba force
+  field, The Journal of chemical physics 147~(16) (2017) 161733.
+
+\bibitem{reif:2017}
+M.~M. Reif, C.~Kallies, V.~Knecht, Effect of sodium and chloride binding on a
+  lecithin bilayer. a molecular dynamics study, Membranes 7~(1) (2017) 5.
+
+\bibitem{wineman:2019}
+V.~Wineman-Fisher, Y.~Al-Hamdani, I.~Addou, A.~Tkatchenko, S.~Varma,
+  Ion-hydroxyl interactions: From high-level quantum benchmarks to transferable
+  polarizable force fields, Journal of chemical theory and computation 15~(4)
+  (2019) 2444--2453.
+
 \bibitem{abraham:2015}
 M.~J. Abraham, T.~Murtola, R.~Schulz, S.~P{\'a}ll, J.~C. Smith, B.~Hess,
   E.~Lindahl, Gromacs: High performance molecular simulations through
@@ -86,6 +165,10 @@ U.~Essmann, L.~Perera, M.~L. Berkowitz, T.~Darden, H.~Lee, L.~G. Pedersen, A
   smooth particle mesh ewald method, The Journal of chemical physics 103~(19)
   (1995) 8577--8593.
 
+\bibitem{berkowitz:2019}
+M.~L. Berkowitz, Biomembrane Simulations: Computational Studies of Biological
+  Membranes, CRC Press, 2019.
+
 \bibitem{fhiaims}
 V.~Blum, R.~Gehrke, F.~Hanke, P.~Havu, V.~Havu, X.~Ren, K.~Reuter,
   M.~Scheffler, Ab initio molecular simulations with numeric atom-centered
@@ -117,12 +200,6 @@ A.~Tkatchenko, M.~Scheffler, Accurate molecular van der waals interactions from
   ground-state electron density and free-atom reference data, Physical review
   letters 102~(7) (2009) 073005.
 
-\bibitem{wineman:2019}
-V.~Wineman-Fisher, Y.~Al-Hamdani, I.~Addou, A.~Tkatchenko, S.~Varma,
-  Ion-hydroxyl interactions: From high-level quantum benchmarks to transferable
-  polarizable force fields, Journal of chemical theory and computation 15~(4)
-  (2019) 2444--2453.
-
 \bibitem{wineman:2020:transferable}
 V.~Wineman-Fisher, J.~M. Delgado, P.~R. Nagy, E.~Jakobsson, S.~A. Pandit,
   S.~Varma, Transferable interactions of li+ and mg2+ ions in polarizable
@@ -133,9 +210,22 @@ V.~Wineman-Fisher, Y.~Al-Hamdani, P.~R. Nagy, A.~Tkatchenko, S.~Varma, Improved
   description of ligand polarization enhances transferability of ion--ligand
   interactions, The Journal of Chemical Physics 153~(9) (2020) 094115.
 
-\bibitem{berkowitz:2019}
-M.~L. Berkowitz, Biomembrane Simulations: Computational Studies of Biological
-  Membranes, CRC Press, 2019.
+\bibitem{nagle:2000}
+J.~F. Nagle, S.~Tristram-Nagle, Structure of lipid bilayers, Biochimica et
+  Biophysica Acta (BBA)-Reviews on Biomembranes 1469~(3) (2000) 159--195.
+
+\bibitem{fogarty:2015}
+J.~C. Fogarty, M.~Arjunwadkar, S.~A. Pandit, J.~Pan, Atomically detailed lipid
+  bilayer models for the interpretation of small angle neutron and x-ray
+  scattering data, Biochimica et Biophysica Acta (BBA)-Biomembranes 1848~(2)
+  (2015) 662--672.
+
+\bibitem{petrache:1997}
+H.~I. Petrache, S.~E. Feller, J.~F. Nagle,
+  \href{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1184418/}{Determination of
+  component volumes of lipid bilayers from simulations.}, Biophysical Journal
+  72~(5) (1997) 2237--2242.
+\newline\urlprefix\url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1184418/}
 
 \bibitem{pandit:2008:simulationtextbook}
 S.~A. Pandit, H.~L. Scott, Simulations and models of lipid bilayers, in: Soft
@@ -226,64 +316,6 @@ G.~Lee~Warren, J.~E. Davis, S.~Patel, Origin and control of superlinear
   polarizability scaling in chemical potential equalization methods, The
   Journal of chemical physics 128~(14) (2008) 144110.
 
-\bibitem{boda:2008:effects}
-D.~Boda, D.~Henderson, The effects of deviations from lorentz--berthelot rules
-  on the properties of a simple mixture, Molecular Physics 106~(20) (2008)
-  2367--2370.
-
-\bibitem{baker:2010:accurate}
-C.~M. Baker, P.~E. Lopes, X.~Zhu, B.~Roux, A.~D. MacKerell~Jr, Accurate
-  calculation of hydration free energies using pair-specific lennard-jones
-  parameters in the charmm drude polarizable force field, Journal of chemical
-  theory and computation 6~(4) (2010) 1181--1198.
-
-\bibitem{yoo:2012:improved}
-J.~Yoo, A.~Aksimentiev, Improved parametrization of li+, na+, k+, and mg2+ ions
-  for all-atom molecular dynamics simulations of nucleic acid systems, The
-  journal of physical chemistry letters 3~(1) (2012) 45--50.
-
-\bibitem{fyta:2012:ionic}
-M.~Fyta, R.~R. Netz, Ionic force field optimization based on single-ion and
-  ion-pair solvation properties: Going beyond standard mixing rules, The
-  Journal of chemical physics 136~(12) (2012) 124103.
-
-\bibitem{mamatkulov:2013:force}
-S.~Mamatkulov, M.~Fyta, R.~R. Netz, Force fields for divalent cations based on
-  single-ion and ion-pair properties, The Journal of chemical physics 138~(2)
-  (2013) 024505.
-
-\bibitem{venable:2013}
-R.~M. Venable, Y.~Luo, K.~Gawrisch, B.~Roux, R.~W. Pastor, Simulations of
-  anionic lipid membranes: development of interaction-specific ion parameters
-  and validation using nmr data, The journal of physical chemistry B 117~(35)
-  (2013) 10183--10192.
-
-\bibitem{savelyev:2014:balancing}
-A.~Savelyev, A.~D. MacKerell~Jr, Balancing the interactions of ions, water, and
-  dna in the drude polarizable force field, The Journal of Physical Chemistry B
-  118~(24) (2014) 6742--6757.
-
-\bibitem{li:2015:representation}
-H.~Li, V.~Ngo, M.~C. Da~Silva, D.~R. Salahub, K.~Callahan, B.~Roux, S.~Y.
-  Noskov, Representation of ion--protein interactions using the drude
-  polarizable force-field, The Journal of Physical Chemistry B 119~(29) (2015)
-  9401--9416.
-
-\bibitem{savelyev:2015:competition}
-A.~Savelyev, A.~D. MacKerell~Jr, Competition among li+, na+, k+, and rb+
-  monovalent ions for dna in molecular dynamics simulations using the additive
-  charmm36 and drude polarizable force fields, The Journal of Physical
-  Chemistry B 119~(12) (2015) 4428--4440.
-
-\bibitem{jing:2017:study}
-Z.~Jing, R.~Qi, C.~Liu, P.~Ren, Study of interactions between metal ions and
-  protein model compounds by energy decomposition analyses and the amoeba force
-  field, The Journal of chemical physics 147~(16) (2017) 161733.
-
-\bibitem{reif:2017}
-M.~M. Reif, C.~Kallies, V.~Knecht, Effect of sodium and chloride binding on a
-  lecithin bilayer. a molecular dynamics study, Membranes 7~(1) (2017) 5.
-
 \bibitem{fogarty:2014:paropt}
 J.~C. Fogarty, S.-W. Chiu, P.~Kirby, E.~Jakobsson, S.~A. Pandit, Automated
   optimization of water--water interaction parameters for a coarse-grained
@@ -316,23 +348,6 @@ J.~Timko, D.~Bucher, S.~Kuyucak, Dissociation of nacl in water from ab initio
 P.~Smirnov, Structure of the nearest environment of na+, k+, rb+, and cs+ ions
   in oxygen-containing solvents, Russian Journal of General Chemistry 90~(9)
   (2020) 1693--1702.
-
-\bibitem{petrache:1997}
-H.~I. Petrache, S.~E. Feller, J.~F. Nagle,
-  \href{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1184418/}{Determination of
-  component volumes of lipid bilayers from simulations.}, Biophysical Journal
-  72~(5) (1997) 2237--2242.
-\newline\urlprefix\url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1184418/}
-
-\bibitem{nagle:2000}
-J.~F. Nagle, S.~Tristram-Nagle, Structure of lipid bilayers, Biochimica et
-  Biophysica Acta (BBA)-Reviews on Biomembranes 1469~(3) (2000) 159--195.
-
-\bibitem{fogarty:2015}
-J.~C. Fogarty, M.~Arjunwadkar, S.~A. Pandit, J.~Pan, Atomically detailed lipid
-  bilayer models for the interpretation of small angle neutron and x-ray
-  scattering data, Biochimica et Biophysica Acta (BBA)-Biomembranes 1848~(2)
-  (2015) 662--672.
 
 \bibitem{egberts:1988}
 E.~Egberts, H.~Berendsen, Molecular dynamics simulation of a smectic liquid

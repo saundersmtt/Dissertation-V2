@@ -349,28 +349,23 @@ mean more stabilizing than LB.}
 
 \subsection{Bilayer Construction}
 
-I prepare simulation systems following the procedure of Saunders \etal~\cite{saunders:2024},
-by arranging 100 POPC lipids on a $10 \times 10$ grid and reflecting this leaflet
-along the $z$--axis to generate the second leaflet. A solvent block of 60,000 waters
-is then added along the box $z$--dimension. To achieve a starting concentration of
-200~mM \mgcl, 216 waters are randomly replaced with \mg{} and 432 waters with \cl{}.
-The resulting simulation boxes are used in both the \mg{ 2025} HFE and micro simulations.
-Each system is energy minimized with the steepest--descents algorithm to remove
-bad contacts, followed by a 1~ns NPT equilibration at 250~K. Systems are then annealed
-by heating to 350~K and cooling in 10~K steps to the production temperature of 300~K,
-with each step lasting 155~ps.
+Simulation systems are prepared following the general procedure in
+Chapter~1~\cite{saunders:2024}. Each system contains 200 POPC lipids
+(100 per leaflet) and 60,000 waters. To achieve a starting concentration
+of 200~mM \mgcl, 216 waters are replaced with \mg{} and 432 with \cl{}.
+These configurations are used for both the \mg{2025} HFE and micro
+simulations.
 
 \subsection{Molecular Dynamics}
 
-I perform two 1~$\mu$s simulations of POPC bilayers with \mgcl{} using the \mg{ 2025}
-parameters: one with the water--\mg{} interaction term from the HFE model of Li
-\etal~\cite{merzhfe}, and one with the \mg{} micro model from Grotz
-\etal~\cite{grotz:2021:optimized,micro}. Lipid bonded and non-bonded interactions
-are described with the gromos43A1-S3 force field~\cite{chiu:2009}.
-
-Trajectory analysis is performed with a combination of GROMACS built--in tools,
-in--house code developed on the GROMACS API, and the MDAnalysis Python package~\cite{mdanalysis1,mdanalysis2}.
-
+Two 1~$\mu$s production simulations are performed using the \mg{2025}
+parameters: one with the water--\mg{} interaction term from the HFE
+model of Li \etal~\cite{merzhfe}, and one with the \mg{} micro model of
+Grotz \etal~\cite{grotz:2021:optimized,micro}. Lipid interactions are
+described with the gromos43A1-S3 force field~\cite{chiu:2009}.
+Trajectory analysis is carried out with GROMACS built--in tools,
+in--house code using the GROMACS API, and the MDAnalysis Python
+package~\cite{mdanalysis1,mdanalysis2}.
 
 \section{Results and Discussion}
 

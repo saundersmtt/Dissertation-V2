@@ -13,6 +13,11 @@ On Debian/Ubuntu systems you can install the requirements with:
 sudo apt-get install texlive-full latexmk
 ```
 
+Or on Macos:
+```bash
+homnebrew install texlive
+```
+
 ## Compiling
 
 The main document is `paper.tex`. To build the PDF once, run:

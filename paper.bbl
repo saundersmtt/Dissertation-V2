@@ -5,16 +5,6 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{nagle:2000}
-J.~F. Nagle, S.~Tristram-Nagle, Structure of lipid bilayers, Biochimica et
-  Biophysica Acta (BBA)-Reviews on Biomembranes 1469~(3) (2000) 159--195.
-
-\bibitem{fogarty:2015}
-J.~C. Fogarty, M.~Arjunwadkar, S.~A. Pandit, J.~Pan, Atomically detailed lipid
-  bilayer models for the interpretation of small angle neutron and x-ray
-  scattering data, Biochimica et Biophysica Acta (BBA)-Biomembranes 1848~(2)
-  (2015) 662--672.
-
 \bibitem{pabst:2007}
 G.~Pabst, A.~Hodzic, J.~{\v{S}}trancar, S.~Danner, M.~Rappolt, P.~Laggner,
   Rigidification of neutral lipid bilayers in the presence of salts,
@@ -291,12 +281,42 @@ V.~Wineman-Fisher, Y.~Al-Hamdani, P.~R. Nagy, A.~Tkatchenko, S.~Varma, Improved
   description of ligand polarization enhances transferability of ion--ligand
   interactions, The Journal of Chemical Physics 153~(9) (2020) 094115.
 
+\bibitem{nagle:2000}
+J.~F. Nagle, S.~Tristram-Nagle, Structure of lipid bilayers, Biochimica et
+  Biophysica Acta (BBA)-Reviews on Biomembranes 1469~(3) (2000) 159--195.
+
+\bibitem{fogarty:2015}
+J.~C. Fogarty, M.~Arjunwadkar, S.~A. Pandit, J.~Pan, Atomically detailed lipid
+  bilayer models for the interpretation of small angle neutron and x-ray
+  scattering data, Biochimica et Biophysica Acta (BBA)-Biomembranes 1848~(2)
+  (2015) 662--672.
+
 \bibitem{petrache:1997}
 H.~I. Petrache, S.~E. Feller, J.~F. Nagle,
   \href{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1184418/}{Determination of
   component volumes of lipid bilayers from simulations.}, Biophysical Journal
   72~(5) (1997) 2237--2242.
 \newline\urlprefix\url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1184418/}
+
+\bibitem{aaman:2003}
+K.~{\AA}man, E.~Lindahl, O.~Edholm, P.~H{\aa}kansson, P.-O. Westlund, Structure
+  and dynamics of interfacial water in an l $\alpha$ phase lipid bilayer from
+  molecular dynamics simulations, Biophysical journal 84~(1) (2003) 102--115.
+
+\bibitem{kruczek:2017:ether}
+J.~Kruczek, M.~Saunders, M.~Khosla, Y.~Tu, S.~A. Pandit, Molecular dynamics
+  simulations of ether-and ester-linked phospholipids, Biochimica et Biophysica
+  Acta (BBA)-Biomembranes 1859~(12) (2017) 2297--2307.
+
+\bibitem{egberts:1988}
+E.~Egberts, H.~Berendsen, Molecular dynamics simulation of a smectic liquid
+  crystal with atomic detail, The Journal of chemical physics 89~(6) (1988)
+  3718--3732.
+
+\bibitem{Douliez:1995}
+J.-P. Douliez, A.~Leonard, E.~J. Dufourc, Restatement of order parameters in
+  biomembranes: calculation of cc bond order parameters from cd quadrupolar
+  splittings., Biophysical journal 68~(5) (1995) 1727.
 
 \bibitem{joung:2008}
 I.~S. Joung, T.~E. Cheatham~III, Determination of alkali and halide monovalent
@@ -368,25 +388,10 @@ P.~Smirnov, Structure of the nearest environment of na+, k+, rb+, and cs+ ions
   in oxygen-containing solvents, Russian Journal of General Chemistry 90~(9)
   (2020) 1693--1702.
 
-\bibitem{egberts:1988}
-E.~Egberts, H.~Berendsen, Molecular dynamics simulation of a smectic liquid
-  crystal with atomic detail, The Journal of chemical physics 89~(6) (1988)
-  3718--3732.
-
-\bibitem{Douliez:1995}
-J.-P. Douliez, A.~Leonard, E.~J. Dufourc, Restatement of order parameters in
-  biomembranes: calculation of cc bond order parameters from cd quadrupolar
-  splittings., Biophysical journal 68~(5) (1995) 1727.
-
 \bibitem{varma:2008:JACS}
 S.~Varma, S.~B. Rempe, Structural transitions in ion coordination driven by
   changes in competition for ligand binding, Journal of the American Chemical
   Society 130~(46) (2008) 15405--15419.
-
-\bibitem{aaman:2003}
-K.~{\AA}man, E.~Lindahl, O.~Edholm, P.~H{\aa}kansson, P.-O. Westlund, Structure
-  and dynamics of interfacial water in an l $\alpha$ phase lipid bilayer from
-  molecular dynamics simulations, Biophysical journal 84~(1) (2003) 102--115.
 
 \bibitem{israelachvili:2011:intermol}
 J.~N. Israelachvili, Intermolecular and surface forces, Academic press, 2011.
@@ -508,11 +513,6 @@ R.~J. Gowers, M.~Linke, J.~Barnoud, T.~J.~E. Reddy, M.~N. Melo, S.~L. Seyler,
 O.~Alln{\'e}r, L.~Nilsson, A.~Villa, Magnesium ion--water coordination and
   exchange in biomolecular simulations, Journal of chemical theory and
   computation 8~(4) (2012) 1493--1502.
-
-\bibitem{kruczek:2017:ether}
-J.~Kruczek, M.~Saunders, M.~Khosla, Y.~Tu, S.~A. Pandit, Molecular dynamics
-  simulations of ether-and ester-linked phospholipids, Biochimica et Biophysica
-  Acta (BBA)-Biomembranes 1859~(12) (2017) 2297--2307.
 
 \bibitem{reddy:1989:dielectric}
 M.~R. Reddy, M.~Berkowitz, The dielectric constant of spc/e water, Chemical

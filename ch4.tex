@@ -54,25 +54,27 @@ Additionally, since the residence time of waters in the first shell of \mg~is
 of the order of a microsecond \cite{neely:1970,Palinkas:1982,bleuzen:1997}, 
 capturing statistics on water-lipid exchanges in the first shell of \mg~requires prohibitively long MD simulations. 
 
-Considering these issues, we previously chose to calibrate \mg-lipid Lennard-Jones (LJ) terms using 
+Considering these issues, we previously chose to calibrate \mg{}-lipid Lennard-Jones (LJ) terms using 
 benchmarked quantum mechanical (QM) target data clusters of small molecules representative of the
 ion binding sites on 1-palmitoyl-2-oleoyl-sn-glycero-phosphatidylcholine (POPC)~\cite{saunders:2022}. 
 Methyl acetate (MeAc) and diethyl phosphate (DEPh) were taken as small molecule representatives for lipid headgroups, 
-and we targeted the changes in energy and structure associated with replacing water molecules in \mg-water clusters with these smaller molecules.  
-Using this model we found that at about 100 mM concentration, \mg adsorbed into the headgroup region of POPC bilayer, 
+and we targeted the changes in energy and structure associated with replacing water molecules in \mg{}-water clusters with these smaller molecules.  
+Using this model we found that at about 100 mM concentration, \mg{} adsorbed into the headgroup region of POPC bilayer, 
 but without losing its inner-shell waters (steric binding mode). We also observed formation of ion double layer at the headgroup-water interface.
-However, \mg~adsorption had a negligible effect on POPC bilayer structure. We posited that since our model at 
+However, \mg{} adsorption had a negligible effect on POPC bilayer structure. We posited that since our model at 
 high salt did not affect bilayer structure, our model at low experimental salt concentration will also not affect POPC bilayer structure; making the result consistent with experiment. 
 We adopted this strategy because we showed that it worked well for modeling interactions of lipid bilayers with monovalent cations \cite{saunders:2022}. Prior to our development, all simulations, irrespective of the employed force field, reported that monovalent salts thickened POPC bilayers \cite{sachs:2004,melcr:2018,jurkiewicz:2012,kruczek:2017}. 
 In contrast, experiments reported insignificant changes in POPC lipid bilayer structure \cite{pabst:2007:rigidification,petrache:2006:swelling}. 
 The use of our new \na-lipid LJ terms resolved this discrepancy to a large extent \cite{saunders:2022}. 
 Recent developments in our lab, however, motivate us to explore a modified strategy for developing \mg-lipid LJ terms. 
-Our recent work of polarizable force fields for describing \mg-protein/nucleotide interactions \cite{julian:2023:mg} suggests that perhaps within the classical framework, a single set of force field parameters for \mg do not perform well at simultaneously reproducing 
+Our recent work of polarizable force fields for describing \mg-protein/nucleotide interactions \cite{julian:2023:mg} 
+suggests that, a single set of force field parameters for \mg{} do not perform well at simultaneously reproducing 
 energies of both fully coordinated (6-fold)
-and partially coordinated \mg~structures. 
+and partially coordinated \mg{} structures. 
 Furthermore, force field developed using 6-fold coordinated structures performed excellently at reproducing not only local interactions of 
-\mg~ions in clusters containing nucleotide phosphates but also condensed phase binding free energies of \mg~ions with nucleotides \cite{julian:2023:mg}. We have shown that this strategy also works for other cations \cite{JACS2025} 
-Fully coordinated 6-fold clusters of \mg~were not considered in the development of our previous \mg{} model~\cite{saunders:2024}, in which target data consisted of only partially coordinated structures of \mg.
+\mg{} ions in clusters containing nucleotide phosphates but also condensed phase binding free energies of \mg{} ions with nucleotides \cite{julian:2023:mg}. 
+We have shown that this strategy also works for other cations \cite{JACS2025} 
+Fully coordinated 6-fold clusters of \mg~were not considered in the development of our previous \mg{} model~\cite{saunders:2024}, in which target data consisted of only partially coordinated structures of \mg{}.
 
 Here we apply this new protocol to develop a new set of \mg{}-lipid LJ
 terms. Our target data consists exclusively of full 6-fold coordinated \mg~clusters with 
@@ -86,11 +88,11 @@ ion-water interaction parameter sets, parameters from Grotz \etal~\cite{grotz:20
 improve the first shell water residence times in comparison to experiments, and parameters from Li
 \etal{}\cite{merzhfe} which target experimental hydration free energies.
 
-In this way, we aim to test how changes to the \mg–water and \mg–lipid interaction models affect adsorption behavior and
+In this way, we aim to test how changes to the \mg{}-water and \mg{}-lipid interaction models affect adsorption behavior and
 the resulting perturbations to bilayer structure. Our goal is not to validate a specific force field parameterization scheme,
 but to identify which structural metrics are most sensitive to these parameter choices and to provide a framework for future
 comparisons with experimental results. 
-Essentially, in absence of appropriate experimental data, we have two competing models for describing \mg-lipid interactions
+Essentially, in absence of appropriate experimental data, we have two competing models for describing \mg{}-lipid interactions
 in MD simulations that point to different adsorption behavior.
 
 \section{Methods}
@@ -100,7 +102,7 @@ We perform a parameter search for the 7 pairs of Lennard-Jones (LJ) \sigmaij{} a
 cross-terms of \mg~with lipid headgroup oxygens, carbon, and phosphorus atoms (see Table \ref{tabch4:params}). 
 This search is performed using target 
 \mg~clusters containing water molecules and ligands that represent the major cation binding sites in phospholipid headgroups. 
-The clusters contain exactly 6 \mg~coordinators, representing a full first-shell coordination shell of \mg.
+The clusters contain exactly 6 \mg~coordinators, representing a full first-shell coordination shell of \mg{}.
 
 These clusters are geometry optimized following the general procedure
 described in Chapter~1, and substitution energies are computed as the
@@ -126,7 +128,7 @@ geometries for these clusters are reported in figure~\label{figch4:optres} and t
 
 Parameter optimizations were performed using the ParOpt software package developed by our group~\cite{fogarty:2014:paropt}. We used the Nelder-Mead optimizer to simultaneously optimize
 the 14 LJ cross terms for each atom type in our target clusters. Constraints are detailed in Table~\ref{tabch4:constrain}. 
-\begin{table}[h!]
+\begin{table}[H]
     \tiny
 \begin{tabularx}{\textwidth}{X|X|X|X}
 \hline
@@ -161,17 +163,17 @@ There are substantial differences between the \mg{ 2024} and \mg{ 2025} models, 
 
 The substitution energies before and after optimization are compared to target QM values in Table~\ref{tabch4:subenergies}. The geometries before and after optimization are compared to QM geometries in figure~\ref{figch4:optres}. 
 \begin{landscape}
-\centering
-\begin{figure}
+    \begin{figure}{H}
+    \centering
     \caption[Geometry of optimized clusters of small molecules]{Comparison between distances of \mg~atom from other atoms in clusters optimized using QM and MM.}
     \label{figch4:optres}
-    \includegraphics[height=\textheight]{Figure_S1.eps}
+    \includegraphics[height=0.7\textheight]{Figure_S1.eps}
 \end{figure}
 \end{landscape}
 We note substantial improvements in both substitution energies with a minimal loss of accuracy in geometries, 
 with parameter optimization reducing mean absolute error in $\Delta E_{sub}$ from 0.26 to 0.01. %, and reducing mean absolute error in distances of Mg from cluster atoms from XX to YY \AA.
-
-\begin{table}[h!]
+\begin{landscape}
+\begin{table}[H]
 \centering
 \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
 \hline
@@ -188,7 +190,7 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 \caption[Lennard-Jones cross-terms]{Lennard-Jones parameters for magnesium interactions: well depth $\epsilon_{ij}$ (kJ/mol) and distance parameter $\sigma_{ij}$ (nm), comparing the 2025 optimized model, the 2024 model, and the original LB-rules.}
 \label{tabch4:params}
 \end{table}
-
+\end{landscape}
 % \begin{table}[h!]
 % \centering
 % \begin{tabular}{lcccc}
@@ -211,7 +213,7 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 
 % Combined comparison: LB Rules vs 2024 vs 2025
 \begin{landscape}
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \sisetup{round-mode=places,round-precision=3,detect-all}
 \begin{tabular}{
@@ -274,6 +276,7 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
   Substitution energies are defined in equation \ref{equ_2}.}
   \label{tabch4:subenergies}
 \end{table}
+\end{landscape}
 % \begin{table}[h!tbp]
 % \centering
 % \sisetup{round-mode=places,round-precision=3,detect-all}
@@ -304,7 +307,8 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 % for MeOAc and DEPh clusters, including mixed six-fold water–ligand clusters.}
 % \label{tab:delta-sub-combined}
 % \end{table}
-\begin{table}[htbp]
+\begin{landscape}
+\begin{table}[h!tbp]
 \centering
 \sisetup{round-mode=places,round-precision=3,detect-all}
 \begin{tabular}{
@@ -363,8 +367,8 @@ parameters: one with the water--\mg{} interaction term from the HFE
 model of Li \etal~\cite{merzhfe}, and one with the \mg{} micro model of
 Grotz \etal~\cite{grotz:2021:optimized,micro}. Lipid interactions are
 described with the gromos43A1-S3 force field~\cite{chiu:2009}.
-Trajectory analysis is carried out with GROMACS built--in tools,
-in--house code using the GROMACS API, and the MDAnalysis Python
+Trajectory analysis is carried out with GROMACS built-in tools,
+in-house code using the GROMACS API, and the MDAnalysis Python
 package~\cite{mdanalysis1,mdanalysis2}.
 
 \section{Results and Discussion}
@@ -392,7 +396,7 @@ The histogram of $P_2$ is used to calculate the \emph{hydration boundary} of the
 region of negative ordering is fitted to an exponential function, and the length scale of the exponential is used to find the location where $P_2$ is considered to be effectively zero. 
 Lines to delimit these values are drawn on the plot in figure~\ref{figch4:h2order}, and these positions are noted for each bilayer
 in table~\ref{tabch4:struc}.
-\begin{table}
+\begin{table}[H]
 {\tiny
     \caption[Bilayer structural parameters]{Bilayer structural parameters. The bilayer hydration boundary is defined as the position away from the bilayer center beyond which solvent is isotropic, and denotes 
         bulk solvent from bound solvent. The number of adsorbed charges in each adsorption mode are within the hydration boundary of the system, and are further classified by the degree
@@ -521,18 +525,17 @@ and thus the volumes cannot be separated. This, along with the $V_{\text{CH3}}=v
 moiety in a lipid are used to compute \Vc. Finally, we compute the \al as the ratio $2\times{}V_c/2D_C$.
 
 \subsection{Acyl-Chain order parameters}
-Acyl-chain order parameters are computed using the method outlined by Douliez \etal~\cite{Douliez:1995} (see  figure~\label{fig:acylorder}). We note that
-the 2024 \mg{} parameters do not significantly increase the acyl-chain ordering from that of the system simulated without salt.The 2025 \mg{} parameters have a much greater effect on the ordering.
-\begin{figure}[h!]
+Acyl-chain order parameters are computed using the method outlined by Douliez \etal~\cite{Douliez:1995} (see  figure~\label{figch4:acylorder}) and described at length in chapter 1 of this dissertation. It is noted 
+that the 2024 \mg{} parameters do not significantly increase the acyl-chain ordering from that of the system simulated without salt.The 2025 \mg{} parameters have a much greater effect on the ordering.
+\begin{figure}[H]
    \caption[Acyl-Chain order parameters]{Acyl-chain CD Order parameters. We note increased ordering in the
    simulations using the 2025 model parameters, while the 2024 parameters result in
 bilayers that remain very similar to the simulation without salt.}
-   \label{fig:acylorder}
+   \label{figch4:acylorder}
    \includegraphics{op.eps}
 \end{figure}
-We can compute the lipid bilayer thickness using the acyl-chain order parameter by using the
-"first-order mean-torque model" of Petrache \etal~\cite{petrache:2000:nmrarea,nagle:2000}.
-This is done by taking the average S\textsubscript{CD} from the experimental plateau region -- the set of carbons where the experimental S\textsubscript{CD} does not change
+We also use this information to compute an additional value for \al{} and \dc{} via the ``first-order mean-torque model'' of Petrache \etal~\cite{petrache:2000:nmrarea,nagle:2000}.
+This is done by taking the average S\textsubscript{CD} from the experimental plateau region --- the set of carbons where the experimental S\textsubscript{CD} does not change
 detectably~\cite{nagle:2000,nagle:1993:nmrarea}. This can be used to compute the average segmental projection onto the bilayer normal $\langle x \rangle$:
 \begin{equation}
    \langle x \rangle = 1 - \frac{1}{\varepsilon_1}, \varepsilon_1 = \frac{2}{1 - \sqrt{\frac{-8\big<S_{CD}\big> - 1}{3}}}\text{,}
@@ -551,25 +554,19 @@ This is then used to compute both the area per lipid and the thickness of the ac
    \langle A \rangle = q\frac{4V_{\text{CH}_2}}{D_M}\text{,}
 \end{equation}
 Using $V_{CH_2}$ computed from the number densities, and the bond length $D_M=2.54$.
-We approximate the $V_{CH2}$ in two ways from the $v_{CH2\&CH1}$ -- first by directly using $V_{CH2}=v_{CH2\&CH1}$, and
+One can approximate the $V_{CH2}$ in two ways from the $v_{CH2\&CH1}$ -- first by directly using $V_{CH2}=v_{CH2\&CH1}$, and
 second by using the common approximation of $\frac{V_{CH2}=v_{CH3}}{2}$~\cite{nagle:2000}.
-These values are listed in table \ref{tab:opstruc}. We can also compute the acyl chain thickness:
+With all of this together, the acyl chain thickness is 
 \begin{equation}
    D_C = \frac{n_cD_M}{2q}\text{,}
 \end{equation}
-with $n_c=16$ as the number of carbons in the Sn-1 chain.
-These values can be seen in table~\ref{tab:opstruc}.
-%This is considered to be a more reliable measure of the lipid bilayer thickness than the other measures such as the peak-to-peak
-%distance from the electron densities \dhh{} or
-%the Gibbs-Luzzati thickness \db{},
-%where both the water structure and the headgroup tilt have significant influence over the result~\cite{nagle:2000}. Also, computing the \dc{} in this way
-%is independent of the number densities as the $V_{CH2}$ is computed using densities, as well as the acyl-chain probability density used for
-%the gap--integral. \TODO I DONT CARE FOR THIS PART!!! WHY LEAVE TODOS????
-\begin{table}
+with $n_c=16$ as the number of carbons in the Sn-1 chain of POPC.
+These values can be seen in table~\ref{tabch4:opstruc}.
+\begin{table}[H]
 {\tiny
    \caption[\dc{} and \al{} from acyl chain ordering]{Area factor, acyl chain region thickness and area per lipid. These values are computed via the method described in Petrache \etal~\cite{petrache:2000:nmrarea}. This provides us with another
    measure of the acyl chain thickness. We note that the thickening of the lipid bilayer remains consistent with the acyl chain thickness \dc{} computed from the number densities.}
-   \label{tab:opstruc}
+   \label{tabch4:opstruc}
    \begin{tabularx}{\textwidth}{X|X|X|X|X|X|X|X}
    \multicolumn{4}{l}{ }                       & \multicolumn{2}{l}{2024} & \multicolumn{2}{l}{2025}\\\hline
                                                & Without salt             & \na                              & \li                & \mg-HFE            & \mg-Micro          & \mg-HFE            & \mg-Micro \\\hline
@@ -592,7 +589,7 @@ this trend is not followed necessarily in the \dhh{}, which is not a reliable me
 and salt in the headgroup region.
 Together, we note that the systems with the greatest number of charges in the Langmuir-type (non-steric) modes correlate with an increase the 
 bilayer thickness (figure~\ref{figch4:chargeperlipid})
-\begin{figure}[h!]
+\begin{figure}[H]
     \caption[Adsorbed charge per adsorption modality]{Adsorbed charge per adsorption modality per lipid as a function of the lipid bilayer hydrocarbon thickness \dc{}. We compare both our results from this work, and our previous work with monovalent
         ions~\cite{saunders:2024}. There is a clear trend in the total number of adsorbed
         charges (i.e. any charges not in bulk solvent), where more charges results in a greater \dc{}. However, if one examines the sterically adsorbed charges, the trend is not as strong. This seems to indicate

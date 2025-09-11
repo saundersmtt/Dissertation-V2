@@ -5,6 +5,99 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{nagle:2000}
+J.~F. Nagle, S.~Tristram-Nagle, Structure of lipid bilayers, Biochimica et
+  Biophysica Acta (BBA)-Reviews on Biomembranes 1469~(3) (2000) 159--195.
+
+\bibitem{fogarty:2015}
+J.~C. Fogarty, M.~Arjunwadkar, S.~A. Pandit, J.~Pan, Atomically detailed lipid
+  bilayer models for the interpretation of small angle neutron and x-ray
+  scattering data, Biochimica et Biophysica Acta (BBA)-Biomembranes 1848~(2)
+  (2015) 662--672.
+
+\bibitem{pabst:2007}
+G.~Pabst, A.~Hodzic, J.~{\v{S}}trancar, S.~Danner, M.~Rappolt, P.~Laggner,
+  Rigidification of neutral lipid bilayers in the presence of salts,
+  Biophysical journal 93~(8) (2007) 2688--2696.
+
+\bibitem{petrache:2006:swelling}
+H.~I. Petrache, S.~Tristram-Nagle, D.~Harries, N.~Ku{\v{c}}erka, J.~F. Nagle,
+  V.~A. Parsegian, Swelling of phospholipids by monovalent salt, Journal of
+  lipid research 47~(2) (2006) 302--309.
+
+\bibitem{uhrikova:2008}
+D.~Uhr{\'\i}kov{\'a}, N.~Ku{\v{c}}erka, J.~Teixeira, V.~Gordeliy,
+  P.~Balgav{\`y}, Structural changes in dipalmitoylphosphatidylcholine bilayer
+  promoted by ca2+ ions: a small-angle neutron scattering study, Chemistry and
+  physics of lipids 155~(2) (2008) 80--89.
+
+\bibitem{kurakin:2021:effect}
+S.~Kurakin, E.~Ermakova, A.~Ivankov, S.~Smerdova, N.~Ku{\v{c}}erka, The effect
+  of divalent ions on the structure of bilayers in the
+  dimyristoylphosphatidylcholine vesicles, Journal of Surface Investigation:
+  X-ray, Synchrotron and Neutron Techniques 15 (2021) 211--220.
+
+\bibitem{akutsu:1981}
+H.~Akutsu, J.~Seelig, Interaction of metal ions with phosphatidylcholine
+  bilayer membranes, Biochemistry 20~(26) (1981) 7366--7373.
+
+\bibitem{seelig:1987}
+J.~Seelig, P.~M. MacDonald, P.~G. Scherer, Phospholipid head groups as sensors
+  of electric charge in membranes, Biochemistry 26~(24) (1987) 7535--7541.
+
+\bibitem{ferber:2011:direct}
+U.~M. Ferber, G.~Kaggwa, S.~P. Jarvis, Direct imaging of salt effects on lipid
+  bilayer ordering at sub-molecular resolution, European Biophysics Journal
+  40~(3) (2011) 329--338.
+
+\bibitem{Bockmann:2003}
+R.~A. B{\"o}ckmann, A.~Hac, T.~Heimburg, H.~Grubm{\"u}ller, Effect of sodium
+  chloride on a lipid bilayer, Biophysical Journal 85~(3) (2003) 1647--1655.
+
+\bibitem{cordomi:2008}
+A.~Cordomi, O.~Edholm, J.~J. Perez, Effect of ions on a dipalmitoyl
+  phosphatidylcholine bilayer. a molecular dynamics simulation study, The
+  Journal of Physical Chemistry B 112~(5) (2008) 1397--1408.
+
+\bibitem{gurtovenko:2008}
+A.~A. Gurtovenko, I.~Vattulainen, Effect of nacl and kcl on phosphatidylcholine
+  and phosphatidylethanolamine lipid membranes: insight from atomic-scale
+  simulations for understanding salt-induced effects in the plasma membrane,
+  The Journal of Physical Chemistry B 112~(7) (2008) 1953--1962.
+
+\bibitem{Cordomi:2009}
+A.~Cordomi, O.~Edholm, J.~J. Perez, Effect of force field parameters on sodium
+  and potassium ion binding to dipalmitoyl phosphatidylcholine bilayers,
+  Journal of chemical theory and computation 5~(8) (2009) 2125--2134.
+
+\bibitem{jurkiewicz:2012}
+P.~Jurkiewicz, L.~Cwiklik, A.~Vojt{\'\i}{\v{s}}kov{\'a}, P.~Jungwirth, M.~Hof,
+  Structure, dynamics, and hydration of popc/pops bilayers suspended in nacl,
+  kcl, and cscl solutions, Biochimica et Biophysica Acta (BBA)-Biomembranes
+  1818~(3) (2012) 609--616.
+
+\bibitem{pandit:2008:simulationtextbook}
+S.~A. Pandit, H.~L. Scott, Simulations and models of lipid bilayers, in: Soft
+  Matter: Lipid Bilayers and Red Blood Cells, Vol.~4, Wiley Online Library,
+  2008, Ch.~1, pp. 1--82.
+
+\bibitem{kruczek:2017}
+J.~Kruczek, S.-W. Chiu, E.~Jakobsson, S.~A. Pandit,
+  \href{http://dx.doi.org/10.1021/acs.langmuir.6b04166}{Effects of lithium and
+  other monovalent ions on palmitoyl oleoyl phosphatidylcholine bilayer},
+  Langmuir 33~(4) (2017) 1105--1115.
+\newline\urlprefix\url{http://dx.doi.org/10.1021/acs.langmuir.6b04166}
+
+\bibitem{kruczek:2019}
+J.~Kruczek, S.-W. Chiu, S.~Varma, E.~Jakobsson, S.~A. Pandit, Interactions of
+  monovalent and divalent cations at palmitoyl-oleoyl-phosphatidylcholine
+  interface, Langmuir 35~(32) (2019) 10522--10532.
+
+\bibitem{saunders:2019}
+M.~Saunders, M.~Steele, W.~Lavigne, S.~Varma, S.~A. Pandit, Interaction of salt
+  with ether-and ester-linked phospholipid bilayers, Biochimica et Biophysica
+  Acta (BBA)-Biomembranes 1861~(5) (2019) 907--915.
+
 \bibitem{gromacsmanual}
 M.~Abraham, D.~van~der Spoel, E.~Lindahl, B.~Hess, the gromacs development team
   gromacs user manual version 5.1. 2; 2016, MJ Abraham, T. Murtola, R. Schulz,
@@ -174,18 +267,6 @@ V.~Blum, R.~Gehrke, F.~Hanke, P.~Havu, V.~Havu, X.~Ren, K.~Reuter,
   M.~Scheffler, Ab initio molecular simulations with numeric atom-centered
   orbitals, Computer Physics Communications 180~(11) (2009) 2175--2196.
 
-\bibitem{kruczek:2017}
-J.~Kruczek, S.-W. Chiu, E.~Jakobsson, S.~A. Pandit,
-  \href{http://dx.doi.org/10.1021/acs.langmuir.6b04166}{Effects of lithium and
-  other monovalent ions on palmitoyl oleoyl phosphatidylcholine bilayer},
-  Langmuir 33~(4) (2017) 1105--1115.
-\newline\urlprefix\url{http://dx.doi.org/10.1021/acs.langmuir.6b04166}
-
-\bibitem{saunders:2019}
-M.~Saunders, M.~Steele, W.~Lavigne, S.~Varma, S.~A. Pandit, Interaction of salt
-  with ether-and ester-linked phospholipid bilayers, Biochimica et Biophysica
-  Acta (BBA)-Biomembranes 1861~(5) (2019) 907--915.
-
 \bibitem{perdew:1996:generalized}
 J.~P. Perdew, K.~Burke, M.~Ernzerhof, Generalized gradient approximation made
   simple, Physical review letters 77~(18) (1996) 3865.
@@ -210,74 +291,12 @@ V.~Wineman-Fisher, Y.~Al-Hamdani, P.~R. Nagy, A.~Tkatchenko, S.~Varma, Improved
   description of ligand polarization enhances transferability of ion--ligand
   interactions, The Journal of Chemical Physics 153~(9) (2020) 094115.
 
-\bibitem{nagle:2000}
-J.~F. Nagle, S.~Tristram-Nagle, Structure of lipid bilayers, Biochimica et
-  Biophysica Acta (BBA)-Reviews on Biomembranes 1469~(3) (2000) 159--195.
-
-\bibitem{fogarty:2015}
-J.~C. Fogarty, M.~Arjunwadkar, S.~A. Pandit, J.~Pan, Atomically detailed lipid
-  bilayer models for the interpretation of small angle neutron and x-ray
-  scattering data, Biochimica et Biophysica Acta (BBA)-Biomembranes 1848~(2)
-  (2015) 662--672.
-
 \bibitem{petrache:1997}
 H.~I. Petrache, S.~E. Feller, J.~F. Nagle,
   \href{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1184418/}{Determination of
   component volumes of lipid bilayers from simulations.}, Biophysical Journal
   72~(5) (1997) 2237--2242.
 \newline\urlprefix\url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1184418/}
-
-\bibitem{pandit:2008:simulationtextbook}
-S.~A. Pandit, H.~L. Scott, Simulations and models of lipid bilayers, in: Soft
-  Matter: Lipid Bilayers and Red Blood Cells, Vol.~4, Wiley Online Library,
-  2008, Ch.~1, pp. 1--82.
-
-\bibitem{kruczek:2019}
-J.~Kruczek, S.-W. Chiu, S.~Varma, E.~Jakobsson, S.~A. Pandit, Interactions of
-  monovalent and divalent cations at palmitoyl-oleoyl-phosphatidylcholine
-  interface, Langmuir 35~(32) (2019) 10522--10532.
-
-\bibitem{Bockmann:2003}
-R.~A. B{\"o}ckmann, A.~Hac, T.~Heimburg, H.~Grubm{\"u}ller, Effect of sodium
-  chloride on a lipid bilayer, Biophysical Journal 85~(3) (2003) 1647--1655.
-
-\bibitem{cordomi:2008}
-A.~Cordomi, O.~Edholm, J.~J. Perez, Effect of ions on a dipalmitoyl
-  phosphatidylcholine bilayer. a molecular dynamics simulation study, The
-  Journal of Physical Chemistry B 112~(5) (2008) 1397--1408.
-
-\bibitem{gurtovenko:2008}
-A.~A. Gurtovenko, I.~Vattulainen, Effect of nacl and kcl on phosphatidylcholine
-  and phosphatidylethanolamine lipid membranes: insight from atomic-scale
-  simulations for understanding salt-induced effects in the plasma membrane,
-  The Journal of Physical Chemistry B 112~(7) (2008) 1953--1962.
-
-\bibitem{Cordomi:2009}
-A.~Cordomi, O.~Edholm, J.~J. Perez, Effect of force field parameters on sodium
-  and potassium ion binding to dipalmitoyl phosphatidylcholine bilayers,
-  Journal of chemical theory and computation 5~(8) (2009) 2125--2134.
-
-\bibitem{jurkiewicz:2012}
-P.~Jurkiewicz, L.~Cwiklik, A.~Vojt{\'\i}{\v{s}}kov{\'a}, P.~Jungwirth, M.~Hof,
-  Structure, dynamics, and hydration of popc/pops bilayers suspended in nacl,
-  kcl, and cscl solutions, Biochimica et Biophysica Acta (BBA)-Biomembranes
-  1818~(3) (2012) 609--616.
-
-\bibitem{pabst:2007}
-G.~Pabst, A.~Hodzic, J.~{\v{S}}trancar, S.~Danner, M.~Rappolt, P.~Laggner,
-  Rigidification of neutral lipid bilayers in the presence of salts,
-  Biophysical journal 93~(8) (2007) 2688--2696.
-
-\bibitem{petrache:2006:swelling}
-H.~I. Petrache, S.~Tristram-Nagle, D.~Harries, N.~Ku{\v{c}}erka, J.~F. Nagle,
-  V.~A. Parsegian, Swelling of phospholipids by monovalent salt, Journal of
-  lipid research 47~(2) (2006) 302--309.
-
-\bibitem{uhrikova:2008}
-D.~Uhr{\'\i}kov{\'a}, N.~Ku{\v{c}}erka, J.~Teixeira, V.~Gordeliy,
-  P.~Balgav{\`y}, Structural changes in dipalmitoylphosphatidylcholine bilayer
-  promoted by ca2+ ions: a small-angle neutron scattering study, Chemistry and
-  physics of lipids 155~(2) (2008) 80--89.
 
 \bibitem{joung:2008}
 I.~S. Joung, T.~E. Cheatham~III, Determination of alkali and halide monovalent
@@ -504,12 +523,6 @@ S.~Kurakin, O.~Ivankov, V.~Skoi, A.~Kuklin, D.~Uhr{\'\i}kov{\'a},
   N.~Ku{\v{c}}erka, Cations do not alter the membrane structure of popc—a
   lipid with an intermediate area, Frontiers in Molecular Biosciences 9 (2022)
   926591.
-
-\bibitem{kurakin:2021:effect}
-S.~Kurakin, E.~Ermakova, A.~Ivankov, S.~Smerdova, N.~Ku{\v{c}}erka, The effect
-  of divalent ions on the structure of bilayers in the
-  dimyristoylphosphatidylcholine vesicles, Journal of Surface Investigation:
-  X-ray, Synchrotron and Neutron Techniques 15 (2021) 211--220.
 
 \bibitem{romani:1992:regulation}
 A.~Romani, A.~Scarpa, Regulation of cell magnesium, Archives of biochemistry

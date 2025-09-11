@@ -7,13 +7,69 @@ adapt to the environment around them.
 Understanding the way that individual lipid species contribute to the structure of a lipid bilayer is critical to understand
 why a cell might choose one lipid or another in their cell membrane. Additionally, because these lipids are exposed to complex
 mixtures of ions on either side of the membrane, the interactions with ions in solution cannot be ignored when discussing the bilayer structure. 
-Experimentally observed ion behavior at an interface in solution has been explained using a mean-field model nearly 100 years ago~\cite{israelachvilli:2011:intermol}.
+Experimentally observed ion behavior at an interface in solution has been explained using a mean-field model~\cite{israelachvilli:2011:intermol}.
 However, this ignores specific chemical interactions between lipid molecules and the ions in the solvent, that are critical for understanding
 the effect of changing headgroup species in a membrane. 
 Computational models can enable researchers to observe the specific ion-lipid interactions are critical for understanding of 
 why cells might choose certain lipids to manipulate their membrane structure under varied ion mixtures in their environment. Furthermore, this 
 changing membrane structure also affects the behavior of membrane protiens embedded in the bilayer. Thus, this manipulation of the lipid mixture
 presents itself as an important regulatory mechanism for cells.
+\subsection{Effects of ions on lipid bilayer structure}
+The effects of dissolved salts on bilayers has been studied with varied methodologies. 
+One of the more commonly applied methods of study
+is small-angle x-ray scattering (SAXS) and neutron scattering (SANS). 
+Lipid bilayers are smectic crystals, and thus give scattering
+patterns that look like concentric rings in reciprocal space -- these circles are the bilayer form-factor~\cite{nagle:2000}. This form-factor
+is the reciprocal-space structure of the bilayer. 
+However, a direct Fourier inversion cannot be performed due to the loss of phase information.
+In order to produce the appropriate density distribution, one can approximate the number density of bilayer parts as gaussian functions, and 
+compute the appropriate scattering density from that~\cite{nagle:2000,fogarty:2015}. This can then be transformed via a cosine transform
+into a form-factor. The gaussians are then adjusted
+until the resulting continuous form-factor fits the data from the experiment~\cite{nagle:2000,fogarty:2015}.
+
+SAXS and SANS experiments to study lipid bilayers in the presence of dissolved salt have reported
+largely that salts do not have a significant affect on zwitterionic lipid bilayer 
+structure~\cite{pabst:2007,petrache:2006:swelling,uhrikova:2008,kurakin:2021:effect}.
+Petrache \etal{} observed that with multilamellar vesicles of 1,2-dilauroyl-sn-glycero-3-sn-glycero-phosphatidylcholine 
+as well as other lipids in KCl and BrCl salt solutions, 
+and reported that while small changes can be seen in the
+X-ray scattering form-factor due to the 
+salts, 
+the fitted electron density profiles are essentially identical for
+systems with and without 
+salt~\cite{petrache:2006:swelling}. 
+Similarly, Pabst \etal{} found no significant change in bilayer structure 
+for POPC bilayers in NaCl salt at or below 1 M concentration~\cite{pabst:2007}.
+Furthermore, Uhrikova \etal{} reported small structural changes using small angle neutron scattering
+(SANS) experiments on 1,2-dipalmitoyl-sn-glycero-3-phosphatidylcholine 
+vesicles interacting with CaCl$_{2}$~\cite{uhrikova:2008}. 
+Taken together, these results point to a general discrepancy between structural data 
+from MD simulations and scattering experiments.
+Kurakin \etal{} reported that in bilayers of POPC, divalent cations such as \mg and Ca\textsuperscript{2+} also cause
+no major alteration in lipid bilayer structure at biologically relevant concentrations of \mg~\cite{kurakin:2021:effect}.
+
+While SAXS and SANS methods do not see a change in the overall structure of lipid bilayers methods like NMR of deuterated headgroup carbons 
+indicate changes in the headgroup tilt angle of neutral lipids in salt solutions, suggesting some interaction~\cite{akutsu:1981,seelig:1987}. 
+This would indicate that there should be ion binding or adsorption to the bilayer interface, that is not visible in the SAXS or SANS form-factor but 
+could be observed through other methods. Additionally, AFM measurements can observe some changes in the organization of lipids in a 
+gel phase bilayer in the presence of salts, again indicating some interaction 
+and adsorption while the area-per-lipid of the bilayer remains largely unchanged~\cite{ferber:2011:direct}.
+
+Molecular simulations can gather atomistic detail of systems, and are often useful for systems like lipid bilayers. Simulations of bilayers
+in salt using many different simulation models 
+have reported that there is significant ion binding to the lipid bilayer, and subsequent 
+thickening of the lipid bilayer when compared to the structure 
+of a bilayer in pure 
+water~\cite{Bockmann:2003,cordomi:2008,gurtovenko:2008,Cordomi:2009,jurkiewicz:2012,pandit:2008:simulationtextbook,kruczek:2017,kruczek:2019,saunders:2019}.
+This persistent discrepancy between the large-scale structural changes predicted by 
+simulations and the subtle rearrangements observed experimentally highlights the need for improved 
+ion–lipid interaction models that better capture experimental behavior. 
+In the following chapters, this problem is addressed through the development of a generalizable 
+method for selecting molecular simulation parameters to reproduce target experimental data, and through 
+the application of this method to refine lipid–ion interaction models across a range of salt solutions. 
+The remainder of this introduction outlines the simulation and analysis methods employed throughout this work, 
+while the subsequent chapters present the specific results obtained.
+
 
 \section{Molecular Simulations}
 \subsection{Classical Molecular Dynamics}
@@ -148,16 +204,6 @@ chapters.
 
 \section{Comparing Molecular Simulations with Experimental Results}
 \subsection{SAXS (and SANS) -- and other properties obtained from density distributions}
-Systems of crystals are often studied using diffraction or scattering experiments. 
-In the case of lipid bilayers, we often use Small-Angle scattering of x-rays (SAXS) or neutrons (SANS) 
-to study the bilayer structure. Lipid bilayers are smectic crystals, and thus give scattering
-patterns that look like concentric circles -- these circles are the bilayer form-factor~\cite{nagle:2000}. This form-factor
-is the reciprocal-space structure of the bilayer, but phase information of each lobe is lost. 
-Thus, a simple reverse-transformation cannot be perfomed.
-In order to produce the appropriate density distribution, one can approximate the number density of bilayer parts as gaussian functions, and 
-compute the appropriate scattering density from that~\cite{nagle:2000,fogarty:2015}. This can then be transformed via a cosine transform
-into a form-factor. The gaussians are then adjusted
-until the resulting continuous form-factor fits the data from the experiment~\cite{nagle:2000,fogarty:2015}.
 In simulations, we can compute the number density histograms of the system components
 directly from the trajectories, and thus the electron densities directly. Once we have the electron density of our system
 per nanosecond, we determine the lipid bilayer centerpoint by locating the minimum at the center of the 
@@ -166,12 +212,20 @@ We subtract the bulk solvent value of the electron density from the average hist
 to obtain the bilayer SAXS form-factor. This can be compared with the experimental data directly.
 We also use the electron density to directly obtain the peak-to-peak distance of the bilayer, \dhh{}, as one measure
 of the bilayer thickness.
-\subsection{Number density histograms}
+\subsection{Obtaining \db{} and \dc{}}
 The number density histograms are also used to compute the various bilayer thicknesses via probability densities
-of the various system components. We compute 
+of the various system components. We compute the bilayer thickness \db{} and \dc{} by compiuting probability densities
+for the solvent, and the lipid acyl chains respectively. We determine the Gibbs' dividing surface of these by finding the point in the interfacial region
+where the area above the histogram is equal to below -- the distance from this point to the bilayer center is used as the respective bilayer thickness.
+These measures are visualized in figure~\ref{figch1:thicknesses}.
+\begin{figure}[h!tb]
+    \caption{ }
+    \label{figch1:thicknesses}
+    \includegraphics{Probabilitydens.eps}
+\end{figure}
 \subsection{Lipid component volumes}
 Phospholipid headgroup and chain occupied volumes are computed using the method of Petrache \etal{} for computing the
-volume of immiscible liquids~\cite{petrache:1997}.
+volume of immiscible liquids~\cite{petrache:1997} using the number density histograms of the headgroups, acyl-chains, and solvent.
 In the work outlined in this dissertation, we identify lipid chains are as starting 
 at the first carbon attached to the lipid chain carbonyl oxygen, including the oxygen.
 The atom groups not part of the lipid

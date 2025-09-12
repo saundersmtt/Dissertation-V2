@@ -1,25 +1,26 @@
-\section{Phospholipid bilayers}
-Phospholipid bilayers are the primary component of the major delimiting boundary between cells and their environment.
-These membranes are not static walls so much as liquid-crystalline, rapidly exploring their conformational
-space and adjusting to the external and internal cellular environment. Cells, through the 
-diversity of chemistry of headgroups and acyl-chain selections, tailor the dynamic structure of their membrane to further
-adapt to the environment around them. 
-Understanding the way that individual lipid species contribute to the structure of a lipid bilayer is critical to understand
-why a cell might choose one lipid or another in their cell membrane. Additionally, because these lipids are exposed to complex
-mixtures of ions on either side of the membrane, the interactions with ions in solution cannot be ignored when discussing the bilayer structure. 
-Experimentally observed ion behavior at an interface in solution has been explained using a mean-field model~\cite{israelachvilli:2011:intermol}.
+\section{Phospholipid Bilayers}
+Phospholipid bilayers are the primary boundary between cells and their environment. These membranes are not static walls but liquid-crystalline, rapidly exploring their 
+conformational space and adjusting to both internal and external conditions. Membranes are constructed from a diversity of different phospholipid species, 
+proteins, and lipid-like molecules. Through all of these molecules, membranes 
+govern the flow of material into and out of cells as well as interact with the environment.
+
+Cell membranes, and thus phospholipids, are exposed to complex
+mixtures of ions inside and outside of cells.
+Thus the interfacial region of cell membranes is a complicated mixture of organized water, signalling molecules, and dissolved salts. 
+This mixture substantially influences membrane structure through direct ion–lipid binding, structured hydration layers, and electrostatics~\cite{pandit:2003:dppc:na,Berkowitz:2006}.
+Experimentally observed ion behavior at an interface in solution has been described using a mean-field model~\cite{israelachvili:2011:intermol}.
 However, this ignores specific chemical interactions between lipid molecules and the ions in the solvent, that are critical for understanding
 the effect of changing headgroup species in a membrane. 
 Computational models can enable researchers to observe the specific ion-lipid interactions are critical for understanding of 
 why cells might choose certain lipids to manipulate their membrane structure under varied ion mixtures in their environment. Furthermore, this 
-changing membrane structure also affects the behavior of membrane protiens embedded in the bilayer. Thus, this manipulation of the lipid mixture
+changing membrane structure also affects the behavior of membrane proteins embedded in the bilayer. Thus, this manipulation of the lipid mixture
 presents itself as an important regulatory mechanism for cells.
 \subsection{Effects of ions on lipid bilayer structure}
 The effects of dissolved salts on bilayers has been studied with varied methodologies. 
 One of the more commonly applied methods of study
 is small-angle x-ray scattering (SAXS) and neutron scattering (SANS). 
-Several studies of this kind havereported
-largely that salts do not have a significant affect on zwitterionic lipid bilayer 
+Several studies of this kind have reported
+largely that salts do not have a significant effect on zwitterionic lipid bilayer 
 structure~\cite{pabst:2007,petrache:2006:swelling,uhrikova:2008,kurakin:2021:effect}.
 Petrache \etal{} observed that with multilamellar vesicles of 1,2-dilauroyl-sn-glycero-3-sn-glycero-phosphatidylcholine 
 as well as other lipids in KCl and BrCl salt solutions, 
@@ -37,7 +38,7 @@ vesicles interacting with CaCl$_{2}$~\cite{uhrikova:2008}.
 Taken together, these results point to a general discrepancy between structural data 
 from MD simulations and scattering experiments.
 Kurakin \etal{} reported that in bilayers of POPC, divalent cations such as \mg{} and Ca\textsuperscript{2+} also cause
-no major alteration in lipid bilayer structure at biologically relevant concentrations of \mg~\cite{kurakin:2021:effect}.
+no major alteration in bilayer structure at biologically relevant concentrations of \mg~\cite{kurakin:2021:effect}.
 
 While SAXS and SANS methods do not see a change in the overall structure of lipid bilayers methods like NMR of deuterated headgroup carbons 
 indicate changes in the headgroup tilt angle of neutral lipids in salt solutions, suggesting some interaction~\cite{akutsu:1981,seelig:1987}. 
@@ -46,8 +47,8 @@ could be observed through other methods. Additionally, AFM measurements can obse
 gel phase bilayer in the presence of salts, again indicating some interaction 
 and adsorption while the area-per-lipid of the bilayer remains largely unchanged~\cite{ferber:2011:direct}.
 
-Molecular simulations can gather atomistic detail of systems, and are often useful for systems like lipid bilayers. Simulations of bilayers
-in salt using many different simulation models 
+Molecular simulations can gather atomistic detail of systems, and are often useful for systems like lipid bilayers~\cite{berkowitz:2019}. Simulations of bilayers
+in salt using many simulation models 
 have reported that there is significant ion binding to the lipid bilayer, and subsequent 
 thickening of the lipid bilayer when compared to the structure 
 of a bilayer in pure 
@@ -96,7 +97,7 @@ The energy of the new configuration
 can be computed, and the simulation continues. Thus, the careful development and improvement of a force-field is critical to 
 reproduce valid results that can help us understand what is seen in experiments.
 
-\subsection{Mixing rules, and NB-fix}
+\subsection{Mixing Rules, and NB-fix}
 Focusing in particular on the non-bonded terms of the hamiltonian, and specifically the Lennard-Jones (LJ) function, we note that there are two
 free parameters \sigmaij{} and \epsilonij{} between a particular pair of particles $i$ and $j$:
 \begin{equation}
@@ -112,7 +113,7 @@ model the interaction radii and energy well-depth for interacting species~\cite{
 The Lorentz rule for computing the \sigmaij{} is simply the arithmetic mean of the self terms from the two species, and 
 the Berthelot rule for computing the \epsilonij{} is the geometric mean of the self terms.
 Modern works have often reported that these mixing rules fail
-or behave unpredicatbly for more complicated species than the noble gases~\cite{fyta:2012,boda:2008:effects},
+or behave unpredictably for more complicated species than the noble gases~\cite{fyta:2012,boda:2008:effects},
 and abandonment of the mixing rules for specifically selected cross-terms can be beneficial to improving
 force-fields~\cite{baker:2010:accurate,yoo:2012:improved,fyta:2012:ionic,mamatkulov:2013:force,venable:2013,
 savelyev:2014:balancing,li:2015:representation,savelyev:2015:competition,jing:2017:study,reif:2017,wineman:2019}. This 
@@ -121,7 +122,7 @@ in order to improve the reproduction of some experimental result.
 In this dissertation, I expand on the idea of a NB-fix method to improve the modeling of the interactions of ions and phospholipid species.
 However, the method proposed and characterize is general, and can be applied to other chemically diverse systems of interest.
 
-\subsubsection{MD methods utilized in this dissertation}
+\subsubsection{MD Methods Utilized in this Dissertation}
 In the following dissertation, unless otherwise specified, I perform all molecular dynamics simulations with the GROMACS software 
 package~\cite{abraham:2015,pall:2014,van:2005,lindahl:2001,berendsen:1995,gromacs}.
 I use the SPC/E model for all waters~\cite{spce}, and I describe lipid interactions
@@ -136,7 +137,7 @@ using a real-space cutoff of 1.6~nm and reciprocal grids of either
 $56 \times 56 \times 224$ or $52 \times 52 \times 240$ cells,
 together with 4th order B-spline interpolation.
 Van der Waals interactions are calculated with a single cutoff of 1.6~nm.
-\subsubsection{Simulation system construction}
+\subsubsection{Simulation System Construction}
 All simulations systems unless otherwise noted are constructed by first creating a leaflet of 100 POPC lipids arranged
 on a $10 \times 10$ grid with sufficient spacing to avoid chain overlap.
 This leaflet is then reflected along the $z$--axis to generate the second
@@ -157,7 +158,7 @@ simulation at 290~K for 200~ps. Simulation systems are then annealled by heating
 simulation run temperature, and then cooling down to the production temperature following the
 specific procedure outlined in each following chapter.
 
-\subsection{\emph{Ab initio} calculations and Density Functional Theory}
+\subsection{\emph{Ab initio} Calculations and Density Functional Theory}
 Classical force-fields are effective for simulating large-systems of particles where an explicit description of 
 the electronic behavior is not critical to the understanding of how the particles behave. While this is a major 
 approximation, it turns out to often be useful in studying biological structures like lipid membranes~\cite{berkowitz:2019}.
@@ -250,7 +251,7 @@ particles, and 20 for the headgroup.
 This gives us the total volume per molecule for each group, defined as \Vh{} and \Vc{}. These are then
 added together to make the total \Vl{}.
 \subsection{Deuterium Order parameters}
-\subsubsection{D2O Water orientational order parameters}
+\subsubsection{D2O Water Orientational Order Parameters}
 Water ordering at the lipid bilayer interface can be measured by using NMR in a system minimally hydrated deuterium oxide~\cite{aaman:2003}.
 The quadrupolar interaction of the deuterium nucleus with the magnetic field results in a splitting of the deuterium lineshape. The width of this splitting 
 is used to make suppositions about the orientational ordering of water in the interfacial region --- this has a value of zero if the system is either isotropic or completely aligned with the

@@ -5,6 +5,19 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{pandit:2003:dppc:na}
+S.~A. Pandit, D.~Bostick, M.~L. Berkowitz, Molecular dynamics simulation of a
+  dipalmitoylphosphatidylcholine bilayer with nacl, Biophysical journal 84~(6)
+  (2003) 3743--3750.
+
+\bibitem{Berkowitz:2006}
+M.~L. Berkowitz, D.~L. Bostick, S.~Pandit, Aqueous solutions next to
+  phospholipid membrane surfaces: insights from simulations, Chemical reviews
+  106~(4) (2006) 1527--1539.
+
+\bibitem{israelachvili:2011:intermol}
+J.~N. Israelachvili, Intermolecular and surface forces, Academic press, 2011.
+
 \bibitem{pabst:2007}
 G.~Pabst, A.~Hodzic, J.~{\v{S}}trancar, S.~Danner, M.~Rappolt, P.~Laggner,
   Rigidification of neutral lipid bilayers in the presence of salts,
@@ -39,6 +52,10 @@ J.~Seelig, P.~M. MacDonald, P.~G. Scherer, Phospholipid head groups as sensors
 U.~M. Ferber, G.~Kaggwa, S.~P. Jarvis, Direct imaging of salt effects on lipid
   bilayer ordering at sub-molecular resolution, European Biophysics Journal
   40~(3) (2011) 329--338.
+
+\bibitem{berkowitz:2019}
+M.~L. Berkowitz, Biomembrane Simulations: Computational Studies of Biological
+  Membranes, CRC Press, 2019.
 
 \bibitem{Bockmann:2003}
 R.~A. B{\"o}ckmann, A.~Hac, T.~Heimburg, H.~Grubm{\"u}ller, Effect of sodium
@@ -248,10 +265,6 @@ U.~Essmann, L.~Perera, M.~L. Berkowitz, T.~Darden, H.~Lee, L.~G. Pedersen, A
   smooth particle mesh ewald method, The Journal of chemical physics 103~(19)
   (1995) 8577--8593.
 
-\bibitem{berkowitz:2019}
-M.~L. Berkowitz, Biomembrane Simulations: Computational Studies of Biological
-  Membranes, CRC Press, 2019.
-
 \bibitem{fhiaims}
 V.~Blum, R.~Gehrke, F.~Hanke, P.~Havu, V.~Havu, X.~Ren, K.~Reuter,
   M.~Scheffler, Ab initio molecular simulations with numeric atom-centered
@@ -393,9 +406,6 @@ S.~Varma, S.~B. Rempe, Structural transitions in ion coordination driven by
   changes in competition for ligand binding, Journal of the American Chemical
   Society 130~(46) (2008) 15405--15419.
 
-\bibitem{israelachvili:2011:intermol}
-J.~N. Israelachvili, Intermolecular and surface forces, Academic press, 2011.
-
 \bibitem{stern:1924:theory}
 O.~Stern, The theory of the electrolytic double-layer, Z. Elektrochem 30~(508)
   (1924) 1014--1020.
@@ -432,16 +442,6 @@ H.~Casal, H.~Mantsch, H.~Hauser, Infrared and 31p-nmr studies of the
   interaction of mg2+ with phosphatidylserines: effect of hydrocarbon chain
   unsaturation, Biochimica et Biophysica Acta (BBA)-Biomembranes 982~(2) (1989)
   228--236.
-
-\bibitem{pandit:2003:dppc:na}
-S.~A. Pandit, D.~Bostick, M.~L. Berkowitz, Molecular dynamics simulation of a
-  dipalmitoylphosphatidylcholine bilayer with nacl, Biophysical journal 84~(6)
-  (2003) 3743--3750.
-
-\bibitem{Berkowitz:2006}
-M.~L. Berkowitz, D.~L. Bostick, S.~Pandit, Aqueous solutions next to
-  phospholipid membrane surfaces: insights from simulations, Chemical reviews
-  106~(4) (2006) 1527--1539.
 
 \bibitem{kalinin:1996:ionbinding}
 V.~Kalinin, C.~Radke, An ion-binding model for ionic surfactant adsorption at

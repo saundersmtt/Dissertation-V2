@@ -5,6 +5,15 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{alberts:2022:molecular}
+B.~Alberts, R.~Heald, A.~Johnson, D.~Morgan, M.~Raff, K.~Roberts, P.~Walter,
+  Molecular biology of the cell: seventh international student edition with
+  registration card, WW Norton \& Company, 2022.
+
+\bibitem{reece:2014:biobook}
+J.~B. Reece, L.~A. Urry, M.~L. Cain, S.~A. Wasserman, P.~V. Minorsky, R.~B.
+  Jackson, et~al., Campbell biology, no. s 1309, Pearson Boston, 2014.
+
 \bibitem{pandit:2003:dppc:na}
 S.~A. Pandit, D.~Bostick, M.~L. Berkowitz, Molecular dynamics simulation of a
   dipalmitoylphosphatidylcholine bilayer with nacl, Biophysical journal 84~(6)
@@ -47,6 +56,12 @@ H.~Akutsu, J.~Seelig, Interaction of metal ions with phosphatidylcholine
 \bibitem{seelig:1987}
 J.~Seelig, P.~M. MacDonald, P.~G. Scherer, Phospholipid head groups as sensors
   of electric charge in membranes, Biochemistry 26~(24) (1987) 7535--7541.
+
+\bibitem{seelig:1977}
+J.~Seelig, Deuterium magnetic resonance: theory and application to lipid
+  membranes, Quarterly Reviews of Biophysics 10~(3) (1977) 353–418.
+\newblock \href {https://doi.org/10.1017/S0033583500002948}
+  {\path{doi:10.1017/S0033583500002948}}.
 
 \bibitem{ferber:2011:direct}
 U.~M. Ferber, G.~Kaggwa, S.~P. Jarvis, Direct imaging of salt effects on lipid

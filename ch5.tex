@@ -1,14 +1,61 @@
-\TODO{
-We have introduced a framework for classifying ion adsorption at lipid bilayers based on the degree of dehydration observed in molecular dynamics simulations. This classification distinguishes between steric, imperfect, and perfect adsorption modes, corresponding to fully hydrated, partially dehydrated, and completely dehydrated ions within the hydration boundary of the bilayer.
+This dissertation describes and addresses the discrepancy between
+experimental lipid bilayer structure and atomistic simulations. To
+this end, I have proposed a general method to generate optimized
+model parameters for simulation models, and applied that to bilayers
+in the presence of \nacl{}, \licl{}, and \mgcl{} salts through the
+use of explicit Lennard–Jones interaction cross-terms. The method
+attempts to implicitly include multibody cooperativity by using the
+substitution energy of ions from water to clusters of molecules that
+mimic headgroup chemistry as target data. These targets are computed
+using a benchmarked \emph{ab initio} DFT method.
 
-Our results show that the electric field at the hydration shell of an ion correlates strongly with its observed mode of adsorption. Ions with high field strength, such as \mg, remain hydrated and adsorb sterically. In contrast, \na\ and \li\ exhibit lower field strengths and bind with partial or full dehydration.
+In the case of \nacl{} especially, and \licl{} to a lesser extent, we
+observe a reduction in the structural changes caused by dissolved
+salt as measured in SAXS form factors, producing results that are
+more consistent with experimental observations. In the case of
+\mgcl{}, we report varied outcomes. Results from both the original
+mixing rules and the optimized parameters required a redefinition of
+ion adsorption beyond the strict Langmuir criterion of hydration
+shell removal. We define three cases of adsorption: \emph{steric},
+where ions enter the bilayer hydration boundary without losing water;
+\emph{imperfect}, where ions lose at least one hydrating water in
+favor of a lipid component; and \emph{perfect}, where the ion has
+fully replaced water with lipid components. Using this framework,
+\na{} and \li{} primarily display imperfect or perfect adsorption,
+while \mg{} remains exclusively in the steric mode.
 
-These adsorption modes are predictive of changes to bilayer structure. Systems with larger populations of imperfect or perfectly adsorbed ions display increased lipid chain order and hydrocarbon thickness. Systems dominated by steric adsorption show bilayer structures closer to the no-salt case.
+These results, along with recent work on \mg{} interactions with
+phosphate groups, led us to revisit \mg{} cross-terms with a focus on
+fully hydrated target clusters. The outcome was two parameter sets:
+one allowing partial dehydration of \mg{} (using parameters from
+Grotz \etal{}~\cite{grotzparams}), and another keeping \mg{}
+completely hydrated (from Li \etal{}~\cite{merzhfe}). We also observe
+a significant number of partial ion pairs, which may change how we
+evaluate \cl{} interactions with lipid components in the future. The
+choice between these parameter sets produces notably different
+results, including substantial bilayer thickening in the case of the
+2025 parameter set. This aside, the change in bilayer structure follows 
+closely with the number of adsorbed charges in the bilayer interface, with 
+no such correlation with the steric adsorption mode. This suggests that dehydrated ions are needed 
+to produce a perturbation in lipid-bilayer structure; however, the partial ion-pairs present in the 2025 results 
+does beg for further investigation, and their role in the alteration of bilayer structure remains an open question.
 
-The observed trends hold across multiple force-field parameterizations, including those with differing water-exchange kinetics for \mg. Poisson--Boltzmann modeling confirms that the accumulation of ions within the hydration boundary is distinct from diffuse ionic layering predicted in the bulk.
+In each chapter I propose results with direct experimental
+connections. SAXS results with \mg{} are still relatively uncommon
+and often performed at concentrations close to physiological, which
+may not be high enough to resolve structural changes. NMR order
+parameters for headgroups, acyl chains, and solvent remain promising
+targets for experimental validation. Deuterium NMR, in particular,
+could provide constraints that help refine model parameter searches
+and distinguish among competing simulation models. Purely
+computational data, even at the \emph{ab initio} level, should not
+be relied upon alone to construct reliable interaction models.
 
-Altogether, this work provides a mechanistic link between ion properties and lipid structural response, grounded in simulation observables. It suggests that the strength of ion adsorption---and its structural consequences---can be anticipated from the ion's electric field without requiring direct tuning to experimental constraints.
-}
+By focusing on lipid-ion interactions, this work highlights how relatively subtle changes to a classical molecular dynamics force-field 
+can lead to macroscopic changes in lipid-bilayer structure. Implicit inclusion of more complex physics can provide a more computationally efficient way to 
+improve force-fields without needing additions to the hamiltonian itself, albeit corrections that are not based on any real physical principle. These methods and the categorization 
+ion adsorption, offers a roadmap to continue to improve these simulation models.
+
 \bibliography{refs}
 \end{document}
 

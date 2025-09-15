@@ -1,22 +1,25 @@
-\section{Phospholipid Bilayers}
+\section{Cell Membranes and Phospholipid Bilayers}
 Phospholipid bilayers are the primary boundary between cells and their environment. These membranes are not static walls but liquid-crystalline, rapidly exploring their 
-conformational space and adjusting to both internal and external conditions. Membranes are constructed from a diversity of different phospholipid species, 
-proteins, and lipid-like molecules. Through all of these molecules, membranes 
-govern the flow of material into and out of cells as well as interact with the environment.
+conformational space and adjusting to both internal and external conditions. Membranes are constructed from a diversity of phospholipid species, 
+proteins, and lipid-like molecules~\cite{alberts:2022:molecular}. Even the endomembrane systems of cells share this lipid-protein composition. 
+Through all of these molecules, membranes 
+regulate the transport of material across and within cells, and mediate environmental interactions.
+Cell membranes, and in turn phospholipids, are exposed to complex
+mixtures of ions inside and outside of cells. Ion gradients across membranes are 
+used in organelles like chloroplasts and mitochondria to drive production of ATP~\cite{reece:2014:biobook,alberts:2022:molecular}.
+This voltage is also the basis for the functioning of nerve cells, which use the flow of ions through membrane channels to propagate signals
+along the cell body~\cite{alberts:2022:molecular}. 
 
-Cell membranes, and thus phospholipids, are exposed to complex
-mixtures of ions inside and outside of cells.
-Thus the interfacial region of cell membranes is a complicated mixture of organized water, signalling molecules, and dissolved salts. 
+Consequently, the interfacial region of cell membranes and lipid bilayers in organisms is a 
+complicated mixture of organized water, signalling molecules, and dissolved salts. 
 This mixture substantially influences membrane structure through direct ion–lipid binding, structured hydration layers, and electrostatics~\cite{pandit:2003:dppc:na,Berkowitz:2006}.
-Experimentally observed ion behavior at an interface in solution has been described using a mean-field model~\cite{israelachvili:2011:intermol}.
-However, this ignores specific chemical interactions between lipid molecules and the ions in the solvent, that are critical for understanding
-the effect of changing headgroup species in a membrane. 
+Experimentally observed ion distributions at interfaces in solutions have been described using mean-field models~\cite{israelachvili:2011:intermol};
+However, this framework ignores specific chemical interactions between lipid molecules and the ions in the solvent.
 Computational models can enable researchers to observe the specific ion-lipid interactions are critical for understanding of 
 why cells might choose certain lipids to manipulate their membrane structure under varied ion mixtures in their environment. Furthermore, this 
-changing membrane structure also affects the behavior of membrane proteins embedded in the bilayer. Thus, this manipulation of the lipid mixture
-presents itself as an important regulatory mechanism for cells.
+changing membrane structure also affects the behavior of membrane proteins embedded in the bilayer.
 \subsection{Effects of ions on lipid bilayer structure}
-The effects of dissolved salts on bilayers has been studied with varied methodologies. 
+The effects of dissolved salts on bilayers have been studied with varied methodologies. 
 One of the more commonly applied methods of study
 is small-angle x-ray scattering (SAXS) and neutron scattering (SANS). 
 Several studies of this kind have reported
@@ -41,7 +44,7 @@ Kurakin \etal{} reported that in bilayers of POPC, divalent cations such as \mg{
 no major alteration in bilayer structure at biologically relevant concentrations of \mg~\cite{kurakin:2021:effect}.
 
 While SAXS and SANS methods do not see a change in the overall structure of lipid bilayers methods like NMR of deuterated headgroup carbons 
-indicate changes in the headgroup tilt angle of neutral lipids in salt solutions, suggesting some interaction~\cite{akutsu:1981,seelig:1987}. 
+indicate changes in the headgroup tilt angle of neutral lipids in salt solutions, suggesting some interaction~\cite{akutsu:1981,seelig:1987,seelig:1977}. 
 This would indicate that there should be ion binding or adsorption to the bilayer interface, that is not visible in the SAXS or SANS form-factor but 
 could be observed through other methods. Additionally, AFM measurements can observe some changes in the organization of lipids in a 
 gel phase bilayer in the presence of salts, again indicating some interaction 
@@ -94,7 +97,7 @@ The forces obtained from the potential energy are used in Newton's equations of 
 which are numerically integrated — most often with algorithms such as the velocity-Verlet method — 
 to update positions and velocities at each time step~\cite{gromacsmanual}.
 The energy of the new configuration
-can be computed, and the simulation continues. Thus, the careful development and improvement of a force-field is critical to 
+can be computed, and the simulation continues. The careful development and improvement of a force-field is critical to 
 reproduce valid results that can help us understand what is seen in experiments.
 
 \subsection{Mixing Rules, and NB-fix}
@@ -107,7 +110,7 @@ E_{\mathrm{LJ}_{ij}} = 4\epsilon_{ij} \left( \left( \frac{\sigma_{ij}}{r_{ij}} \
 Where $r_{ij}$ is the distance between the two particles, \sigmaij{} is the characteristic distance of the Van der Waals interaction between the two species,
 and \epsilonij{} is the characteristic energy of the interaction.
 These parameters are generally determined for a particular species for the case of the self-interaction, or $\sigma_{ii}$ and $\epsilon_{ii}$.
-In this case, they represent roughly the atomic radius, and the ``stickyness'' of the particle. These can then be combined with the 
+In this case, they represent roughly the atomic radius, and the ``stickiness'' of the particle. These can then be combined with the 
 $\sigma_{jj}$ and $\epsilon_{jj}$ from another species by using what are called mixing rules, developed to 
 model the interaction radii and energy well-depth for interacting species~\cite{lorentz:1881,berthelot:1898}.
 The Lorentz rule for computing the \sigmaij{} is simply the arithmetic mean of the self terms from the two species, and 
@@ -138,7 +141,7 @@ $56 \times 56 \times 224$ or $52 \times 52 \times 240$ cells,
 together with 4th order B-spline interpolation.
 Van der Waals interactions are calculated with a single cutoff of 1.6~nm.
 \subsubsection{Simulation System Construction}
-All simulations systems unless otherwise noted are constructed by first creating a leaflet of 100 POPC lipids arranged
+All simulation systems unless otherwise noted are constructed by first creating a leaflet of 100 POPC lipids arranged
 on a $10 \times 10$ grid with sufficient spacing to avoid chain overlap.
 This leaflet is then reflected along the $z$--axis to generate the second
 leaflet, producing a bilayer of 200 lipids. A solvent block is added by
@@ -154,7 +157,7 @@ real-space cutoff of 1.6~nm, reciprocal grid spacing of 0.12~nm$^{-1}$, and
 with a single cutoff of 1.6~nm. Neighbor searching is performed every 2 steps.
 
 Following energy minimization, I relax the system with a constant-pressure
-simulation at 290~K for 200~ps. Simulation systems are then annealled by heating the system above the
+simulation at 290~K for 200~ps. Simulation systems are then annealed by heating the system above the
 simulation run temperature, and then cooling down to the production temperature following the
 specific procedure outlined in each following chapter.
 
@@ -167,7 +170,7 @@ of quantum mechanical calculations. These calculations are used to set terms lik
 charge per particle in a molecule and to compare to the molecular structure predicted by our bonded-parameters.
 \emph{Ab initio} quantum mechanical calculations include chemistry by explicitly describing the behavior of electrons to varied 
 levels of accuracy depending on the kind of functional form used, and then the basis vectors used to describe the space.
-Pertubation theory methods include electron correlation, which can be useful for assigning electrons to parts of a molecule. 
+Perturbation theory methods include electron correlation, which can be useful for assigning electrons to parts of a molecule. 
 However, these methods quickly become expensive for systems with many electrons. Density functional theory, which treats the electrons 
 with a mean-field approximation is often more computationally efficient and can thus be applied to larger systems.
 
@@ -197,18 +200,18 @@ chapters.
 \section{Comparing Molecular Simulations with Experimental Results}
 \subsection{Bilayer Structural Parameters}
 SAXS and SANS measurements yield structural information of crystalline systems.
-Lipid bilayers are smectic crystals, and thus give scattering
+Lipid bilayers are smectic crystals, which give scattering
 patterns that look like concentric rings in reciprocal space --- these circles are the bilayer form-factor~\cite{nagle:2000}. This form-factor
 is the reciprocal-space structure of the bilayer. 
 However, a direct Fourier inversion cannot be performed due to the loss of phase information.
 In order to produce the appropriate density distribution, one can approximate the number density of bilayer parts as gaussian functions, and 
 compute the appropriate scattering density from that~\cite{nagle:2000,fogarty:2015}. This can then be transformed via a cosine transform
-into a form-factor. The gaussians are then adjusted
+into a form-factor. The Gaussian distributions are then adjusted
 until the resulting continuous form-factor fits the data from the experiment~\cite{nagle:2000,fogarty:2015}. These density histograms are then used to compute the various bilayer parameters.
 
 In simulations, one can compute the number density histograms of the system components
 directly from the trajectories, and thus the electron densities directly. Once the electron density of our system has been obtained
-per nanosecond, the lipid bilayer centerpoint is determined by locating the minimum at the center of the 
+per nanosecond, the lipid bilayer center point is determined by locating the minimum at the center of the 
 histogram. This is symmetrized around the minimum at the center, and then averaged over many nanoseconds.
 The bulk solvent value of the electron density is set to zero by subtracting this from the average histogram, and then a cosine transform is used 
 to obtain the bilayer SAXS form-factor. SANS form-factors are obtained similarly, but by using the neutron-scattering length density --- instead of weighting the number density 
@@ -218,14 +221,14 @@ These formfactors can be compared with the experimental data directly.
 One can also use the electron density to directly obtain the peak-to-peak distance of the bilayer, \dhh{}, as one measure
 of the bilayer thickness. 
 The number density histograms are also used to compute the various bilayer thicknesses via probability densities
-of the various system components. We compute the bilayer thickness \db{} and \dc{} by compiuting probability densities
+of the various system components. We compute the bilayer thickness \db{} and \dc{} by computing probability densities
 for the solvent, and the lipid acyl chains respectively. We determine the Gibbs' dividing surface of these by finding the point in the interfacial region
 where the area above the histogram is equal to below --- the distance from this point to the bilayer center is used as the respective bilayer thickness.
 These measures are visualized in figure~\ref{figch1:thicknesses}.
 \begin{figure}[h!tb]
     \caption[Diagram of bilayer thickness measurements]{Measurements of the bilayer thickness that are often obtained in experiments and reproduced in simulations. We see the electron density in (b) shown in red,
     with the characteristic minimum at the bilayer center and the two peaks that roughly localize the electron-dense phosphate moiety. The \dhh{} is taken as the distance between the two peaks,
-    measuring the bilayer repeat distance. In (a), we see probability densities for water (green) and solvent (purple). We compute the gibbs' dividing surface for each of these densities by taking the area 
+    measuring the bilayer repeat distance. In (a), we see probability densities for water (green) and solvent (purple). We compute the Gibbs' dividing surface for each of these densities by taking the area 
     above and below the curve, and selecting the position where they become equal. The distance from this to the center of the bilayer is half of the bilayer thickness \db{} or \dc{}.}
     \label{figch1:thicknesses}
     \includegraphics{Probabilitydens.eps}
@@ -252,55 +255,52 @@ This gives us the total volume per molecule for each group, defined as \Vh{} and
 added together to make the total \Vl{}.
 \subsection{Deuterium Order parameters}
 \subsubsection{D2O Water Orientational Order Parameters}
-Water ordering at the lipid bilayer interface can be measured by using NMR in a system minimally hydrated deuterium oxide~\cite{aaman:2003}.
-The quadrupolar interaction of the deuterium nucleus with the magnetic field results in a splitting of the deuterium lineshape. The width of this splitting 
-is used to make suppositions about the orientational ordering of water in the interfacial region --- this has a value of zero if the system is either isotropic or completely aligned with the
-magnetic field, and takes non-zero values for any other average ordering.
-In simulation, we compute 
-orientational order parameters by defining the quadrupolar axis as the
-OW$\rightarrow$HW1 bond of water, and the angle formed with the magnetic field director 
-as that formed with the z-axis of the simulation box ($\beta$). 
-These order parameters are defined using the first and second 
-Legendre polynomials with respect to the angle $\beta$,
+Water ordering at the lipid bilayer interface can be measured by using NMR in a system minimally hydrated with deuterium oxide~\cite{aaman:2003}.
+The quadrupole moment of the deuteron couples to the local electric-field gradient, producing a splitting of the deuterium lineshape~\cite{seelig:1977}.
+The width of this splitting reflects the orientational ordering of water in the interfacial region: it vanishes under isotropic averaging and takes non-zero values otherwise.
+
+In simulation, we compute orientational order parameters by defining the quadrupolar axis as the
+OW$\rightarrow$HW1 bond of water, which is conveniently well aligned with the electric-field gradient of D$_2$O~\cite{aaman:2003}.
+We compute the angle formed with the magnetic field director as that formed with the z-axis of the simulation box ($\beta$). 
+These order parameters are defined using the first and second Legendre polynomials with respect to the angle $\beta$,
 \begin{equation}
     \begin{split}
-    P_1&=\langle \cos\left(\beta\right) \rangle
-    \\ P_2&=\frac{1}{2}\bigg\langle\left(3\cos^2\left(\beta\right)-2\right)\bigg\rangle
-    \text{,} 
+    P_1&=\langle \cos\left(\beta\right) \rangle \\
+    P_2&=\tfrac{1}{2}\big\langle 3\cos^2\left(\beta\right)-1 \big\rangle
+    \text{,}
 \end{split}
 \end{equation}
-where average is over all the waters in a particular volume slice of the box 
-and then over simulation time.  
+where the average is taken over all waters in a particular volume slice of the box and then over simulation time.  
 We plot these values as a function of distance from the bilayer center. 
-$P_1$ denotes dipolar ordering of the bond vector and the bilayer normal direction, 
-with a positive value indicating an average outward orientation 
-and a zero value corresponding to an average perpendicular orientation to the
-bilayer normal or a uniformly random orientation. 
-$P_2$ represents a nematic ordering, measuring more if the vector in question is more parallel to the box z-axis, with less regard to the directionality otherwise. This parameter 
-is asymmetric around zero, with a zero value representing a vector that is completely parallel with the director axis. This second parameter is directly related to the quadrupolar splitting 
-seen in experiments~\cite{aaman:2003,kruczek:2017:ether,saunders:2019}.
-\subsubsection{Acyl-chain CD order parameters}
-Similar to the water order parameters, lipid chain ordering can be determined experimentally by performing NMR 
-on specifically deuterated hydrocarbon chains. Each C-D bond has a quadrupolar character from the deuterium nucleus, that results in
-a quadrupolar splitting of the NMR spectral lineshape. The width of this splitting is directly related to the 
-S\textsubscript{CD}, which changes with temperature and along the various thermodynamic phases of the lipid bilayer.
+$P_1$ denotes dipolar ordering of the bond vector relative to the bilayer normal, with a positive value indicating an average outward orientation and a zero value corresponding to an average perpendicular orientation or a uniformly random orientation. 
+$P_2$ represents a nematic ordering: it is positive when the vector tends to align with the z-axis, negative when it lies perpendicular, and zero for isotropic distributions or for alignment at the ``magic angle'' ($54.7^{\circ}$)~\cite{seelig:1977}. 
+This second parameter is directly related to the quadrupolar splitting seen in experiments~\cite{aaman:2003,kruczek:2017:ether,saunders:2019}.
 
-Since hydrogen/deuterium is not included on the coarse-grained lipid chains, 
-one cannot directly access the C-D ordering by simply measuring the angle between the bond vector and the director field. 
-Instead, one must compute the chain order tensor $S_{\alpha\beta}$ defined as
+\subsubsection{Acyl-chain CD Order Parameters}
+The same quadrupolar principle applies to lipid acyl chains: the C-D bond defines the principal axis of the local electric-field gradient, and the corresponding splitting yields the deuterium order parameter $S_{CD}$~\cite{seelig:1977}.
+Experimentally, $S_{CD}$ changes with temperature and across different bilayer phases. 
+Since hydrogen/deuterium is not included on the coarse-grained lipid chains, one cannot directly access the C-D ordering by simply measuring the bond angle with the director field. 
+Instead, one computes the chain order tensor $S_{\alpha\beta}$ defined as
 \begin{equation}
-    S_{\alpha\beta}=\frac{1}{2}\big\langle
+    S_{\alpha\beta}=\tfrac{1}{2}\big\langle
     3\cos{\theta_\alpha}\cdot\cos{\theta_\beta}-\delta_{\alpha\beta}\big\rangle,
     \nonumber
 \end{equation}
-where the angles $\theta_\alpha$ and $\theta_\beta$ are the angles between the molecular
-axis and the box z-direction. 
-Then use this tensor is used to calculate the $S_{CD}$ as
+where the angles $\theta_\alpha$ and $\theta_\beta$ are measured between the molecular axis and the box z-direction. 
+This tensor is then used to calculate the $S_{CD}$ as
 \begin{equation}
-    -S_{CD}^{\text{Saturated}}=\frac{2}{3}S_{xx}+\frac{1}{3}S_{yy}
+    -S_{CD}^{\text{Saturated}}=\tfrac{2}{3}S_{xx}+\tfrac{1}{3}S_{yy}
 \end{equation}
 for saturated carbons~\cite{egberts:1988}, and as
 \begin{equation}
--S_{CD}^{\text{Unsaturated}}=\frac{1}{4}S_{zz}+\frac{3}{4}S_{yy}\mp \frac{\sqrt{3}}{2}S_{yz}
+    -S_{CD}^{\text{Unsaturated}}=\tfrac{1}{4}S_{zz}+\tfrac{3}{4}S_{yy}\mp \tfrac{\sqrt{3}}{2}S_{yz}
 \end{equation}
-for unsaturated carbons~\cite{Douliez:1995}.  
+for unsaturated carbons~\cite{Douliez:1995}. These work not only for the acyl-chain order parameters,
+but also for the headgroup $C_\alpha$ and $C_\beta$ carbons to measure headgroup tilt. 
+
+These methods together provide a framework to describe the of 
+the dynamics and organization of the lipid bilayer in both the headgroup and acyl-chain regions, and the 
+bilayer interfacial region. Order parameters are both accessible through measurements of 
+the quadrupolar splitting. In the following chapters, we will use these to evaluate the perturbation 
+of bilayer 
+structure by ions.

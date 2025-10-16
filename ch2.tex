@@ -233,8 +233,6 @@ Boundary constraints are imposed on \epsilonij{} and \sigmaij{} to keep
 the search space finite.  Table~\ref{tabch2:constraints} shows all of the
 constraints placed on the parameter search. 
 \begin{table}
-    \caption[Nelder-Meade constraints]{Nelder-Meade constraints. These values were used to constrain the parameter search space during the NM-optimization.}
-    \label{tabch2:constraints}
     {\tiny
     \begin{tabularx}{\textwidth}{X|X|X|X|X|X|X|X|X|X|}
 	        &\tbxmulticol{2}{X|}{NA-CH3}&\tbxmulticol{2}{X|}{NA-CH2}&\tbxmulticol{2}{X|}{NA-CO*}&\tbxmulticol{2}{X|}{NA-OA,-OM*,-O*,-P}&Additional Constraints\\\hline
@@ -244,6 +242,8 @@ constraints placed on the parameter search.
 	\epsilonij (kJ/mol) &0&0.79&0&0.81&0&0.83&0.05&7&N/A\\\hline
     \end{tabularx}
     }
+    \caption[Nelder-Mead constraints]{These values were used to constrain the parameter search space during the NM-optimization.}
+    \label{tabch2:constraints}
 \end{table}
 Additionally, constraints are applied to keep the NA-OM\* \sigmaij{} to be smaller than the \sigmaij{} for
 NA-P to avoid unphysical conformations of DePh.  Boundary constraints are enforced 
@@ -353,19 +353,19 @@ close to the original values in general, suggesting that the optimum
 distance to the minimum energy of the LJ potential is estimated well by LB rules. 
 It can also be seen that no values of \sigmaij{} or \epsilonij{} violate the 
 constraints described in table~\ref{tabch2:constraints}.
- \begin{table}
-    \caption{Nelder--Meade constraints. These values were used to constrain the parameter search space during the NM-optimization.}
-    \label{tabch2:constraints}
-    {\tiny
-    \begin{tabularx}{\textwidth}{X|X|X|X|X|X|X|X|X|X|}
-            &\tbxmulticol{2}{X|}{NA-CH3}&\tbxmulticol{2}{X|}{NA-CH2}&\tbxmulticol{2}{X|}{NA-CO*}&\tbxmulticol{2}{X|}{NA-OA,-OM*,-O*,-P}&Additional Constraints\\\hline
-        &Min&Max&Min&Max&Min&Max&Min&Max&N/A\\\hline
-    \sigmaij (nm)&0.2&0.5&0.2&0.5&0.2&0.5&0.2&0.5&$\sigma_{ij}^{\text{NA-OM*}}
-        \leq \sigma_{ij}^{\text{NA-P}}$ \\\hline
-    \epsilonij (kJ/mol) &0&0.79&0&0.81&0&0.83&0.05&7&N/A\\\hline
-    \end{tabularx}
-    }
-\end{table}
+% \begin{table}
+%    \caption{Nelder--Meade constraints. These values were used to constrain the parameter search space during the NM-optimization.}
+%    \label{tabch2:constraints}
+%    {\tiny
+%    \begin{tabularx}{\textwidth}{X|X|X|X|X|X|X|X|X|X|}
+%            &\tbxmulticol{2}{X|}{NA-CH3}&\tbxmulticol{2}{X|}{NA-CH2}&\tbxmulticol{2}{X|}{NA-CO*}&\tbxmulticol{2}{X|}{NA-OA,-OM*,-O*,-P}&Additional Constraints\\\hline
+%        &Min&Max&Min&Max&Min&Max&Min&Max&N/A\\\hline
+%    \sigmaij (nm)&0.2&0.5&0.2&0.5&0.2&0.5&0.2&0.5&$\sigma_{ij}^{\text{NA-OM*}}
+%        \leq \sigma_{ij}^{\text{NA-P}}$ \\\hline
+%    \epsilonij (kJ/mol) &0&0.79&0&0.81&0&0.83&0.05&7&N/A\\\hline
+%    \end{tabularx}
+%    }
+%\end{table}
 Substitution energies and corresponding conformational geometries are examined by running energy
 minimization of the QM-optimized structures using the final parameter set. 
 These are then analyzed using the GROMACS built-in energy and distance tools. 

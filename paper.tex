@@ -15,7 +15,8 @@
 %------------------------------------------------------------------------------
 % Microtypography for better spacing/justification
 %------------------------------------------------------------------------------
-\usepackage[final,tracking=true,expansion=true,protrusion=true]{microtype}
+%\usepackage[final,tracking=true,expansion=true,protrusion=true]{microtype}
+\usepackage[final,tracking=true,expansion=false,protrusion=true]{microtype}
 \microtypesetup{stretch=10,shrink=10,step=1}
 
 %------------------------------------------------------------------------------
@@ -250,8 +251,7 @@ Copyright \textsuperscript\textcopyright~2025, Matthew W. Saunders\\
 \pagenumbering{arabic}
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-
-
+\input{abstract.tex}
 \chapter[Introduction]{Introduction\footnote{Portions reprinted with permission from Matthew Saunders, Vered Wineman-Fisher, and Eric Jakobsson, \textit{High-Dimensional Parameter Search Method to Determine Force Field Mixing Terms in Molecular Simulations}, 
 \textit{Langmuir}, American Chemical Society, March 1, 2022. and from Matthew Saunders, Abibat Adekeye-Olowofela, and Sabrina Downing, \textit{Adsorption Modes of Na\textsuperscript{+}, Li\textsuperscript{+}, and Mg\textsuperscript{2+} to a Model Zwitterionic Lipid Bilayer}, 
 \textit{Langmuir}, American Chemical Society, December 1, 2024.}}

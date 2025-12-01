@@ -43,7 +43,7 @@ monovalent and divalent ions on model 1-palmitoyl-2-oleoyl-sn-glycero-phosphatid
 bilayers~\cite{pandit:2008:simulationtextbook,kruczek:2017,kruczek:2019,saunders:2019}. 
 We reported that ions modify POPC bilayer structure with significant
 effects on area per lipid and bilayer thickness. Similar results were also reported in MD simulations by
-others~\cite{Bockmann:2003,cordomi:2008,gurtovenko:2008,Cordomi:2009,jurkiewicz:2012}.
+others~\cite{bockmann:2003,cordomi:2008,gurtovenko:2008,cordomi:2009,jurkiewicz:2012}.
 Experiments characterizing bilayer structures in the presence of ions
 have not been as numerous as simulation studies. However, experimental findings indicate that 
 dissolved salts at physiological concentrations do not modify bilayer structure
@@ -575,6 +575,33 @@ delicate balance between ion-lipid, lipid-water, and ion-water interactions.
 In order to fully understand how our new parameter set has altered the
 overall bilayer structure, we next characterize the specific interactions
 between these moieties.
+
+Headgroup carbon order parameters are also used to examine ion-lipid interaction in the headgroup. 
+Results for the $S_{CD}$ from our simulations can be seen in Table~\ref{tab:scd}, computing using the method of 
+Egberts and Berendsen~\cite{egberts:1988}. We note that the
+$\Delta |S_{CD}|$ from our simulations with both original LB rules as well as MB-NBfix parameters
+stay quite close to zero, although the sign of the $S_{CD}$ is opposite that for the system without salt
+in both cases. Since experimentally the sign is not known in systems with salt, and is assumed
+from indirect measurements~\cite{seelig:1987}, it is difficult to assign a definitive value. Thus, we report
+the absolute value of the order parameter.
+\begin{table}[h]
+\centering
+\caption{$S_{CD}$ Order parameters for $\beta$ (C5) and $\alpha$ (C6) carbons.}
+\begin{tabular}{lcc}
+\toprule
+& $\beta$ & $\alpha$ \\
+\midrule
+No Salt & $-0.0574 \pm 0.0098$ & $-0.1108 \pm 0.0115$ \\
+Na$^+$ LB Rules & $0.0157 \pm 0.0095$ & $0.0286 \pm 0.0079$ \\
+$\Delta |S_{CD}|$ & $0.0417$ & $-0.0822$ \\
+Na$^+$ MB-NBfix & $0.0555 \pm 0.0068$ & $0.0976 \pm 0.0074$ \\
+$\Delta |S_{CD}|$ & $-0.0019$ & $-0.0132$ \\
+\bottomrule
+\end{tabular}
+\label{tab:scd}
+\end{table}
+This is consistent with the result from the work by Akutsu \etal~\cite{akutsu:1991}, who reported that the change in the 
+headgroup $S_{CD}$ of POPC with the addition of \nacl salt is insignificant.
 
 \subsection{Membrane-Salt Interactions}
 

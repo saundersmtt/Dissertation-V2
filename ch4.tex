@@ -51,7 +51,7 @@ For example, in our previous simulations with \na{}~\cite{saunders:2022}, we obs
 100 POPC molecules per leaflet. If we assume similar numbers of \mg to be adsorbed, 
 simulating at a biologically relevant concentration of 0.5 mM~\cite{romani:1992:regulation} will require more than 11 million waters.
 Additionally, since the residence time of waters in the first shell of \mg~is 
-of the order of a microsecond \cite{neely:1970,Palinkas:1982,bleuzen:1997}, 
+of the order of a microsecond \cite{neely:1970,palinkas:1982,bleuzen:1997}, 
 capturing statistics on water-lipid exchanges in the first shell of \mg~requires prohibitively long MD simulations. 
 
 Considering these issues, we previously chose to calibrate \mg{}-lipid Lennard-Jones (LJ) terms using 
@@ -123,7 +123,7 @@ where $E_{MgW}$ is the energy of the fully hydrated \mg{} cluster,
 $E_{MgWX}$ is the energy of the mixed cluster with $n$ ligands and $6-n$
 waters, and $E_W$ and $E_X$ are the isolated water and ligand energies,
 respectively. The substitution energies and corresponding optimized
-geometries for these clusters are reported in figure~\label{figch4:optres} and table~\label{tabch4:subenergies}.
+geometries for these clusters are reported in figure~\ref{figch4:optres} and table~\ref{tabch4:subenergies}.
 
 
 Parameter optimizations were performed using the ParOpt software package developed by our group~\cite{fogarty:2014:paropt}. We used the Nelder-Mead optimizer to simultaneously optimize
@@ -174,10 +174,11 @@ We note substantial improvements in both substitution energies with a minimal lo
 with parameter optimization reducing mean absolute error in $\Delta E_{sub}$ from 0.26 to 0.01. %, and reducing mean absolute error in distances of Mg from cluster atoms from XX to YY \AA.
 \begin{landscape}
 \begin{table}[H]
+    \begin{tiny}
 \centering
-\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
+\begin{tabularx}{\textwidth}{X|X|X|X|X|X|X}
 \hline
-                         & \multicolumn{2}{c|}{\textbf{2025}} & \multicolumn{2}{c|}{\textbf{2024}} & \multicolumn{2}{c|}{\textbf{LB-rules}} \\\hline
+                         & \multicolumn{2}{c|}{\textbf{2025}} & \multicolumn{2}{c|}{\textbf{2024}} & \multicolumn{2}{c}{\textbf{LB-rules}} \\\hline
 Parameter                & \boldmath$\varepsilon$             & \boldmath$\sigma$                  & \boldmath$\varepsilon$                          & \boldmath$\sigma$ & \boldmath$\varepsilon$ & \boldmath$\sigma$ \\\hline
 MG-CH3                   & 0.60498                            & 0.22161                            & 0.68709                                         & 0.14257           & 0.19239                & 0.30856 \\\hline
 MG-CH2                   & 1.36553                            & 0.41404                            & 0.63126                                         & 0.20617           & 0.13238                & 0.32468 \\\hline
@@ -189,8 +190,8 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 \end{tabularx}
 \caption[Lennard-Jones cross-terms]{Lennard-Jones parameters for magnesium interactions: well depth $\epsilon_{ij}$ (kJ/mol) and distance parameter $\sigma_{ij}$ (nm), comparing the 2025 optimized model, the 2024 model, and the original LB-rules.}
 \label{tabch4:params}
+\end{tiny}
 \end{table}
-\end{landscape}
 % \begin{table}[h!]
 % \centering
 % \begin{tabular}{lcccc}
@@ -212,28 +213,22 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 % \end{table}
 
 % Combined comparison: LB Rules vs 2024 vs 2025
-\begin{landscape}
 \begin{table}[H]
+\begin{tiny}
 \centering
 \sisetup{round-mode=places,round-precision=3,detect-all}
-\begin{tabular}{
-  l
-  S[table-format=-7.3] % PBE0+VdW
-  S[table-format=-7.3] S[table-format=1.3] S[table-format=1.3] % LB Rules
-  S[table-format=-7.3] S[table-format=1.3] S[table-format=1.3] % 2024
-  S[table-format=-7.3] S[table-format=1.3] S[table-format=1.3] % 2025
-}
-\toprule
+\begin{tabularx}{\textwidth}{X|X|XXX|XXX|XXX}
+\hline  
 & {PBE0+VdW} 
-& \multicolumn{3}{c}{LB Rules} 
-& \multicolumn{3}{c}{2024} 
+& \multicolumn{3}{c|}{LB Rules} 
+& \multicolumn{3}{c|}{2024} 
 & \multicolumn{3}{c}{2025} \\
-\cmidrule(lr){2-2}\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}
+\hline
 {System} & {Ref.}
 & {Energy} & {Abs.\%} & {MAPE}
 & {Energy} & {Abs.\%} & {MAPE}
 & {Energy} & {Abs.\%} & {MAPE} \\
-\midrule
+\hline  
 1MeOAc    & -268.702 & -130.319 & 0.515 & {}
                     & -299.844 & 0.116 & {}
                     & -32.724  & 0.878 & {} \\
@@ -270,11 +265,12 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 4W 2DEPh  & -1279.754& -1198.284& 0.064 & 0.119
                     & -1519.772& 0.188 & 0.141
                     & -1333.653& 0.042 & 0.034 \\
-\bottomrule
-\end{tabular}
+\hline
+\end{tabularx}
   \caption[Substitution energies]{Energies (kJ/mol) associated with substituting $n$ water molecules in low coordination clusters, and in 6-fold Mg-water clusters with $n$ methyl acetates (MeAcs) or $n$ diethyl phosphates (DEPhs). 
   Substitution energies are defined in equation \ref{equ_2}.}
   \label{tabch4:subenergies}
+\end{tiny}
 \end{table}
 \end{landscape}
 % \begin{table}[h!tbp]
@@ -307,22 +303,19 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 % for MeOAc and DEPh clusters, including mixed six-fold water–ligand clusters.}
 % \label{tab:delta-sub-combined}
 % \end{table}
-\begin{landscape}
+We also compare the difference in substitution energies between the three parameter sets in table~\ref{tab:subs-relative-to-lb}.
+We note that the 2024 \mg{} parameters tend to increase the binding strength of the interaction with the ligand over the LB rules parameters,
+and the 2025 \mg{} parameters reduce the energy of binding to MeAc while increasing the interaction with DePh.
 \begin{table}[h!tbp]
 \centering
 \sisetup{round-mode=places,round-precision=3,detect-all}
-\begin{tabular}{
-  l
-  S[table-format=+6.3]
-  S[table-format=+6.3]
-  S[table-format=+6.3]
-}
-\toprule
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+\hline  
 {Cluster} &
 {$\Delta E_{\text{sub}}^{2024}-\Delta E_{\text{sub}}^{\text{LB}}$} &
 {$\Delta E_{\text{sub}}^{2025}-\Delta E_{\text{sub}}^{\text{LB}}$} &
 {$[2025{-}2024]$} \\
-\midrule
+\hline
 % --- MeOAc (no waters) ---
 1MeOAc     & -169.525 & +97.595 & +267.120 \\
 2MeOAc     & -301.531 & +184.311 & +485.842 \\
@@ -333,15 +326,15 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 4W\,2MeOAc & -138.484 &  +54.647 & +193.131 \\
 3W\,3MeOAc & -149.072 &  +85.741 & +234.813 \\
 2W\,4MeOAc & -189.334 & +125.440 & +314.774 \\
-\midrule
+\hline  
 % --- DEPh (no waters) ---
 1DEPh      &  -90.488 & +200.083 & +290.571 \\
 2DEPh      & -436.919 & -196.211 & +240.708 \\
 % --- DEPh mixed 6-fold ---
 4W\,1DEPh  & -208.031 & -114.761 &  +93.270 \\
 4W\,2DEPh  & -321.488 & -135.369 & +186.119 \\
-\bottomrule
-\end{tabular}
+\hline     
+\end{tabularx}
 \caption[Shifts in substitution energies relative to LB Rules]{Shifts in substitution energies relative to LB Rules:
 $\Delta E_{\text{sub}}^{202X}-\Delta E_{\text{sub}}^{\text{LB}}$ for 2024 and 2025,
 and their difference $[2025{-}2024]$.
@@ -349,7 +342,6 @@ Positive values mean 202X is less stabilizing (less negative) than LB; negative 
 mean more stabilizing than LB.}
 \label{tab:subs-relative-to-lb}
 \end{table}
-\end{landscape}
 
 \subsection{Bilayer Construction}
 
@@ -525,7 +517,7 @@ and thus the volumes cannot be separated. This, along with the $V_{\text{CH3}}=v
 moiety in a lipid are used to compute \Vc. Finally, we compute the \al as the ratio $2\times{}V_c/2D_C$.
 
 \subsection{Acyl-Chain order parameters}
-Acyl-chain order parameters are computed using the method outlined by Douliez \etal~\cite{Douliez:1995} (see  figure~\label{figch4:acylorder}) and described at length in chapter 1 of this dissertation. It is noted 
+Acyl-chain order parameters are computed using the method outlined by Douliez \etal~\cite{douliez:1995} (see  figure~\ref{figch4:acylorder}) and described at length in chapter 1 of this dissertation. It is noted 
 that the 2024 \mg{} parameters do not significantly increase the acyl-chain ordering from that of the system simulated without salt.The 2025 \mg{} parameters have a much greater effect on the ordering.
 \begin{figure}[H]
    \caption[Acyl-Chain order parameters]{Acyl-chain CD Order parameters. We note increased ordering in the

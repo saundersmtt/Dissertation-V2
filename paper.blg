@@ -4,45 +4,45 @@ The top-level auxiliary file: paper.aux
 The style file: elsarticle-num.bst
 Database file #1: refs.bib
 Warning--there's a number but no series in reece:2014:biobook
-You've used 119 entries,
+You've used 120 entries,
             2952 wiz_defined-function locations,
-            1350 strings with 28574 characters,
-and the built_in function-call counts, 37974 in all, are:
-= -- 3645
-> -- 1394
+            1351 strings with 28704 characters,
+and the built_in function-call counts, 38287 in all, are:
+= -- 3678
+> -- 1401
 < -- 5
-+ -- 544
-- -- 425
-* -- 3107
-:= -- 5275
-add.period$ -- 125
-call.type$ -- 119
-change.case$ -- 117
++ -- 547
+- -- 427
+* -- 3132
+:= -- 5316
+add.period$ -- 126
+call.type$ -- 120
+change.case$ -- 118
 chr.to.int$ -- 0
-cite$ -- 120
-duplicate$ -- 968
-empty$ -- 4065
-format.name$ -- 530
-if$ -- 9475
+cite$ -- 121
+duplicate$ -- 976
+empty$ -- 4100
+format.name$ -- 533
+if$ -- 9554
 int.to.chr$ -- 0
-int.to.str$ -- 119
-missing$ -- 122
-newline$ -- 376
-num.names$ -- 119
-pop$ -- 620
+int.to.str$ -- 120
+missing$ -- 123
+newline$ -- 379
+num.names$ -- 120
+pop$ -- 625
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 2171
+skip$ -- 2189
 stack$ -- 0
-substring$ -- 2956
-swap$ -- 144
+substring$ -- 2987
+swap$ -- 145
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 323
-width$ -- 122
-write$ -- 981
+while$ -- 326
+width$ -- 123
+write$ -- 989
 (There was 1 warning)

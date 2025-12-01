@@ -27,11 +27,31 @@
 \usepackage[nottoc]{tocbibind}
 \usepackage{flafter}
 \usepackage{floatrow}
-\usepackage{lscape}
+\usepackage{pdflscape}
+\newenvironment{landscapefigure}
+  {\begin{landscape}%
+   \begin{figure}[H]%
+   \centering}
+  {\end{figure}%
+   \end{landscape}%
+   \clearpage}
+
 \usepackage{float}
 \floatstyle{plaintop}
 \restylefloat{table}
-\usepackage{placeins}
+\usepackage[section]{placeins}
+\makeatletter
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{%
+  \FloatBarrier
+  \oldsubsection
+}
+\let\oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}{%
+  \FloatBarrier
+  \oldsubsubsection
+}
+\makeatother
 \usepackage{siunitx}
 \usepackage{graphicx}
 \graphicspath{{figures/}}% input figure files
@@ -52,48 +72,23 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{xtab}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
-\usepackage{xcolor}
 \usepackage{lineno}
 \usepackage{setspace}
 \usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage[superscript]{cite}
+\usepackage{pdfpages}
 
-%------------------------------------------------------------------------------
-% Spacing and float tuning
-%------------------------------------------------------------------------------
-% \onehalfspac ing              % 1.5 line spacing, common dissertation req.
-\setlength{\parskip}{0pt}    % no vertical gap between paragraphs
-\setlength{\parindent}{15pt} % indent new paragraphs
-\raggedbottom                % prevent vertical stretch across pages
 
-% Float parameters (reduce white space holes)
-\renewcommand{\topfraction}{0.95}
-\renewcommand{\bottomfraction}{0.85}
-\renewcommand{\textfraction}{0.07}
-\renewcommand{\floatpagefraction}{0.85}
-\setcounter{topnumber}{3}
-\setcounter{bottomnumber}{2}
-\setcounter{totalnumber}{4}
+\usepackage{xcolor}
+\usepackage{caption}
 
-% Keep floats from sticking to top/bottom with giant gaps
-\makeatletter
-\setlength{\@fptop}{0pt}
-\setlength{\@fpbot}{0pt plus 1fil}
-\makeatother
-
-% Widow/orphan penalties
-\clubpenalty=10000
-\widowpenalty=10000
-\displaywidowpenalty=10000
-
-% Line-breaking tolerance
-\tolerance=2000
-\emergencystretch=2em
-\hyphenpenalty=200
-\exhyphenpenalty=50
-
+\captionsetup{
+    labelfont={color=black!75},
+    textfont={color=black!75}
+}
 %------------------------------------------------------------------------------
 % Title formatting
 %------------------------------------------------------------------------------
@@ -102,17 +97,61 @@
 \titleformat{\section}
   {\normalfont\normalsize\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}
-  {\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+  {\normalfont\normalsize}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}
-  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+  {\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
 \titleformat{\paragraph}[runin]
-  {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+  {\normalfont\normalsize\bfseries\itshape}{\theparagraph}{1em}{}
 \titleformat{\subparagraph}[runin]
-  {\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+  {\normalfont\normalsize\itshape}{\thesubparagraph}{1em}{}
 
 % Chapter spacing
 \titlespacing*{\chapter}{0pt}{0.5in}{0.25in}
 \titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
+\setcounter{secnumdepth}{3}
+
+%------------------------------------------------------------------------------
+% Spacing and float tuning
+%------------------------------------------------------------------------------
+% \onehalfspacing              % 1.5 line spacing, common dissertation req.
+\setlength{\parskip}{0pt}    % no vertical gap between paragraphs
+\setlength{\parindent}{0.5in} % indent new paragraphs
+% \raggedbottom                % prevent vertical stretch across pages
+\flushbottom
+
+% Float parameters (reduce white space holes)
+\renewcommand{\topfraction}{0.97}
+\renewcommand{\bottomfraction}{0.97}
+\renewcommand{\textfraction}{0}   % allow pages with very little text
+\renewcommand{\floatpagefraction}{1} % effectively disable float-only pages
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{6}
+
+% Tighter spacing around floats
+\setlength{\floatsep}{3pt plus 0pt minus 0pt}      % between floats
+\setlength{\textfloatsep}{3pt plus 0pt minus 0pt}  % float <-> text
+\setlength{\intextsep}{2pt plus 0pt minus 0pt}     % in-text float <-> text
+
+% Keep floats from sticking to top/bottom with giant gaps
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
+
+% Widow/orphan penalties
+\clubpenalty=3000
+\widowpenalty=3000
+\displaywidowpenalty=3000
+
+% Line-breaking tolerance
+\tolerance=2000
+\emergencystretch=2em
+\hyphenpenalty=200
+\exhyphenpenalty=50
+
 
 %------------------------------------------------------------------------------
 % Hyperref setup (black links for print compliance)
@@ -124,21 +163,72 @@
     linkcolor=black,
     urlcolor=black
 }
-
 %------------------------------------------------------------------------------
 % TOC / LOF / LOT formatting
 %------------------------------------------------------------------------------
+\usepackage[figurewithin=none,tablewithin=none]{caption}
 \usepackage[titles]{tocloft}
+
 \setlength\cftbeforechapskip{\baselineskip}
-\setlength\cftbeforefigskip{\baselineskip}
-\setlength\cftbeforetabskip{\baselineskip}
+\setlength\cftbeforefigskip{\baselineskip} % one single-spaced line between figures
+\setlength\cftbeforetabskip{\baselineskip} % one single-spaced line between tables
 \setlength\cftfigindent{0in}
 \setlength\cfttabindent{0in}
 \cftsetpnumwidth{0.5in}
 \cftsetrmarg{0.5in}
+
+% No dots
 \renewcommand{\cftdot}{}
+
+% Chapter fonts
 \renewcommand{\cftchapfont}{\normalsize}
 \renewcommand{\cftchappagefont}{\normalsize}
+
+%------------------------------------------------------------------------------
+% TOC hierarchy + spacing
+%------------------------------------------------------------------------------
+
+% Level 1: Chapter — flush with margin
+\setlength{\cftchapindent}{0in}
+\setlength{\cftchapnumwidth}{5em}          % room for "Chapter 10"
+\renewcommand{\cftchappresnum}{Chapter~}
+\renewcommand{\cftchapaftersnum}{\ }
+
+% Level 2: Section — 0.5" indent
+\setlength{\cftsecindent}{0.5in}
+\setlength{\cftsecnumwidth}{1.8em}
+\renewcommand{\cftsecaftersnum}{\ }
+
+% Level 3: Subsection — 1.0" indent
+\setlength{\cftsubsecindent}{1.0in}
+\setlength{\cftsubsecnumwidth}{2.3em}
+\renewcommand{\cftsubsecaftersnum}{\ }
+
+%------------------------------------------------------------------------------
+% LIST OF TABLES (LOT)
+% "Table #" flush left, caption starts at 0.75" (or 1")
+%------------------------------------------------------------------------------
+
+\renewcommand{\cfttabpresnum}{Table~}
+\renewcommand{\cfttabaftersnum}{\ }
+
+\setlength{\cfttabindent}{0in}      % "Table #" at left margin
+\setlength{\cfttabnumwidth}{5em} % caption block starts at 0.75"
+% (use 1in instead if they insist on 1")
+
+%------------------------------------------------------------------------------
+% LIST OF FIGURES (LOF)
+% "Figure #" flush left, caption starts at 0.75" (or 1")
+%------------------------------------------------------------------------------
+
+\renewcommand{\cftfigpresnum}{Figure~}
+\renewcommand{\cftfigaftersnum}{\ }
+
+\setlength{\cftfigindent}{0in}      % "Figure #" at left margin
+\setlength{\cftfignumwidth}{5em} % caption block starts at 0.75"
+% (again, change to 1in if they want 1")
+
+
 
 %------------------------------------------------------------------------------
 % URL formatting
@@ -203,6 +293,7 @@
 }
 
 \renewcommand{\bibname}{References}
+\renewcommand{\contentsname}{Table of Contents}
 
 \author{Matthew Saunders}
 \begin{document}
@@ -234,9 +325,9 @@ Libin Ye, Ph.D.\\
 Stanley Stevens, Ph.D.
 ~\\[2\baselineskip]
 Date of Approval:~\\
-October 1st, 2025 
+October 1, 2025 
 ~\\[3\baselineskip]
-Keywords: Molecular Dynamics, Ions\\
+Keywords: Molecular Dynamics, Zwitterion, Ion Adsorption, Force-Field, Phospholipid\\
 ~\\
 Copyright \textsuperscript\textcopyright~2025, Matthew W. Saunders\\
 
@@ -257,29 +348,109 @@ Copyright \textsuperscript\textcopyright~2025, Matthew W. Saunders\\
 \textit{Langmuir}, American Chemical Society, December 1, 2024., and from Matthew Saunders, Sagar Pandit, and Sameer Varma, Alteration of Lipid Bilayer Structure by \mg{}, \textit{Langmuir}, American Chemical Society, manuscript in review, 2025.}}
  \graphicspath{{CH1/figures/}}
 \input{ch1.tex}
-\chapter[A high dimensional parameter search method to...]{A high dimensional parameter search method to determine force field mixing terms in molecular simulations\footnote{
+\chapter[A High Dimensional Parameter Search Method to...]{A high dimensional parameter search method to determine force field mixing terms in molecular simulations\footnote{
 Portions reprinted with permission from Matthew Saunders, Vered Wineman-Fisher, and Eric Jakobsson, \textit{High-Dimensional Parameter Search Method to Determine Force Field Mixing Terms in Molecular Simulations}, 
 \textit{Langmuir}, American Chemical Society, March 1, 2022. 
-\textcopyright{} 2022 American Chemical Society.
+\textcopyright{} 2022 American Chemical Society. See appendix~\ref{app:permissions}
 }}
 \graphicspath{{CH2/figures/}}
+
+\begingroup
+\makeatletter
+% Save originals
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\let\origtable\table
+\let\endorigtable\endtable
+
+% Redefine environments so any optional argument is ignored and [H] is used
+\renewenvironment{figure}[1][]{\origfigure[H]}{\endorigfigure}
+\renewenvironment{table}[1][]{\origtable[H]}{\endorigtable}
+\makeatother
+\section{Author Contributions}
+In this work I created geometries for target data, performed calculations for classical force-field target data.
+I set up and performed parameter searches, implemented the force-field parameters, and ran all classical molecular dynamics simulations.
+I performed all analysis and generated all figures, and wrote 90\% of the manuscript text.
+
 \input{ch2.tex}
-\chapter[Adsorption modes of \na{}, \li{}, and \mg{} to a model zwitterionic lipid bilayer]{Adsorption modes of \na{}, \li{}, and \mg{} to a model zwitterionic lipid bilayer\footnote{
+\makeatletter
+\let\figure\origfigure
+\let\endfigure\endorigfigure
+\let\table\origtable
+\let\endtable\endorigtable
+\makeatother
+\endgroup
+
+
+\chapter[Adsorption Modes of \na{}, \li{}, and \mg{}...]{Adsorption modes of \na{}, \li{}, and \mg{} to a model zwitterionic lipid bilayer\footnote{
     Portions reprinted with permission from Matthew Saunders, Abibat Adekeye-Olowofela, and Sabrina Downing, \textit{Adsorption Modes of Na\textsuperscript{+}, Li\textsuperscript{+}, and Mg\textsuperscript{2+} to a Model Zwitterionic Lipid Bilayer}, 
 \textit{Langmuir}, American Chemical Society, December 1, 2024. 
-\textcopyright{} 2024 American Chemical Society.
+\textcopyright{} 2024 American Chemical Society. See appendix~\ref{app:permissions}
 }}
 \graphicspath{{CH3/figures/}}
+\section{Author Contributions}
+In this work I created geometries for target data, performed both \emph{ab inito} and 
+classical calculations target data.
+I set up and performed parameter searches, implemented the force-field parameters, and ran all classical molecular dynamics simulations.
+I performed all analysis and generated all figures, and wrote the manuscript text.
 \input{ch3.tex}
-\chapter[Alteration of bilayer structure by \mg{}]{Alteration of bilayer structure by \mg{}\footnote{Portions reprinted with permission from Matthew Saunders; Sagar A. Pandit; Sameer Varma.
+\chapter[Alteration of Bilayer Structure by \mg{}]{Alteration of bilayer structure by \mg{}\footnote{Portions reprinted with permission from Matthew Saunders; Sagar A. Pandit; Sameer Varma.
 Alteration of Lipid Bilayer Structure by Mg$^{2+}$.
 \textit{Langmuir}, American Chemical Society, manuscript in review, 2025.}}
 \graphicspath{{CH4/figures/}}
+\section{Author Contributions}
+In this work I created geometries for target data, performed both \emph{ab inito} and 
+classical calculations target data.
+I set up and performed parameter searches, implemented the force-field parameters, and ran all classical molecular dynamics simulations.
+I performed all analysis and generated all figures, and wrote the manuscript text.
 \input{ch4.tex}
 \chapter{Conclusions}
 \graphicspath{{CH5/figures/}}
 \input{ch5.tex}
+%----------------------------------------------------------
+% Appendices
+%----------------------------------------------------------
+\appendix
+
+\chapter{Publisher Permission Letters}
+\label{app:permissions}
+This appendix contains publisher permission agreements for reuse of material
+from Chapters~2–4.
+
+
+% Chapter 2 permissions
+\includepdf[
+  pages={1-4},
+  nup=2x2,
+  frame=true,
+  scale=0.8,
+  pagecommand={}
+]{Permissionforreuse1.pdf}
+
+% Chapter 3 permissions
+\includepdf[
+  pages={1-4},
+  nup=2x2,
+  frame=true,
+  scale=0.8,
+  pagecommand={}
+]{Permissionforreuse2.pdf}
+
+% Chapter 4 permissions
+% \includepdf[
+%   pages=-,
+%   pagecommand={},
+%   scale=0.95
+% ]{Permissionforreuse3.pdf}
+
+\begingroup
+\clubpenalty=10000
+\widowpenalty=10000
+\interlinepenalty=10000
+\sloppy
 \bibliography{refs}
+\endgroup
+
 \end{document}
 
 

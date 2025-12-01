@@ -128,8 +128,8 @@ geometries for these clusters are reported in figure~\ref{figch4:optres} and tab
 
 Parameter optimizations were performed using the ParOpt software package developed by our group~\cite{fogarty:2014:paropt}. We used the Nelder-Mead optimizer to simultaneously optimize
 the 14 LJ cross terms for each atom type in our target clusters. Constraints are detailed in Table~\ref{tabch4:constrain}. 
-\begin{table}[H]
-    \tiny
+\begin{table}[h!bt]
+    \small
 \begin{tabularx}{\textwidth}{X|X|X|X}
 \hline
 \textbf{Parameter} & \textbf{Min} & \textbf{Max} & \textbf{Additional Constraint} \\
@@ -161,20 +161,18 @@ These optimized parameters are provided in table~\ref{tabch4:params}. We denote 
 Saunders \etal{} 2024~\cite{saunders:2024}, which we will refer to as the \mg{ 2024} model.
 There are substantial differences between the \mg{ 2024} and \mg{ 2025} models, with the greatest changes in the size of the well depth \epsilonij{} for MG-OA, MG-P, and MG-OM\textsuperscript{*}
 
-The substitution energies before and after optimization are compared to target QM values in Table~\ref{tabch4:subenergies}. The geometries before and after optimization are compared to QM geometries in figure~\ref{figch4:optres}. 
 \begin{landscape}
-    \begin{figure}{H}
+The substitution energies before and after optimization are compared to target QM values in Table~\ref{tabch4:subenergies}. The geometries before and after optimization are compared to QM geometries in figure~\ref{figch4:optres}. 
+\begin{figure}[h!bt]
     \centering
     \caption[Geometry of optimized clusters of small molecules]{Comparison between distances of \mg~atom from other atoms in clusters optimized using QM and MM.}
     \label{figch4:optres}
-    \includegraphics[height=0.7\textheight]{Figure_S1.eps}
+    \includegraphics[width=0.8\textwidth]{Figure_S1.eps}
 \end{figure}
-\end{landscape}
 We note substantial improvements in both substitution energies with a minimal loss of accuracy in geometries, 
 with parameter optimization reducing mean absolute error in $\Delta E_{sub}$ from 0.26 to 0.01. %, and reducing mean absolute error in distances of Mg from cluster atoms from XX to YY \AA.
-\begin{landscape}
-\begin{table}[H]
-    \begin{tiny}
+\begin{table}[h!bt]
+    \begin{small}
 \centering
 \begin{tabularx}{\textwidth}{X|X|X|X|X|X|X}
 \hline
@@ -190,7 +188,7 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 \end{tabularx}
 \caption[Lennard-Jones cross-terms]{Lennard-Jones parameters for magnesium interactions: well depth $\epsilon_{ij}$ (kJ/mol) and distance parameter $\sigma_{ij}$ (nm), comparing the 2025 optimized model, the 2024 model, and the original LB-rules.}
 \label{tabch4:params}
-\end{tiny}
+\end{small}
 \end{table}
 % \begin{table}[h!]
 % \centering
@@ -213,13 +211,13 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 % \end{table}
 
 % Combined comparison: LB Rules vs 2024 vs 2025
-\begin{table}[H]
-\begin{tiny}
+\begin{table}[h!bt]
+\begin{small}
 \centering
 \sisetup{round-mode=places,round-precision=3,detect-all}
 \begin{tabularx}{\textwidth}{X|X|XXX|XXX|XXX}
 \hline  
-& {PBE0+VdW} 
+& {PBE0 + VdW} 
 & \multicolumn{3}{c|}{LB Rules} 
 & \multicolumn{3}{c|}{2024} 
 & \multicolumn{3}{c}{2025} \\
@@ -270,7 +268,7 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
   \caption[Substitution energies]{Energies (kJ/mol) associated with substituting $n$ water molecules in low coordination clusters, and in 6-fold Mg-water clusters with $n$ methyl acetates (MeAcs) or $n$ diethyl phosphates (DEPhs). 
   Substitution energies are defined in equation \ref{equ_2}.}
   \label{tabch4:subenergies}
-\end{tiny}
+\end{small}
 \end{table}
 \end{landscape}
 % \begin{table}[h!tbp]
@@ -306,7 +304,7 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 We also compare the difference in substitution energies between the three parameter sets in table~\ref{tab:subs-relative-to-lb}.
 We note that the 2024 \mg{} parameters tend to increase the binding strength of the interaction with the ligand over the LB rules parameters,
 and the 2025 \mg{} parameters reduce the energy of binding to MeAc while increasing the interaction with DePh.
-\begin{table}[h!tbp]
+\begin{table}[h!bt]
 \centering
 \sisetup{round-mode=places,round-precision=3,detect-all}
 \begin{tabularx}{\textwidth}{|X|X|X|X|}
@@ -372,7 +370,7 @@ orientation of these waters can be probed by computing the orientational order p
 To compute $P_1$ and $P_2$, we divide the simulation unit cell into 2000 slices along the membrane transverse (z-) axis.  
 The average values over the last 150 ns of the simulation are plotted in figure~\ref{figch4:h2order}, with points shown for every 200 slices. 
 
-\begin{figure}[H]
+\begin{figure}[h!bt]
     \caption[Water orientational order parameters]{Water orientation order parameters. The first
     order parameter represents an in-out ordering with respect to the bilayer center, and the second is related to the orientation of the quadrupole moment of the box. A value of zero is completely
     parallel with the box axis.  
@@ -382,14 +380,15 @@ The average values over the last 150 ns of the simulation are plotted in figure~
 \mg{ 2025} Micro system. We note that the hydration boundary of both of the 2025 simulations is further from the bilayer center compared to the 2024 simulations, resulting in a larger region of biological water
 at the bilayer surface. This alone can result in a greater number of ions adsorbed in at least the \emph{steric} adsorption mode.} 
     \label{figch4:h2order}
-    \includegraphics{Figure_1.eps}
+    \includegraphics[width=0.4\textwidth]{Figure_1.eps}
 \end{figure}
 The histogram of $P_2$ is used to calculate the \emph{hydration boundary} of the lipid bilayer system. The outermost
 region of negative ordering is fitted to an exponential function, and the length scale of the exponential is used to find the location where $P_2$ is considered to be effectively zero. 
 Lines to delimit these values are drawn on the plot in figure~\ref{figch4:h2order}, and these positions are noted for each bilayer
 in table~\ref{tabch4:struc}.
-\begin{table}[H]
-{\tiny
+\begin{landscape}
+\begin{table}[h!bt]
+{\small
     \caption[Bilayer structural parameters]{Bilayer structural parameters. The bilayer hydration boundary is defined as the position away from the bilayer center beyond which solvent is isotropic, and denotes 
         bulk solvent from bound solvent. The number of adsorbed charges in each adsorption mode are within the hydration boundary of the system, and are further classified by the degree
     of loss of hydration water -- steric adsorbed have lost no water, imperfect have lost at least one, and perfect have replaced all water oxygens for lipid oxygens. The bilayer thickness
@@ -399,7 +398,7 @@ of Petrache \etal{}~\cite{petrache:1997}. $V_C$ is computed from the component v
 $A_L=\frac{V_C}{D_C}$ is the two-dimensional area occupied per lipid on the bilayer surface. We note a correlation between simulations with larger numbers of adsorbed charges
 and perturbation of the bilayer structure from that of the simulation without salt, especially in the bilayer \dc{}.}
     \label{tabch4:struc}
-    \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|}
+    \begin{tabularx}{\textwidth}{|l|X|X|X|X|X|}
 
         \hline                     & Without salt             &  \mg{ 2024} HFE     & \mg{ 2024} Micro    & \mg{ 2025} HFE    & \mg{ 2025} Micro \\\hline
     Hydration Boundary~(\AA)       & N/A                      &  34.5               & 33.3               & 34.8               & 35.9      \\\hline
@@ -418,6 +417,7 @@ and perturbation of the bilayer structure from that of the simulation without sa
     \end{tabularx}
 }
 \end{table}
+\end{landscape}
 \section{\mg Adsorption Behavior}
 We classify any ion within the hydration boundary as at least sterically adsorbed, with further distinction -- steric, imperfect, or perfect -- based on how much dehydration the ion undergoes when approaching the bilayer center. A \emph{perfectly} adsorbed ion has lost all waters in its first hydration shell and an  \emph{imperfectly} adsorbed ion
 has lost at least one water from its first coordination shell. 
@@ -427,7 +427,7 @@ computed from radial distribution functions. The cutoff used for \mg{} in all sy
 We compute the nearest oxygens (lipid phosphate, glycerol, ester fragment, \cl{}, or water) within these
 cutoffs of cations across the simulation system, and generate a histogram averaged over slices and then over the last 150 ns of simulation time. This histogram is shown in 
 figure~\ref{figch4:ioncoordination}.
-\begin{figure}[H]
+\begin{figure}[h!b]
     \caption[First-shell coordination partners of \mg]{Coordination partners of \mg{}. We note that while the Micro water with the 2024 parameters do result in some dehydration 
         of the \mg{} in the headgroup region of the bilayer, both 2024 parameters yield nearly no dehydration of \mg{} at any location in the simulation box. The 2025 HFE parameters
         still largely do not dehydrate, but the 2025 Micro parameters do result in loss of 1-2 waters from the \mg{} coordination shell within the headgroup region. 
@@ -445,7 +445,7 @@ The \mg{ 2025} Micro parameters appear to have a preference for direct interacti
 Fractions of ions in each adsorption mode have been computed by counting the number of ions in each frame within the hydration boundary, 
 and the number of those that have lost one water, or all of their waters. We compute averages over the last 150ns, and then 
 fractions of the total adsorbed ions present in each mode. These values are shown in figure~\ref{figch4:adfrac}, alongside the fraction of ions adsorbed vs the fraction remaining in bulk solvent. 
-\begin{figure}[H]
+\begin{figure}[h!b]
     \caption[Fraction of ions in each adsorption modality]{ (a) Distribution of \mg{} ions in different membrane adsorption modes. \mg{} are first classified into those in bulk and those adsorbed in membranes. 
         Among those adsorbed in membrane, \mg{} are 
         further classified into those that are perfectly, imperfectly and sterically adsorbed. 
@@ -479,7 +479,7 @@ From the resulting profiles, we calculated the small-angle X-ray scattering (SAX
 density and applying a cosine transform. Electron density profiles and corresponding simulated SAXS form factors are shown in
 Figure~\ref{figch4:formfactors}.
 
-\begin{figure}[H]
+\begin{figure}[h!bt]
     \caption[SAXS formfactors]{SAXS form-factors and associated electron densities for \mg{} simulations. (a) \mg{ 2024} under both Micro
 and HFE has little effect in changing the bilayer form-factor compared to that of the no-salt simulation, consistent with the available experimental results at lower ion concentrations. 
 Conversely, both of the simulations with 2025 parameters result in significant thickening of the bilayer. 
@@ -495,7 +495,7 @@ These histograms are then symmetrized, and averaged over the last 150ns of simul
 These can be seen for solvent and lipid headgroup components of in figure~\ref{figch4:soldens}.
 We note greater accumulation of \mg{} in the \mg{ 2025} simulations, with greater peak densities of cations in the headgroup regions, with the largest peak in the \mg{ 2025} HFE system. 
 
-\begin{figure}[H]
+\begin{figure}[h!bt]
     \includegraphics{Figure_5.eps}
     \caption[Number densities]{Number density histograms of lipid headgroup components. Vertical lines denote the bilayer structural features such as the hydration boundary in purple, the \dhh{} in orange and the \dc{} in red. We note
     that within the hydration boundary of each system there is accumulation of ions -- anions accumulate near the trimethylammonium nitrogen and cations accumulate near the phosphate group. The \mg{ 2025} parameters
@@ -519,7 +519,7 @@ moiety in a lipid are used to compute \Vc. Finally, we compute the \al as the ra
 \subsection{Acyl-Chain order parameters}
 Acyl-chain order parameters are computed using the method outlined by Douliez \etal~\cite{douliez:1995} (see  figure~\ref{figch4:acylorder}) and described at length in chapter 1 of this dissertation. It is noted 
 that the 2024 \mg{} parameters do not significantly increase the acyl-chain ordering from that of the system simulated without salt.The 2025 \mg{} parameters have a much greater effect on the ordering.
-\begin{figure}[H]
+\begin{figure}[h!bt]
    \caption[Acyl-Chain order parameters]{Acyl-chain CD Order parameters. We note increased ordering in the
    simulations using the 2025 model parameters, while the 2024 parameters result in
 bilayers that remain very similar to the simulation without salt.}
@@ -545,6 +545,7 @@ This is then used to compute both the area per lipid and the thickness of the ac
 \begin{equation}
    \langle A \rangle = q\frac{4V_{\text{CH}_2}}{D_M}\text{,}
 \end{equation}
+\begin{landscape}
 Using $V_{CH_2}$ computed from the number densities, and the bond length $D_M=2.54$.
 One can approximate the $V_{CH2}$ in two ways from the $v_{CH2\&CH1}$ -- first by directly using $V_{CH2}=v_{CH2\&CH1}$, and
 second by using the common approximation of $\frac{V_{CH2}=v_{CH3}}{2}$~\cite{nagle:2000}.
@@ -554,8 +555,8 @@ With all of this together, the acyl chain thickness is
 \end{equation}
 with $n_c=16$ as the number of carbons in the Sn-1 chain of POPC.
 These values can be seen in table~\ref{tabch4:opstruc}.
-\begin{table}[H]
-{\tiny
+\begin{table}[h!bt]
+{\small
    \caption[\dc{} and \al{} from acyl chain ordering]{Area factor, acyl chain region thickness and area per lipid. These values are computed via the method described in Petrache \etal~\cite{petrache:2000:nmrarea}. This provides us with another
    measure of the acyl chain thickness. We note that the thickening of the lipid bilayer remains consistent with the acyl chain thickness \dc{} computed from the number densities.}
    \label{tabch4:opstruc}
@@ -570,6 +571,7 @@ These values can be seen in table~\ref{tabch4:opstruc}.
    \end{tabularx}
 }
 \end{table}
+\end{landscape}
 Notably, the \dc{} for all systems studied is slightly smaller than what we compute from the number densities, but follows similar trends.
 The \al{} computed here only relies on the volume of the CH2 moiety, and ends up with again
 quite different results than what we computed from $2V_C/2D_C$.
@@ -581,13 +583,13 @@ this trend is not followed necessarily in the \dhh{}, which is not a reliable me
 and salt in the headgroup region.
 Together, we note that the systems with the greatest number of charges in the Langmuir-type (non-steric) modes correlate with an increase the 
 bilayer thickness (figure~\ref{figch4:chargeperlipid})
-\begin{figure}[H]
+\begin{figure}[h!bt]
     \caption[Adsorbed charge per adsorption modality]{Adsorbed charge per adsorption modality per lipid as a function of the lipid bilayer hydrocarbon thickness \dc{}. We compare both our results from this work, and our previous work with monovalent
         ions~\cite{saunders:2024}. There is a clear trend in the total number of adsorbed
         charges (i.e. any charges not in bulk solvent), where more charges results in a greater \dc{}. However, if one examines the sterically adsorbed charges, the trend is not as strong. This seems to indicate
     that the non-steric charges are most responsible for the pertubation of the bilayer thickness from that of the no-salt simulation shown as the blue region on the plot.}
     \label{figch4:chargeperlipid}
-    \includegraphics[height=0.5\textheight]{Figure_6.eps}
+    \includegraphics[height=0.35\textheight]{Figure_6.eps}
 \end{figure}
 \section{Conclusions}
 We have presented a comparison between

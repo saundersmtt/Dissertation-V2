@@ -105,10 +105,11 @@ force-field for \mg{} the predominant mode of adsorption
 of \mg{} to 1-palmitoyl-2-oleoyl-sn-glycero-3-phosphatidylcholine (POPC) is 
 {always} \emph{steric adsorption}.
 
+\begin{landscape}
 \section{Methods}
 Multiple simulations of POPC bilayers are performed
 with LiCl and MgCl$_{2}$ salt. Configurations for each simulation are listed in table~\ref{tabch3:ions}.
-\begin{table}
+\begin{table}[H]
     \caption[Simulation system details]{Simulation system details. Each simulated system is started with 200~mM salt, and the final bulk concentration 
     is computed from the average number density of ions 
     at the center of the solvent occupied region of the box, from the last 150~ns of simulation time. \nambnbfix{}
@@ -118,19 +119,18 @@ with LiCl and MgCl$_{2}$ salt. Configurations for each simulation are listed in 
     the work by Joung and Chetatham III~\cite{joung:2008}. \mg{} (b-c) parameters
     are obtained from Li \etal{}~\cite{merzparams} and Grotz \etal{}~\cite{microparams}, respectively.}
     \label{tabch3:ions}
-    \begin{minipage}{\textwidth}
-    \tiny{
-    \begin{tabularx}{\textwidth}{X|X|X|X|X|X}
+    \small{
+    \begin{tabularx}{\linewidth}{l|X|X|X|X|X}
         System & No. of Cations & No. of Anions & Starting Bulk Salt Concentration & Final Bulk Salt Concentration & Simulated Time \\\hline
-        \na{\tiny{From Saunders \etal{} 2022~\cite{saunders:2022}}}      & 216  & 216   &   200mM   & 103mM & 0.7$\mu$s\\\hline
+        \na{\tiny\textsubscript{From Saunders \etal{} 2022~\cite{saunders:2022}}}      & 216  & 216   &   200mM   & 103mM & 0.7$\mu$s\\\hline
         \li{} (a)         & 216  & 216   &   200mM   & 102.0mM & 1$\mu$s  \\\hline
         \mg{} (b)         & 216  & 432   &   200mM   & 152mM  & 2.5$\mu$s\\\hline
         \mg{} (c)           & 216  & 432   &   200mM   & 153mM & 1$\mu$s\\\hline
     \end{tabularx}}\par
    \vspace{-0.75\skip\footins}
    \renewcommand{\footnoterule}{}
-\end{minipage}
 \end{table}
+\end{landscape}
 \subsection{Bilayer Construction}
 Bilayers are constructed as described in Chapter~1, with 200 POPC lipids
 (100 per leaflet) and 60,000 waters to provide sufficient bulk solvent.
@@ -157,7 +157,7 @@ agreement with experiment. Trajectory analysis is carried out with
 GROMACS built---in tools, in---house software using the GROMACS API, and the
 MDAnalysis Python package~\cite{gromacsmanual,mdanalysis1,mdanalysis2}.
 
-\subsection{Force-field parameters}
+\subsection{Force-field Parameters}
 
 Lipid-lipid and lipid-water interactions are described using our 
 gromos43a1-s3 model~\cite{chiu:2009}, 
@@ -212,58 +212,131 @@ The interaction cross-terms for \mg{} from Grotz \etal{} have been {computed}
 with SPC/E water explicitly, using Lorentz-Berthelot mixing rules.
 Similarly to \li{}, we selected LJ cross-terms for use in our simulation following the procedure from Saunders \etal{} 2022~\cite{saunders:2022}. 
 Target QM data for clusters of water with \mg{} are shown in table~\ref{tabch3:ionwater}.
-\begin{table}[H]
+\begin{table}[h!tb]
     \centering
-    \tiny
-    \begin{tabularx}{\textwidth}{X|X|X|X|X|X|X}
-        \hline
-        Waters & CCSD(T)/CBS~\cite{wineman:2020:transferable} & PBE0+vdW~\cite{wineman:2020:transferable} & AMOEBA-HFC~\cite{wineman:2020:transferable} & Li et al.~\cite{merzparams} & Grotz et al.~\cite{microparams}  & Allner \etal{} \cite{villaparams}\\
-        \hline
-             1  &  -344.8  &  -349.9  &  -349.8  &  -276.8  & -282.8   &-270.3\\
-             2  &  -651.0  &  -657.6  &  -657.3  &  -544.3  & -557.3   &-531.5\\
-             3  &  -898.7  &  -904.6  &  -902.5  &  -792.1. & -815.2   &-774.3\\
-             4  & -1101.2  & -1103.4  & -1100.4  & -1018.3 & -1055.3   &-995.7\\
-        MAE &     -        &  4.9       &  4.0        &  91.1     &  71.3& 106.0     \\
-        \hline
-    \end{tabularx}
-        \caption[\mg{} binding energies to water]{Mg$^{2+}$ binding energies to water clusters determined using different QM
+    \small
+    \caption[\mg{} binding energies to water]{Mg$^{2+}$ binding energies to water clusters determined using different QM
     theories and classical force fields. All energies are in kJ/mol. These are used when
     computing the energies of substitution from water to lipid parts, which we use
     as our optimization target when selecting LJ cross-terms.}
+    \subcaption*{(a) Quantum mechanical reference energies}
+    \begin{tabularx}{0.5\textwidth}{X|X|X|X}
+        \hline
+        Waters & CCSD(T) / CBS~\cite{wineman:2020:transferable} & PBE0 + vdW~\cite{wineman:2020:transferable} & AMOEBA-HFC~\cite{wineman:2020:transferable} \\
+        \hline
+             1  &  -344.8  &  -349.9  &  -349.8  \\
+             2  &  -651.0  &  -657.6  &  -657.3  \\
+             3  &  -898.7  &  -904.6  &  -902.5  \\
+             4  & -1101.2  & -1103.4  & -1100.4  \\
+        MAE &     -        &  4.9       &  4.0   \\
+        \hline
+    \end{tabularx}
+    \subcaption*{(b) Classical force-field predictions}
+    \begin{tabularx}{0.5\textwidth}{X|X|X|X}
+        \hline
+        Waters & Li et al.~\cite{merzparams} & Grotz et al.~\cite{microparams}  & Allner \etal{} \cite{villaparams}\\
+        \hline
+             1  &    -276.8  & -282.8   &-270.3\\
+             2  &    -544.3  & -557.3   &-531.5\\
+             3  &    -792.1. & -815.2   &-774.3\\
+             4  &   -1018.3 & -1055.3   &-995.7\\
+        MAE &            91.1     &  71.3& 106.0     \\
+        \hline
+    \end{tabularx}
+
     \label{tabch3:ionwater}
 \end{table}
 These energies for water were similar enough across force-fields that I chose to use only the values from Li \etal{}~\cite{merzparams} for use in computing substitution energies for our target data.
 The result of our parameter search are shown in table~\ref{tabch3:params}.
-\begin{table}
-\tiny{
-    \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\hline
-        \multirow{3}{*}{Atom type} & \multicolumn{4}{c|}{\li{}} & \multicolumn{6}{c|}{\mg} \\\cline{2-11}
-                  &\multicolumn{2}{c|}{LB-Rules}&\multicolumn{2}{c|}{\mbnbfix}&\multicolumn{2}{c|}{LB-Rules}&\multicolumn{2}{c|}{\mbnbfix}&\multicolumn{2}{c|}{\mbnbfixmicro}\\\cline{2-11}
-                  & \eps{}  & \sig{}  & \eps{} & \sig{} & \eps{}& \sig{} & \eps{}& \sig{} & \eps{}& \sig{} \\\hline
-            CH3   & 1.07485 & 0.25797 & 0.99872 & 0.30898 & 0.19239 & 0.30856 & 0.68709 & 0.14257& 0.68709 & 0.14257\\\hline
-            CH2   & 0.75411 & 0.27432 & 1.05729 & 0.20001 & 0.13238 & 0.32468 & 0.63126 & 0.20617& 0.63126 & 0.20617\\\hline
-            OA    & 1.09408 & 0.21821 & 2.91925 & 0.20020 & 0.19044 & 0.26890 & 5.05190 & 0.26223& 5.05190 & 0.26223\\\hline
-            P     & 1.85667 & 0.23975 & 6.99324 & 0.21844 & 0.32318 & 0.29044 & 3.89200 & 0.27811& 3.89200 & 0.27811\\\hline
-            OM*   & 1.19328 & 0.21400 & 0.23749 & 0.20015 & 0.20771 & 0.26469 & 3.22262 & 0.17691& 3.22262 & 0.17691\\\hline
-            CO*   & 0.35344 & 0.29727 & 0.48204 & 0.35920 & 0.06152 & 0.34796 & 0.56152 & 0.37127& 0.56152 & 0.37127\\\hline
-            O*    & 1.19328 & 0.21400 & 0.06248 & 0.20068 & 0.20771 & 0.26469 & 2.43058 & 0.13069& 2.43058 & 0.13069\\\hline
-            OW    & 0.95709 & 0.22875 & 0.95709 & 0.22875 & 0.16659 & 0.27944 & 0.16659 & 0.27944& 13.75000& 0.21010\\\hline
-    \end{tabularx}}
-    \caption[Lennard-Jones cross-terms for \mg{}]{Lennard-Jones cross-terms used in each \mg{} simulation. LB-terms are computed using Lorentz-Berthelot (LB) mixing rules,
-    starting with the self-terms for \li{} from Joung and Chetatham III\etal{}~\cite{joung:2008} and the self terms from \mg{} from the work of
-    Li \etal{}\cite{merzparams}. The \mbnbfix{} parameters are chosen following the procedure described in the methods section.
-    The \mbnbfixmicro{} parameters for \mg{} only change the cross-term for OW-\mg, and were computed using LB-rules to mix the self-terms from
-    Grotz \etal{}~\cite{microparams} with those of SPC/E water, without changing the cross-terms with anything else in the system.\ \eps{} are in
-    units of / Kj/mol and \sig~are presented in units of /nm.}
+\begin{table}[h!tb]
+    \centering
+    \small
+    \caption[Lennard-Jones cross-terms for \mg{}]{Lennard-Jones cross-terms
+    used in each \mg{} simulation. LB-terms are computed using
+    Lorentz--Berthelot (LB) mixing rules, starting with the self-terms for
+    \li{} from Joung and Cheatham III\etal{}\cite{joung:2008} and the
+    self-terms for \mg{} from Li\etal{}\cite{merzparams}. The \mbnbfix{}
+    parameters are chosen following the procedure described in the Methods
+    section. The \mbnbfixmicro{} parameters for \mg{} only change the OW--\mg{}
+    cross-term, using LB-rules to mix the self-terms from
+    Grotz\etal{}\cite{microparams} with those of SPC/E water, without changing
+    any other cross-terms. Energies \eps{} are in kJ/mol and \sig{} values are
+    in nm.}
+    
+    %------------------------------------------
+    % (a) Li+ cross-terms
+    %------------------------------------------
+    \subcaption*{(a) Lennard--Jones cross-terms for \li{}}
+    \begin{tabularx}{0.9\textwidth}{l|X|X|X|X}
+        \hline
+        \multirow{2}{*}{Atom type} &
+            \multicolumn{2}{c|}{LB-rules} &
+            \multicolumn{2}{c}{\mbnbfix} \\\cline{2-5}
+        & \eps{} & \sig{} & \eps{} & \sig{} \\\hline
+        CH3 & 1.07485 & 0.25797 & 0.99872 & 0.30898 \\\hline
+        CH2 & 0.75411 & 0.27432 & 1.05729 & 0.20001 \\\hline
+        OA  & 1.09408 & 0.21821 & 2.91925 & 0.20020 \\\hline
+        P   & 1.85667 & 0.23975 & 6.99324 & 0.21844 \\\hline
+        OM* & 1.19328 & 0.21400 & 0.23749 & 0.20015 \\\hline
+        CO* & 0.35344 & 0.29727 & 0.48204 & 0.35920 \\\hline
+        O*  & 1.19328 & 0.21400 & 0.06248 & 0.20068 \\\hline
+        OW  & 0.95709 & 0.22875 & 0.95709 & 0.22875 \\\hline
+    \end{tabularx}
+
+    %------------------------------------------
+    % (b) Mg2+ cross-terms
+    %------------------------------------------
+    \subcaption*{(b) Lennard--Jones cross-terms for \mg{}}
+    \begin{tabularx}{0.9\textwidth}{l|X|X|X|X|X|X}
+        \hline
+        \multirow{2}{*}{Atom type} &
+            \multicolumn{2}{c|}{LB-rules} &
+            \multicolumn{2}{c|}{\mbnbfix} &
+            \multicolumn{2}{c}{\mbnbfixmicro} \\\cline{2-7}
+        & \eps{} & \sig{} & \eps{} & \sig{} & \eps{} & \sig{} \\\hline
+        CH3 & 0.19239 & 0.30856 & 0.68709 & 0.14257 & 0.68709 & 0.14257 \\\hline
+        CH2 & 0.13238 & 0.32468 & 0.63126 & 0.20617 & 0.63126 & 0.20617 \\\hline
+        OA  & 0.19044 & 0.26890 & 5.05190 & 0.26223 & 5.05190 & 0.26223 \\\hline
+        P   & 0.32318 & 0.29044 & 3.89200 & 0.27811 & 3.89200 & 0.27811 \\\hline
+        OM* & 0.20771 & 0.26469 & 3.22262 & 0.17691 & 3.22262 & 0.17691 \\\hline
+        CO* & 0.06152 & 0.34796 & 0.56152 & 0.37127 & 0.56152 & 0.37127 \\\hline
+        O*  & 0.20771 & 0.26469 & 2.43058 & 0.13069 & 2.43058 & 0.13069 \\\hline
+        OW  & 0.16659 & 0.27944 & 0.16659 & 0.27944 & 13.75000 & 0.21010 \\\hline
+    \end{tabularx}
+
     \label{tabch3:params}
 \end{table}
+
+% \begin{table}
+% \tiny{
+%     \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\hline
+%         \multirow{3}{*}{Atom type} & \multicolumn{4}{c|}{\li{}} & \multicolumn{6}{c|}{\mg} \\\cline{2-11}
+%                   &\multicolumn{2}{c|}{LB-Rules}&\multicolumn{2}{c|}{\mbnbfix}&\multicolumn{2}{c|}{LB-Rules}&\multicolumn{2}{c|}{\mbnbfix}&\multicolumn{2}{c|}{\mbnbfixmicro}\\\cline{2-11}
+%                   & \eps{}  & \sig{}  & \eps{} & \sig{} & \eps{}& \sig{} & \eps{}& \sig{} & \eps{}& \sig{} \\\hline
+%             CH3   & 1.07485 & 0.25797 & 0.99872 & 0.30898 & 0.19239 & 0.30856 & 0.68709 & 0.14257& 0.68709 & 0.14257\\\hline
+%             CH2   & 0.75411 & 0.27432 & 1.05729 & 0.20001 & 0.13238 & 0.32468 & 0.63126 & 0.20617& 0.63126 & 0.20617\\\hline
+%             OA    & 1.09408 & 0.21821 & 2.91925 & 0.20020 & 0.19044 & 0.26890 & 5.05190 & 0.26223& 5.05190 & 0.26223\\\hline
+%             P     & 1.85667 & 0.23975 & 6.99324 & 0.21844 & 0.32318 & 0.29044 & 3.89200 & 0.27811& 3.89200 & 0.27811\\\hline
+%             OM*   & 1.19328 & 0.21400 & 0.23749 & 0.20015 & 0.20771 & 0.26469 & 3.22262 & 0.17691& 3.22262 & 0.17691\\\hline
+%             CO*   & 0.35344 & 0.29727 & 0.48204 & 0.35920 & 0.06152 & 0.34796 & 0.56152 & 0.37127& 0.56152 & 0.37127\\\hline
+%             O*    & 1.19328 & 0.21400 & 0.06248 & 0.20068 & 0.20771 & 0.26469 & 2.43058 & 0.13069& 2.43058 & 0.13069\\\hline
+%             OW    & 0.95709 & 0.22875 & 0.95709 & 0.22875 & 0.16659 & 0.27944 & 0.16659 & 0.27944& 13.75000& 0.21010\\\hline
+%     \end{tabularx}}
+%     \caption[Lennard-Jones cross-terms for \mg{}]{Lennard-Jones cross-terms used in each \mg{} simulation. LB-terms are computed using Lorentz-Berthelot (LB) mixing rules,
+%     starting with the self-terms for \li{} from Joung and Chetatham III\etal{}~\cite{joung:2008} and the self terms from \mg{} from the work of
+%     Li \etal{}\cite{merzparams}. The \mbnbfix{} parameters are chosen following the procedure described in the methods section.
+%     The \mbnbfixmicro{} parameters for \mg{} only change the cross-term for OW-\mg, and were computed using LB-rules to mix the self-terms from
+%     Grotz \etal{}~\cite{microparams} with those of SPC/E water, without changing the cross-terms with anything else in the system.\ \eps{} are in
+%     units of / Kj/mol and \sig~are presented in units of /nm.}
+%     \label{tabch3:params}
+% \end{table}
 \section{Results and Discussion}
-\subsection{Bilayer simulations of \li{} and \mg{}}
-\subsubsection{Lipid bilayer structure}
+\subsection{Bilayer Simulations of \li{} and \mg{}}
+\subsubsection{Lipid Bilayer Structure}
 % \paragraph{Densities}
 The simulated lipid bilayer x-ray scattering form-factors and associated 
 electron densities for each system are shown in figure~\ref{figch3:eledens}.
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Comparison of SAXS formfactors]{Comparison of x-ray scattering formfactors (a,b) and associated electron densities (c,d) for simulated systems. 
     {The system with \li{} salt has a slightly thicker bilayer compared to \na{} and the simulation without salt (a,c) and},
     \mg{} does not significantly change the bilayer thickness
@@ -276,6 +349,7 @@ in our previous work~\cite{kruczek:2017}.
 The bilayer thickness \dhh{} is determined by measuring the distance between the
 peaks in the electron density, which roughly localize the electron-dense phosphates in the
 lipid headgroup --- the values for this can be seen in table~\ref{tabch3:struc}.
+\begin{landscape}
 \begin{table}
     \caption[Bilayer simulation details and structure]{Bilayer simulation details, and structural parameters. Here we detail the various
     structural measurements of each simulated bilayer.
@@ -289,7 +363,7 @@ lipid headgroup --- the values for this can be seen in table~\ref{tabch3:struc}.
 position of the hydration boundary of each system, which we compute as the point where the second water order parameter $P_2(cos(\beta))\approx 0$
 {as was done in Saunders \etal{} 2019~\cite{saunders:2019}}.}
     \label{tabch3:struc}
-    {\tiny
+    {\small
     \begin{tabularx}{\textwidth}{Y|Y|Y|Y|Y|Y}
             &No Salt&\na{} &\li{}&\mgmbnbfix{} &\mgmicro{} \\\hline
         \dhh{} (nm)    &3.744   $\pm$ 0.107  &3.764   $\pm$ 0.088 &3.864  $\pm$ 0.070&3.832  $\pm$ 0.364  &3.768  $\pm$ 0.525\\
@@ -302,7 +376,7 @@ position of the hydration boundary of each system, which we compute as the point
         Hydration Boundary (nm) & 2.79 &3.69&3.63 &3.48&3.33  \\
 \end{tabularx}}
 \end{table}
-
+\end{landscape}
 Experiments often report various types of thicknesses, volumes, and cross-sectional areas that are model dependent.
 We also compute these quantities to compare the simulation results with experiments. These values are presented in 
 table~\ref{tabch3:struc}.
@@ -333,7 +407,7 @@ or invalidate
 these numbers.
 Lipid chain ordering is determined via the acyl chain $S_{CD}$ per carbon
 atom. These can be seen in figure~\ref{figch3:op}. 
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Acyl chain order parameters]{Acyl chain carbon-deuterium order parameters. These are computed for the Sn1 and Sn2 chains of each lipid starting at the 
         second carbon in the chain\cite{egberts:1988,douliez:1995}. We note that the lipids simulated in systems of monovalent ions (a,c) show a significant increase
 in the lipid chain ordering for both acyl chains. The systems simulated with \mg{} (b,d) are much closer in ordering to that of a system
@@ -348,8 +422,8 @@ of the bilayer seen in the \db{} values. The less coordinated \mg{} systems have
 ordering seen in the no-salt simulation.
 
 
-\section{Specific ion adsorption}
-\subsection{Bulk ions}
+\section{Specific Ion Adsorption}
+\subsection{Bulk Ions}
 
 Interfaces in salt solutions give rise to a double layer of cations and anions at the surface~\cite{israelachvili:2011:intermol}. 
 Ions in these double layers get stuck to the surface, or adsorb, which is sometimes referred to as specific binding. Zwitterionic lipid bilayers have no net charge before ions are adsorbed,
@@ -360,7 +434,7 @@ beyond that point
 can be represented by a dielectric continuum. The electrostatic potential at this surface is the $\zeta$--potential.
 In simulations the interface is not a simple surface, but a region {without a clear point of delineation}. 
 
-\subsubsection{Hydration boundary}
+\subsubsection{Hydration Boundary}
 The slip-surface boundary is identified as the point where 
 water orientational ordering is negligible, i.e.
 beyond the ``slip-surface'' 
@@ -374,7 +448,7 @@ the cosine of the angle between the box z-axis and
 the water O-H bond vector, and then average these values over the last 150 ns of simulated time.
 Figure~\ref{figch3:h2order}~shows the water order parameters 
 as a function of the distance of a slice from the bilayer center.
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Water orientational order parameters]{Water order parameters.   
         {The P1 and P2 calculated for monovalent cations (a,c) show greater 
             organization in the bulk region and the B\textsubscript{-2} regions, and less organization within 
@@ -481,7 +555,7 @@ These values can be seen in table~\ref{tabch3:gctheory}. {Since our
     phospholipid is zwitterionic, all of the surface charge comes from the
 ions that have accumulated within 
 the hydration boundary (see figure~\ref{figch3:dens})}
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Number densities]{Number density of lipid headgroup species and
     ions near the bilayer interface.\ (a-b) We report that the 
     monovalent cations show peaks near the phosphate, with
@@ -496,7 +570,7 @@ the hydration boundary (see figure~\ref{figch3:dens})}
     red vertical dashes
 delineate the D\textsubscript{C}~of the bilayer.}
 \label{figch3:dens}
-\includegraphics[height=0.7\textheight]{Figure_4.eps}
+\includegraphics[height=0.5\textheight]{Figure_4.eps}
 \end{figure}
 
 Returning to equation~\ref{eq:gcpot}, $K$ is the inverse Debye length,
@@ -510,7 +584,7 @@ This is taken as an average of the number density of each ion in the solvent occ
 Finally, we fit equation~\ref{eq:gcnum} to the density of anions in 
 bulk solvent via $\rho_0$. The comparisons
 can be seen in figure~\ref{figch3:catgcdens}.
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Number densities of cations and anions]{Number density of cations and anions in the bulk solvent-occupied region of each
     simulated system, compared with theoretical predictions from PB-theory for each calculated $\sigma$. PB-theory predictions
     correspond well with the simulation results within the region bounded by the hydration boundary.}
@@ -527,7 +601,7 @@ We also compare {the}
 electrostatic potential from our simulations 
 to the potential from PB-theory 
 (figure \ref{figch3:potgc}). 
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Electrostatic potential]{Electrostatic potential in the bulk solvent-occupied region compared to predictions from PB-theory. We report good
     agreement between the theoretical potential shown in green, and the simulation results shown in black, within the region bounded by the hydration
     bounds of the lipid bilayer.}
@@ -545,7 +619,7 @@ the electric field in bulk solvent must be zero, and the electrostatic potential
 The electrostatic potential from simulation agrees well with the prediction from PB-theory.
 
 
-\subsection{Adsorbed ions}
+\subsection{Adsorbed Ions}
 \label{sec:boundions}
 The total number of adsorbed ions are counted as the number of ions within the ``slip-surface'' or ``hydration-boundary'' of the bilayer, and
 further characterization is based on the level of hydration of the ion.
@@ -593,7 +667,7 @@ of \cl{} anions adsorbed can be seen in table~\ref{tabch3:anionfrac}.
     We note that the anion binding fractions follow the trend seen in the total number of cations bound for each system, due to the formation of the ionic double-layer
     at the bilayer-water interface.
     Most anions adsorb sterically in each system, with some adsorbing imperfectly as they approach the positively charged choline trimethylammonium in the lipid headgroup.}
-    \label{tabch3:anionfrac}\tiny
+    \label{tabch3:anionfrac}\small
     \begin{tabularx}{\textwidth}{|X|X|X|X|X|}\hline
     Adsorbed anions / lipid     & \cl{} in \na{} System & \cl{} in \li{} System & \cl{} in \mgmbnbfix{} System& \cl{} in \mgmicro{} System\\\hline
     Total      $\theta  $&0.423&0.463& 0.186&0.208 \\\hline
@@ -609,7 +683,7 @@ is almost entirely in the steric modality.
 
 
 
-\subsubsection{Adsorption modalities}
+\subsubsection{Adsorption Modalities}
 
 % The total number of adsorbed ions can be seen in~\ref{tabch3:struc}.
 Further characterization of the adsorbed ions begins by examining the first-shell coordination partners of cations in each system.
@@ -623,7 +697,7 @@ This cutoff is used to produce a neighborlist for ions
 across each simulation in every frame, and count the number of neighbors within this cutoff. 
 These data {are} histogrammed and averaged over
 the last 150ns of simulation time. The results for this are presented in figure~\ref{figch3:cood}.
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[First shell coordinators for \li{} and \mg{}]{First shell coordination partners 
         for \li{} and \mg{} in each simulation. 
         These are computed over the last 150ns of 
@@ -675,7 +749,7 @@ adsorb in this way in significant numbers. Additionally, \cl{} shows significant
 These data raise the question, what determines the mode of adsorption for a given ion? 
 With the substrate and the solvent held constant, the magnitude of the electric field at the position of the hydration shell
 of each ion is all that remains to determine the adsorption modality of the ion (figure~\ref{figch3:cationfrac}).
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Fractions of ion-adsorption modalities]{Fractions of ion-adsorption modality per each simulated system as a function of electric field strength. Here we 
     show that the fractions of ions adsorbed in each modality follow a trend with an increasing electric field strength at the
     hydration shell of the cation. The overall trend is that the cations with the weakest field at the hydration shell position
@@ -713,16 +787,16 @@ of \mg{}, which primarily adsorbs in the non-Langmuir type steric modality.
 Furthermore, we identify several bilayer structural
 parameters that can be verified experimentally via x-ray scattering, neutron
 scattering,
-or various NMR methods {(figures 1, 2, and 3 respectively).}
+or various NMR methods {(figures~\ref{figch3:eledens}, \ref{figch3:op}, and \ref{figch3:h2order} respectively).}
 While the effect on lipid bilayer structure is not obvious in
-the electron density {(figure 1)}, the pertubation can be seen in the \db~and water density --
+the electron density {(figure~\ref{figch3:eledens})}, the pertubation can be seen in the \db~and water density --
 the less hydrated ions induce slight thickening of the lipid bilayer. This
-is reinforced by the chain ordering, where these ions increase chain ordering {(figure 2)} 
+is reinforced by the chain ordering, where these ions increase chain ordering {(figure~\ref{figch3:op})} 
 while the hydrated ions leave the lipid bilayer structure similar to that of the no-salt case.
 These two results can be verified experimentally via solvent deuterium NMR, and lipid chain NMR.
 In the case of POPC, we expect deuterium solvent quadrupolar splitting values will be 
 {larger} 
-for the less hydrated ions \na{} and \li{} when compared to the more hydrated Mg\textsuperscript{2+} {(figure 3)}. 
+for the less hydrated ions \na{} and \li{} when compared to the more hydrated Mg\textsuperscript{2+} {(figure~\ref{figch3:h2order})}. 
 We also expect the lipid chain order parameters to follow the opposite trend,
 with the monovalent ions inducing more ordering and \mg{} inducing a smaller change from the no-salt system.
 We also expect that the adsorption of \mg{} will be less detectable via the 

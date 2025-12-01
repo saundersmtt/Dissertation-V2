@@ -3,64 +3,68 @@
 \contentsline {chapter}{Abstract}{1}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Cell Membranes and Phospholipid Bilayers}{2}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Effects of ions on lipid bilayer structure}{3}{subsection.1.1.1}%
-\contentsline {section}{\numberline {1.2}Molecular Simulations}{5}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Classical Molecular Dynamics}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.1.1}Effects of Ions on Lipid Bilayer Structure}{3}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Molecular Simulations}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Classical Molecular Dynamics}{4}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Mixing Rules, and NB-fix}{6}{subsection.1.2.2}%
-\contentsline {subsubsection}{MD Methods Utilized in this Dissertation}{7}{subsubsection*.5}%
-\contentsline {subsubsection}{Simulation System Construction}{7}{subsubsection*.6}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}MD Methods Utilized in this Dissertation}{6}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2.2}Simulation System Construction}{7}{subsubsection.1.2.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}\emph {Ab initio} Calculations and Density Functional Theory}{8}{subsection.1.2.3}%
 \contentsline {section}{\numberline {1.3}Comparing Molecular Simulations with Experimental Results}{9}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Bilayer Structural Parameters}{9}{subsection.1.3.1}%
-\contentsline {subsubsection}{Lipid component volumes}{10}{subsubsection*.8}%
-\contentsline {subsection}{\numberline {1.3.2}Deuterium Order parameters}{11}{subsection.1.3.2}%
-\contentsline {subsubsection}{D2O Water Orientational Order Parameters}{11}{subsubsection*.9}%
-\contentsline {subsubsection}{Acyl-chain CD Order Parameters}{12}{subsubsection*.10}%
-\contentsline {chapter}{\numberline {2}A high dimensional parameter search method to...}{14}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Abstract}{14}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Introduction}{15}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Methods}{17}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Quantum Mechanical Calculations}{18}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Parameter Optimization}{19}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Bilayer Construction}{22}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Molecular Dynamics}{22}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Results and Discussion}{22}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Optimized Cross-Terms}{22}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Validation of Parameters}{26}{subsection.2.4.2}%
-\contentsline {subsubsection}{Bilayer Structure}{27}{subsubsection*.18}%
-\contentsline {subsection}{\numberline {2.4.3}Membrane-Salt Interactions}{32}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Water Structure and Dynamics}{36}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Bilayer Electrostatics}{41}{subsection.2.4.5}%
-\contentsline {section}{\numberline {2.5}Conclusions}{43}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Adsorption modes of Na\textsuperscript {+}{}, Li\textsuperscript {+}{}, and Mg\textsuperscript {2+}{} to a model zwitterionic lipid bilayer}{46}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Abstract}{46}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Introduction}{46}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Methods}{48}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Bilayer Construction}{48}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Molecular Dynamics}{49}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Force-field parameters}{49}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Results and Discussion}{52}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Bilayer simulations of Li\textsuperscript {+}{} and Mg\textsuperscript {2+}{}}{52}{subsection.3.4.1}%
-\contentsline {subsubsection}{Lipid bilayer structure}{52}{subsubsection*.35}%
-\contentsline {section}{\numberline {3.5}Specific ion adsorption}{55}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Bulk ions}{55}{subsection.3.5.1}%
-\contentsline {subsubsection}{Hydration boundary}{56}{subsubsection*.39}%
-\contentsline {subsubsection}{Poisson-Boltzmann Theory}{57}{subsubsection*.41}%
-\contentsline {subsection}{\numberline {3.5.2}Adsorbed ions}{63}{subsection.3.5.2}%
-\contentsline {subsubsection}{Adsorption modalities}{63}{subsubsection*.48}%
-\contentsline {section}{\numberline {3.6}Conclusions}{69}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Alteration of bilayer structure by Mg\textsuperscript {2+}{}}{70}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Abstract}{70}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Introduction}{71}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Methods}{73}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Mg\textsuperscript {2+}{} Model Parameters}{73}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Bilayer Construction}{79}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Molecular Dynamics}{80}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Results and Discussion}{80}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Water structure, and hydration boundaries}{80}{subsection.4.4.1}%
-\contentsline {section}{\numberline {4.5}Mg\textsuperscript {2+}Adsorption Behavior}{82}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Bilayer Structure}{86}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Acyl-Chain order parameters}{89}{subsection.4.6.1}%
-\contentsline {section}{\numberline {4.7}Conclusions}{93}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Conclusions}{95}{chapter.5}%
-\contentsline {chapter}{References}{97}{chapter*.65}%
+\contentsline {subsubsection}{\numberline {1.3.1.1}Lipid Component Volumes}{11}{subsubsection.1.3.1.1}%
+\contentsline {subsection}{\numberline {1.3.2}Deuterium Order Parameters}{11}{subsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.1}D2O Water Orientational Order Parameters}{11}{subsubsection.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Acyl-chain CD Order Parameters}{12}{subsubsection.1.3.2.2}%
+\contentsline {chapter}{\numberline {2}A High Dimensional Parameter Search Method to...}{14}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Author Contributions}{14}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Abstract}{14}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Introduction}{15}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Methods}{17}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Quantum Mechanical Calculations}{18}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Parameter Optimization}{19}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Bilayer Construction}{22}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Molecular Dynamics}{22}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Results and Discussion}{22}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Optimized Cross-Terms}{22}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Validation of Parameters}{26}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}Bilayer Structure}{26}{subsubsection.2.5.2.1}%
+\contentsline {subsection}{\numberline {2.5.3}Membrane-Salt Interactions}{31}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Water Structure and Dynamics}{34}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Bilayer Electrostatics}{38}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}Conclusions}{42}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Adsorption Modes of Na\textsuperscript {+}{}, Li\textsuperscript {+}{}, and Mg\textsuperscript {2+}{}...}{44}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Author Contributions}{44}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Abstract}{44}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Introduction}{45}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Methods}{47}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Bilayer Construction}{48}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Molecular Dynamics}{48}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Force-field Parameters}{48}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Results and Discussion}{53}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Bilayer Simulations of Li\textsuperscript {+}{} and Mg\textsuperscript {2+}{}}{53}{subsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}Lipid Bilayer Structure}{53}{subsubsection.3.5.1.1}%
+\contentsline {section}{\numberline {3.6}Specific Ion Adsorption}{56}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Bulk Ions}{56}{subsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.1.1}Hydration Boundary}{56}{subsubsection.3.6.1.1}%
+\contentsline {subsubsection}{\numberline {3.6.1.2}Poisson-Boltzmann Theory}{58}{subsubsection.3.6.1.2}%
+\contentsline {subsection}{\numberline {3.6.2}Adsorbed Ions}{63}{subsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}Adsorption Modalities}{63}{subsubsection.3.6.2.1}%
+\contentsline {section}{\numberline {3.7}Conclusions}{67}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Alteration of Bilayer Structure by Mg\textsuperscript {2+}{}}{69}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Author Contributions}{69}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Abstract}{69}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Introduction}{70}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Methods}{73}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Mg\textsuperscript {2+}{} Model Parameters}{73}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Bilayer Construction}{79}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Molecular Dynamics}{80}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Results and Discussion}{80}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Water structure, and hydration boundaries}{80}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Mg\textsuperscript {2+}Adsorption Behavior}{83}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Bilayer Structure}{86}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Acyl-Chain order parameters}{89}{subsection.4.7.1}%
+\contentsline {section}{\numberline {4.8}Conclusions}{93}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Conclusions}{94}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Publisher Permission Letters}{96}{appendix.A}%
+\contentsline {chapter}{References}{99}{appendix*.55}%

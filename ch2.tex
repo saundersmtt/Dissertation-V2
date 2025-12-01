@@ -189,7 +189,7 @@ as the energy cost of replacing water molecules with methyl acetate
 \end{equation}
 The QM total energies and self-energies used in these calculations are
 reported in Tables~\ref{tabch2:qmbinding} and~\ref{tabch2:qmself}.
-\begin{table}[H] 
+\begin{table}[h!tb] 
     \caption[QM Total energies of small molecules]{Total energies of systems of small molecules from QM calculations. 
     These energies are computed by taking the total energy from the final step of geometry optimization on clusters of our selected small molecules 
     around a single \na following the procedure outlined in the methods section. We computed binding energies using these values.} 
@@ -201,7 +201,7 @@ reported in Tables~\ref{tabch2:qmbinding} and~\ref{tabch2:qmself}.
         4&$-3.018\times10^{6}$&$-3.243\times10^{6}$& N/A \\\hline 
     \end{tabularx} 
 \end{table} 
-\begin{table}[H] 
+\begin{table}[h!tb] 
     \caption[Self energies of isolated molecules]{Self energies of isolated molecules. These are computed by performing 
     geometry optimization on an isolated molecule following the procedure outlined in the methods.} 
     \label{tabch2:qmself} 
@@ -228,12 +228,12 @@ Error was
 determined by comparing the optimized
 geometries and substitution energies of each new parameter set to the
 reference data from QM.  
-
 Boundary constraints are imposed on \epsilonij{} and \sigmaij{} to keep
 the search space finite.  Table~\ref{tabch2:constraints} shows all of the
 constraints placed on the parameter search. 
+\begin{landscape}
 \begin{table}
-    {\tiny
+    {\small
     \begin{tabularx}{\textwidth}{X|X|X|X|X|X|X|X|X|X|}
 	        &\tbxmulticol{2}{X|}{NA-CH3}&\tbxmulticol{2}{X|}{NA-CH2}&\tbxmulticol{2}{X|}{NA-CO*}&\tbxmulticol{2}{X|}{NA-OA,-OM*,-O*,-P}&Additional Constraints\\\hline
 		&Min&Max&Min&Max&Min&Max&Min&Max&N/A\\\hline
@@ -255,10 +255,11 @@ this nature may not have a unique solution; thus, 200 independant optimizations 
 each initialized with random initial parameter values. Parameter sets that best improved the substitution energy
 without significantly compromising the conformational geometries are compared to select the final parameters that are
 used in the present work.
+\end{landscape}
 
 Figure~\ref{figch2:nmerror}a illustrates a representative
 NM-trajectory that follows NM-error as a function of optimization step. 
-\begin{figure}[H]
+\begin{figure}[h!tb]
     %\includegraphics[width=\textwidth,trim=-3cm 0 0 -3cm]{7_NA_RERUN_CCONSTRAINED_EQ_3.eps}
     \includegraphics[width=0.7\textwidth]{figure_2.eps}
     \caption[Representative Nelder-Meade (NM) optimization run.]{(a) Representative Nelder-Meade (NM) optimization run. Each point
@@ -325,7 +326,7 @@ tools and in-house software developed on the GROMACS API.
 
 The final optimized parameters are detailed in table~\ref{tabch2:paropt}
 alongside the original parameters computed using LB rules. 
-\begin{table}[H]
+\begin{table}[h!tb]
     \caption[Force-field cross terms]{Force-field cross terms. Original terms, as used in the system simulated with LB rules 
     were computed by applying Lorentz-Berthelot mixing rules to the LJ parameters of \na{} and each lipid component atom type. Optimized parameters are the 
     result of the NM-optimization using ParOpt~\cite{fogarty:2014:paropt,fogarty:2014:thesis}. All constraints
@@ -372,8 +373,8 @@ These are then analyzed using the GROMACS built-in energy and distance tools.
 The substitution energies and the conformations for
 this parameter set are shown in figure~\ref{figch2:energies} 
 and in figure~\ref{figch2:distances}, respectively. 
-\begin{figure}[H]
-    \includegraphics[width=0.7\textwidth]{figure_1.eps}
+\begin{figure}[h!tb]
+    \includegraphics[height=0.5\textheight]{figure_1.eps}
     \caption[Substitution energies for \na~clusters]{Substitution energies for \na~clusters computed as described
 in equation~\ref{eq:substitution}. 
 The energies of systems computed using the standard 
@@ -386,7 +387,8 @@ the small molecules Methyl-Acetate (MeAc) and Diethyl-Phosphate (DePh)
 that were used to represent the major \na~interaction sites on the POPC molecule.}
     \label{figch2:energies}
 \end{figure}
-\begin{sidewaysfigure}[H]
+\begin{landscape}
+\begin{figure}[h!tb]
     \centering
     \caption[Distances from \na{} to each component atom in sample clusters]{Distances from \na{} to each component 
     atom in sample clusters. The geometry of our sample clusters is found by computing the distance from
@@ -395,12 +397,12 @@ that were used to represent the major \na~interaction sites on the POPC molecule
 error for the NM optimization.}
     \label{figch2:distances}
     %\includegraphics[width=0.8\textheight]{distances_combined_final.eps}
-    \includegraphics[width=0.8\textheight]{figure_s1.eps}
-\end{sidewaysfigure}
+    \includegraphics[width=\textwidth]{figure_s1.eps}
+\end{figure}
 It can be noted that for MeAc there is substantially improved substitution
 energies relative to those obtained from using LB mixing rules, 
 which started with an discrepancy of around 30--80~kJ/mol. The optimization has also
-improved the relative substitution between the clusters of various sizes. 
+improved the relative substitution between the clusters of various sizes. \end{landscape}
 The substitution energies for DePh have also improved by a similar magnitude. 
 The conformational geometries are largely unchanged, 
 with a general trend of the binding distance to OM\* shrinking on the order of 0.25~\AA~in DePh. 
@@ -440,7 +442,7 @@ This ion binding is further characterized in a subsequent section.
 \subsubsection{Bilayer Structure}
 
 Bilayer structural parameters can be seen in table~\ref{tabch2:struc}.
-\begin{table}[H]
+\begin{table}[h!tb]
     \caption[Bilayer structural parameters]{Bilayer structural parameters. \dhh{} is the peak-to-peak distance from the electron density of the
         lipid bilayer, and is a measure of bilayer thickness. Bilayer thickness \db~and chain thickness \dc{} are computed from
         number densities of the solvent and the lipid chains, respectively. $V_H$, and $V_C$ are the volumes of the headgroup and lipid chains computed
@@ -487,7 +489,7 @@ Our simulations allow us direct access to the electron densities and number dens
 The entries in table~\ref{tabch2:struc} are determined from these densities.
 
 Figure~\ref{figch2:eldens} shows the electron densities and corresponding bilayer form-factors.
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Electron densities of the simulated bilayers]{Electron densities of the simulated bilayers (a), and corresponding bilayer form-factors (b).
         Electron densities as obtained using the GROMACS density tool,
     centered at the minimum to define the bilayer center, and with the electron density of solvent subtracted.
@@ -500,7 +502,7 @@ SAXS results are for a POPC bilayer in pure solvent~\cite{fogarty:2015}. We see 
 of the optimized system moves closer to the experimental results and the form-factor of a system without salt. This lines up with experimental results, that have shown small, if any, change
 in the bilayer SAXS form-factor~\cite{pabst:2007,petrache:2006:swelling,uhrikova:2008}.}
     \label{figch2:eldens}
-    \includegraphics[width=0.7\textwidth]{figure_4.eps}
+    \includegraphics[height=0.5\textheight]{figure_4.eps}
 \end{figure}
 Form-factors are computed by taking the cosine-transform of the symmetrized electron densities.   
 It can be noted that the simulations carried out using LB rules produced a
@@ -553,7 +555,7 @@ When the chains become more disordered,
 the bilayer thickness typically drops~\cite{nagle:2000}. 
 This ordering is described by the acyl-chain C-D order parameter, 
 plotted per each carbon in the lipid chain in figure~\ref{figch2:op}. 
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Lipid chain deuterium order parameters.]{ Lipid chain deuterium order parameters. $S_{CD}$s are computed for each carbon
         for the chains Sn1 (a) and Sn2 (b), starting at the second carbon in the chain. We see that the optimized system is still showing significant ordering in the lipid
     chains as a result of ion binding; however, the ordering is less pronounced than in the system simulated with LB rules, 
@@ -561,7 +563,7 @@ plotted per each carbon in the lipid chain in figure~\ref{figch2:op}.
 result corresponds with the smaller bilayer thickness in the optimized system.
 }
     \label{figch2:op}
-    \includegraphics[width=0.7\textwidth]{figure_s2.eps}
+    \includegraphics[height=0.5\textheight]{figure_s2.eps}
 \end{figure}
 As reported in our previous simulations, 
 the addition of salt has an ordering effect on the lipid chains. 
@@ -584,7 +586,7 @@ stay quite close to zero, although the sign of the $S_{CD}$ is opposite that for
 in both cases. Since experimentally the sign is not known in systems with salt, and is assumed
 from indirect measurements~\cite{seelig:1987}, it is difficult to assign a definitive value. Thus, we report
 the absolute value of the order parameter.
-\begin{table}[h]
+\begin{table}[h!tb]
 \centering
 \caption{$S_{CD}$ Order parameters for $\beta$ (C5) and $\alpha$ (C6) carbons.}
 \begin{tabular}{lcc}
@@ -619,8 +621,8 @@ In order to compute the equilibrium binding constant,
 one must determine the equilibrium number of bound ions to the lipid surface. 
 Figure~\ref{figch2:ioncoodcount} shows the number of bound ions as a
 function of time over the entire duration of the simulation. 
-\begin{figure}[H]
-    \includegraphics[width=0.7\textwidth]{figure_3.eps}
+\begin{figure}[h!tb]
+    \includegraphics[height=0.3\textheight]{figure_3.eps}
     \caption[Number of ions bound to the lipid bilayer]{Number of ions bound to the lipid bilayer as a function of simulation time. 
 The exponential fits to this data are also shown. These fits are used to compute the asymptotic
 number of ions bound as well as binding rate constants.
@@ -672,13 +674,13 @@ The number of these potential binding partners within the first shell of each \n
 across the simulation box is computed. 
 Ions are then sorted according to their box z-positions, and then the data are averaged over the last 150~ns. 
 This is plotted in figure~\ref{figch2:cood}. 
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[\na{} inner shell coordination partners]{Chemistry of \na{} inner shell coordination as a function of distance from bilayer
 center. Compared to the system simulated with LB rules (a), the system simulated with optimized cross terms (b)
         yields a lower \na{} total coordination number within the headgroup region of the bilayer. 
         This drop in coordination appears to be due to a greater dehydration of the ions in this system.}
     \label{figch2:cood}
-    \includegraphics[width=0.7\textwidth]{figure_5.eps}
+    \includegraphics[height=0.5\textheight]{figure_5.eps}
 \end{figure}
 It is noted that the total number of solvating oxygens of ions within the bilayer headgroup
 region with the optimized parameter set has dropped by $\sim 1$ when
@@ -695,14 +697,14 @@ we look to the lipid- and ion-water interactions.
 Figure~\ref{figch2:waterdens} shows the number density of water as a
 function of distance from the bilayer center for each of our simulated
 systems, with the \dc{} and \db{} illustrated as dotted lines.  
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Water density at the bilayer interface]{ Water density at the bilayer interface. We illustrate the regions $B_{-1}$, $B_+$, $B_{-2}$ and $Bulk$ for each system with dotted lines.
     We see that the optimized cross terms yield a greater density 
     of solvent in the $B_{+}$ and $B_{-1}$ regions over the system simulated with LB rules. 
 We also see the density in these regions of the system optimized
 with optimized cross terms is more similar to that of the system without salt.}
     \label{figch2:waterdens}
-    \includegraphics[width=0.7\textwidth]{figure_6.eps}
+    \includegraphics[height=0.5\textheight]{figure_6.eps}
 \end{figure}
 It can be seen that our new parameter set produces a bilayer
 interface that has more solvent inside the headgroup region, 
@@ -713,7 +715,7 @@ does not correspond to a dehydration of the lipid bilayer.
 
 Next, the orientational structure of the water is calculated following the procedure outlined in chapter 1.
 Figure~\ref{figch2:waterorder} examines the water order parameter across the simulation box. 
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Water orientational order parameters]{ Water orientational order parameters $P_1$ (a) and $P_2$ (b), 
 and the product of the water number density and $P_2$ (c). We see in $P_1$ and $P_2$ less
     ordering in the waters in the optimized system, suggesting that waters may be less strongly interacting with ions or lipid components. We denote the four regions of the lipid bilayer based on the shape of the $P_2$ data as dotted lines
@@ -725,7 +727,7 @@ and the product of the water number density and $P_2$ (c). We see in $P_1$ and $
  The regions $B_{-2}$ and $Bulk$ are not within the bilayer
 headgroup, and are expected to be less affected by the new parameter set.}
     \label{figch2:waterorder}
-    \includegraphics[width=0.7\textwidth]{figure_7.eps}
+    \includegraphics[height=0.5\textheight]{figure_7.eps}
 \end{figure}
 A similar pattern of ordering across the box in all systems can be observed; 
 however, we see an overall reduction in ordering with our new parameter set when
@@ -771,7 +773,7 @@ Einstiein's relation for 2D diffusion
 \lim_{t \to \infty}\frac{\big\langle (r(t) - r(0))^2 \big\rangle}{(t-t_0)} = 4D. 
 \end{equation}
 These values can be seen in table~\ref{tabch2:diff}. 
-\begin{table}[H]
+\begin{table}[h!tb]
     \caption[Diffusion coefficients of water in different regions]{Diffusion coefficients of water in different regions of the lipid bilayer, 
 defined by the shape of the second orientational order parameter of water molecules in the box. 
 These regions are defined by the shape of the distribution of the second 
@@ -820,7 +822,7 @@ size in the optimized system, the average value of a much
 larger region than in LB is needed in order to apply boundary conditions. This is then
 integrated again to get the electrostatic potential. This result
 can be seen in figure~\ref{figch2:potential}. 
-\begin{figure}[H]
+\begin{figure}[h!tb]
     \caption[Bilayer electrostatic potential]{ Electrostatic potential as a function of distance from bilayer center. The optimized
 cross terms yield a small change in the location of the peak of the potential in the
 bilayer simulated with optimized cross terms, as well as the loss of the valley behind the peak.
@@ -914,7 +916,7 @@ for clarity.\ (b) and (d)
     \cl{} density data is used for fitting in both systems. 
 }
     \label{figch2:gouy}
-    \includegraphics[width=0.7\textwidth]{figure_s4.eps}
+    \includegraphics[height=0.5\textheight]{figure_s4.eps}
 \end{figure}
 The results from our simulation are
 represented by points with error bars, while PB theory results are

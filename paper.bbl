@@ -14,6 +14,9 @@ B.~Alberts, R.~Heald, A.~Johnson, D.~Morgan, M.~Raff, K.~Roberts, P.~Walter,
 J.~B. Reece, L.~A. Urry, M.~L. Cain, S.~A. Wasserman, P.~V. Minorsky, R.~B.
   Jackson, et~al., Campbell biology, no. s 1309, Pearson Boston, 2014.
 
+\bibitem{israelachvili:2011:intermol}
+J.~N. Israelachvili, Intermolecular and surface forces, Academic press, 2011.
+
 \bibitem{pandit:2003:dppc:na}
 S.~A. Pandit, D.~Bostick, M.~L. Berkowitz, Molecular dynamics simulation of a
   dipalmitoylphosphatidylcholine bilayer with nacl, Biophysical journal 84~(6)
@@ -23,9 +26,6 @@ S.~A. Pandit, D.~Bostick, M.~L. Berkowitz, Molecular dynamics simulation of a
 M.~L. Berkowitz, D.~L. Bostick, S.~Pandit, Aqueous solutions next to
   phospholipid membrane surfaces: insights from simulations, Chemical reviews
   106~(4) (2006) 1527--1539.
-
-\bibitem{israelachvili:2011:intermol}
-J.~N. Israelachvili, Intermolecular and surface forces, Academic press, 2011.
 
 \bibitem{pabst:2007}
 G.~Pabst, A.~Hodzic, J.~{\v{S}}trancar, S.~Danner, M.~Rappolt, P.~Laggner,
@@ -72,7 +72,7 @@ U.~M. Ferber, G.~Kaggwa, S.~P. Jarvis, Direct imaging of salt effects on lipid
 M.~L. Berkowitz, Biomembrane Simulations: Computational Studies of Biological
   Membranes, CRC Press, 2019.
 
-\bibitem{Bockmann:2003}
+\bibitem{bockmann:2003}
 R.~A. B{\"o}ckmann, A.~Hac, T.~Heimburg, H.~Grubm{\"u}ller, Effect of sodium
   chloride on a lipid bilayer, Biophysical Journal 85~(3) (2003) 1647--1655.
 
@@ -87,7 +87,7 @@ A.~A. Gurtovenko, I.~Vattulainen, Effect of nacl and kcl on phosphatidylcholine
   simulations for understanding salt-induced effects in the plasma membrane,
   The Journal of Physical Chemistry B 112~(7) (2008) 1953--1962.
 
-\bibitem{Cordomi:2009}
+\bibitem{cordomi:2009}
 A.~Cordomi, O.~Edholm, J.~J. Perez, Effect of force field parameters on sodium
   and potassium ion binding to dipalmitoyl phosphatidylcholine bilayers,
   Journal of chemical theory and computation 5~(8) (2009) 2125--2134.
@@ -341,7 +341,7 @@ E.~Egberts, H.~Berendsen, Molecular dynamics simulation of a smectic liquid
   crystal with atomic detail, The Journal of chemical physics 89~(6) (1988)
   3718--3732.
 
-\bibitem{Douliez:1995}
+\bibitem{douliez:1995}
 J.-P. Douliez, A.~Leonard, E.~J. Dufourc, Restatement of order parameters in
   biomembranes: calculation of cc bond order parameters from cd quadrupolar
   splittings., Biophysical journal 68~(5) (1995) 1727.
@@ -415,6 +415,11 @@ J.~Timko, D.~Bucher, S.~Kuyucak, Dissociation of nacl in water from ab initio
 P.~Smirnov, Structure of the nearest environment of na+, k+, rb+, and cs+ ions
   in oxygen-containing solvents, Russian Journal of General Chemistry 90~(9)
   (2020) 1693--1702.
+
+\bibitem{akutsu:1991}
+H.~Akutsu, T.~Nagamori, Conformational analysis of the polar head group in
+  phosphatidylcholine bilayers: a structural change induced by cations,
+  Biochemistry 30~(18) (1991) 4510--4516.
 
 \bibitem{varma:2008:JACS}
 S.~Varma, S.~B. Rempe, Structural transitions in ion coordination driven by
@@ -547,7 +552,7 @@ A.~Romani, A.~Scarpa, Regulation of cell magnesium, Archives of biochemistry
 J.~Neely, R.~Connick, Rate of water exchange from hydrated magnesium ion,
   Journal of the American Chemical Society 92~(11) (1970) 3476--3478.
 
-\bibitem{Palinkas:1982}
+\bibitem{palinkas:1982}
 G.~Pálinkás, T.~Radnai,
   \href{https://consensus.app/papers/hydration-shell-structures-in-an-mgcl2-solution-from-xray-pálinkás-radnai/16b7c39c6b6a50828119dbe4c293bfda/?utm_source=chatgpt}{Hydration
   shell structures in an mgcl2 solution from x-ray and md studies}, Zeitschrift

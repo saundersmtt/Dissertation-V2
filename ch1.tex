@@ -4,20 +4,27 @@ conformational space and adjusting to both internal and external conditions. Mem
 proteins, and lipid-like molecules~\cite{alberts:2022:molecular}. Even the endomembrane systems of cells share this lipid-protein composition. 
 Through all of these molecules, membranes 
 regulate the transport of material across and within cells, and mediate environmental interactions.
+
+The primary constituent molecules of lipid bilayers are phospholipids --- these are amphipathic molecules, with a hydrophilic headgroup and hydrophobic acyl chains linked 
+by a glycerol backbone. These molecules self assemble into structures like bilayers in order to minimize the exposure of the acyl chains to water and maximize the headgroup exposure.
+There are different kinds of phospholipid, defined by both the headgroup moiety and the length and saturation of the acyl-chains. Through the combination of headgroup and acyl-chains these
+molecules contribute substantially and actively to the structure of the cell membrane.
+
 Cell membranes, and in turn phospholipids, are exposed to complex
 mixtures of ions inside and outside of cells. Ion gradients across membranes are 
 used in organelles like chloroplasts and mitochondria to drive production of ATP~\cite{reece:2014:biobook,alberts:2022:molecular}.
-This voltage is also the basis for the functioning of nerve cells, which use the flow of ions through membrane channels to propagate signals
+This gradient is also the basis for the functioning of nerve cells, which use the flow of ions through membrane channels to propagate signals
 along the cell body~\cite{alberts:2022:molecular}. 
 
+This raises the question --- if there are ions around these bilayers, do they interact?
+Experimentally observed ion distributions at interfaces in solutions have been described using mean-field models~\cite{israelachvili:2011:intermol}.
+If one takes the solvent to be a dielectric continuum, the dissolved ions diffuse similarly to an uncorrelated gas --- however, when a boundary is introduced, like a lipid bilayer in this case, 
+ions will accumulate at that surface~\cite{israelachvili:2011:intermol}.
+This accumulation and binding occurs even when the surface is neutrally charged, due to the mutual repulsion of the ions acting to drive them onto the surface.
 Consequently, the interfacial region of cell membranes and lipid bilayers in organisms is a 
 complicated mixture of organized water, signalling molecules, and dissolved salts. 
 This mixture substantially influences membrane structure through direct ion–lipid binding, structured hydration layers, and electrostatics~\cite{pandit:2003:dppc:na,Berkowitz:2006}.
-Experimentally observed ion distributions at interfaces in solutions have been described using mean-field models~\cite{israelachvili:2011:intermol};
-However, this framework ignores specific chemical interactions between lipid molecules and the ions in the solvent.
-Computational models can enable researchers to observe the specific ion-lipid interactions are critical for understanding of 
-why cells might choose certain lipids to manipulate their membrane structure under varied ion mixtures in their environment. Furthermore, this 
-changing membrane structure also affects the behavior of membrane proteins embedded in the bilayer.
+
 \subsection{Effects of ions on lipid bilayer structure}
 The effects of dissolved salts on bilayers have been studied with varied methodologies. 
 One of the more commonly applied methods of study
@@ -55,7 +62,7 @@ in salt using many simulation models
 have reported that there is significant ion binding to the lipid bilayer, and subsequent 
 thickening of the lipid bilayer when compared to the structure 
 of a bilayer in pure 
-water~\cite{Bockmann:2003,cordomi:2008,gurtovenko:2008,Cordomi:2009,jurkiewicz:2012,pandit:2008:simulationtextbook,kruczek:2017,kruczek:2019,saunders:2019}.
+water~\cite{bockmann:2003,cordomi:2008,gurtovenko:2008,cordomi:2009,jurkiewicz:2012,pandit:2008:simulationtextbook,kruczek:2017,kruczek:2019,saunders:2019}.
 This persistent discrepancy between the large-scale structural changes predicted by 
 simulations and the subtle rearrangements observed experimentally highlights the need for improved 
 ion-lipid interaction models that better capture experimental behavior. 
@@ -296,7 +303,7 @@ for saturated carbons~\cite{egberts:1988}, and as
 \begin{equation}
     -S_{CD}^{\text{Unsaturated}}=\tfrac{1}{4}S_{zz}+\tfrac{3}{4}S_{yy}\mp \tfrac{\sqrt{3}}{2}S_{yz}
 \end{equation}
-for unsaturated carbons~\cite{Douliez:1995}. These work not only for the acyl-chain order parameters,
+for unsaturated carbons~\cite{douliez:1995}. These work not only for the acyl-chain order parameters,
 but also for the headgroup $C_\alpha$ and $C_\beta$ carbons to measure headgroup tilt. 
 
 These methods together provide a framework to describe the of 

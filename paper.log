@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  16 OCT 2025 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 NOV 2025 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1039,20 +1039,7 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 )
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 208.
- (./paper.aux
-
-LaTeX Warning: Label `eq:gcpot' multiply defined.
-
-
-LaTeX Warning: Label `figch4:optres' multiply defined.
-
-
-LaTeX Warning: Label `tabch4:subenergies' multiply defined.
-
-
-LaTeX Warning: Label `figch4:acylorder' multiply defined.
-
-)
+ (./paper.aux)
 \openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 208.
@@ -1208,15 +1195,15 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local
 
 
 
-[3] (./paper.lot)
+[3] (./paper.lot
+
+[4
+
+])
 \tf@lot=\write6
 \openout6 = `paper.lot'.
 
 
-
-[4
-
-]
 
 [5] (./paper.lof
 
@@ -1252,6 +1239,8 @@ Chapter 1.
 [7]
 
 [8]
+
+[9]
 Package epstopdf Info: Source file: <CH1/figures/Probabilitydens.eps>
 (epstopdf)                    date: 2025-10-16 12:59:13
 (epstopdf)                    size: 8312959 bytes
@@ -1261,32 +1250,31 @@ to.pdf>
 (epstopdf)                    size: 1232741 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH1/figures/Probabilityden
 s-eps-converted-to.pdf CH1/figures/Probabilitydens.eps>
-(epstopdf)             \includegraphics on input line 235.
+(epstopdf)             \includegraphics on input line 242.
 Package epstopdf Info: Output file is already uptodate.
-<CH1/figures/Probabilitydens-eps-converted-to.pdf, id=576, 421.575pt x 297.11pt
+<CH1/figures/Probabilitydens-eps-converted-to.pdf, id=585, 421.575pt x 297.11pt
 >
 File: CH1/figures/Probabilitydens-eps-converted-to.pdf Graphic file (type pdf)
 <use CH1/figures/Probabilitydens-eps-converted-to.pdf>
 Package pdftex.def Info: CH1/figures/Probabilitydens-eps-converted-to.pdf  used
- on input line 235.
+ on input line 242.
 (pdftex.def)             Requested size: 421.57396pt x 297.10927pt.
 
 
-[9]
+[10]
 
-[10 <./CH1/figures/Probabilitydens-eps-converted-to.pdf>]
+[11 <./CH1/figures/Probabilitydens-eps-converted-to.pdf>]
 
-[11]
+[12])
 
-[12
+[13
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.7}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.302 T
-       hese methods together provide a framework to describe the of])
-
-[13]
+l.260 \chapter
+              [A high dimensional parameter search method to...]{A high dime...
+]
 Chapter 2.
 (./ch2.tex
 
@@ -1339,7 +1327,7 @@ Package epstopdf Info: Source file: <CH2/figures/figure_2.eps>
 onverted-to.pdf CH2/figures/figure_2.eps>
 (epstopdf)             \includegraphics on input line 263.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_2-eps-converted-to.pdf, id=710, 871.255pt x 794.97pt>
+<CH2/figures/figure_2-eps-converted-to.pdf, id=713, 871.255pt x 794.97pt>
 File: CH2/figures/figure_2-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_2-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_2-eps-converted-to.pdf  used on inp
@@ -1363,7 +1351,7 @@ Package epstopdf Info: Source file: <CH2/figures/figure_1.eps>
 onverted-to.pdf CH2/figures/figure_1.eps>
 (epstopdf)             \includegraphics on input line 376.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_1-eps-converted-to.pdf, id=754, 300.12125pt x 287.0725pt>
+<CH2/figures/figure_1-eps-converted-to.pdf, id=757, 300.12125pt x 287.0725pt>
 File: CH2/figures/figure_1-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_1-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_1-eps-converted-to.pdf  used on inp
@@ -1380,7 +1368,7 @@ Package epstopdf Info: Source file: <CH2/figures/figure_s1.eps>
 converted-to.pdf CH2/figures/figure_s1.eps>
 (epstopdf)             \includegraphics on input line 398.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_s1-eps-converted-to.pdf, id=757, 722.7pt x 361.35pt>
+<CH2/figures/figure_s1-eps-converted-to.pdf, id=760, 722.7pt x 361.35pt>
 File: CH2/figures/figure_s1-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_s1-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_s1-eps-converted-to.pdf  used on in
@@ -1408,7 +1396,7 @@ Package epstopdf Info: Source file: <CH2/figures/figure_4.eps>
 onverted-to.pdf CH2/figures/figure_4.eps>
 (epstopdf)             \includegraphics on input line 503.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_4-eps-converted-to.pdf, id=834, 289.08pt x 361.35pt>
+<CH2/figures/figure_4-eps-converted-to.pdf, id=837, 289.08pt x 361.35pt>
 File: CH2/figures/figure_4-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_4-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_4-eps-converted-to.pdf  used on inp
@@ -1432,7 +1420,7 @@ Package epstopdf Info: Source file: <CH2/figures/figure_s2.eps>
 converted-to.pdf CH2/figures/figure_s2.eps>
 (epstopdf)             \includegraphics on input line 564.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_s2-eps-converted-to.pdf, id=866, 361.35pt x 252.945pt>
+<CH2/figures/figure_s2-eps-converted-to.pdf, id=869, 361.35pt x 252.945pt>
 File: CH2/figures/figure_s2-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_s2-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_s2-eps-converted-to.pdf  used on in
@@ -1441,6 +1429,8 @@ put line 564.
 
 
 [31 <./CH2/figures/figure_s2-eps-converted-to.pdf>]
+
+[32]
 Package epstopdf Info: Source file: <CH2/figures/figure_3.eps>
 (epstopdf)                    date: 2025-09-05 10:42:59
 (epstopdf)                    size: 72735 bytes
@@ -1450,17 +1440,15 @@ Package epstopdf Info: Source file: <CH2/figures/figure_3.eps>
 (epstopdf)                    size: 24466 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH2/figures/figure_3-eps-c
 onverted-to.pdf CH2/figures/figure_3.eps>
-(epstopdf)             \includegraphics on input line 596.
+(epstopdf)             \includegraphics on input line 623.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_3-eps-converted-to.pdf, id=882, 216.81pt x 216.81pt>
+<CH2/figures/figure_3-eps-converted-to.pdf, id=895, 216.81pt x 216.81pt>
 File: CH2/figures/figure_3-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_3-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_3-eps-converted-to.pdf  used on inp
-ut line 596.
+ut line 623.
 (pdftex.def)             Requested size: 328.82707pt x 328.8698pt.
 
-
-[32]
 
 [33 <./CH2/figures/figure_3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <CH2/figures/figure_5.eps>
@@ -1472,13 +1460,13 @@ Package epstopdf Info: Source file: <CH2/figures/figure_5.eps>
 (epstopdf)                    size: 22853 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH2/figures/figure_5-eps-c
 onverted-to.pdf CH2/figures/figure_5.eps>
-(epstopdf)             \includegraphics on input line 654.
+(epstopdf)             \includegraphics on input line 681.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_5-eps-converted-to.pdf, id=903, 289.08pt x 289.08pt>
+<CH2/figures/figure_5-eps-converted-to.pdf, id=911, 289.08pt x 289.08pt>
 File: CH2/figures/figure_5-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_5-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_5-eps-converted-to.pdf  used on inp
-ut line 654.
+ut line 681.
 (pdftex.def)             Requested size: 328.82707pt x 328.84444pt.
 
 
@@ -1492,13 +1480,13 @@ Package epstopdf Info: Source file: <CH2/figures/figure_6.eps>
 (epstopdf)                    size: 13352 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH2/figures/figure_6-eps-c
 onverted-to.pdf CH2/figures/figure_6.eps>
-(epstopdf)             \includegraphics on input line 678.
+(epstopdf)             \includegraphics on input line 705.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_6-eps-converted-to.pdf, id=911, 216.81pt x 216.81pt>
+<CH2/figures/figure_6-eps-converted-to.pdf, id=921, 216.81pt x 216.81pt>
 File: CH2/figures/figure_6-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_6-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_6-eps-converted-to.pdf  used on inp
-ut line 678.
+ut line 705.
 (pdftex.def)             Requested size: 328.82707pt x 328.8698pt.
 
 
@@ -1514,13 +1502,13 @@ Package epstopdf Info: Source file: <CH2/figures/figure_7.eps>
 (epstopdf)                    size: 24405 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH2/figures/figure_7-eps-c
 onverted-to.pdf CH2/figures/figure_7.eps>
-(epstopdf)             \includegraphics on input line 701.
+(epstopdf)             \includegraphics on input line 728.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_7-eps-converted-to.pdf, id=937, 216.81pt x 289.08pt>
+<CH2/figures/figure_7-eps-converted-to.pdf, id=946, 216.81pt x 289.08pt>
 File: CH2/figures/figure_7-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_7-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_7-eps-converted-to.pdf  used on inp
-ut line 701.
+ut line 728.
 (pdftex.def)             Requested size: 328.82707pt x 438.49307pt.
 
 
@@ -1538,13 +1526,13 @@ Package epstopdf Info: Source file: <CH2/figures/figure_s3.eps>
 (epstopdf)                    size: 17294 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH2/figures/figure_s3-eps-
 converted-to.pdf CH2/figures/figure_s3.eps>
-(epstopdf)             \includegraphics on input line 802.
+(epstopdf)             \includegraphics on input line 829.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_s3-eps-converted-to.pdf, id=967, 252.945pt x 144.54pt>
+<CH2/figures/figure_s3-eps-converted-to.pdf, id=976, 252.945pt x 144.54pt>
 File: CH2/figures/figure_s3-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_s3-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_s3-eps-converted-to.pdf  used on in
-put line 802.
+put line 829.
 (pdftex.def)             Requested size: 328.82707pt x 187.90416pt.
 
 
@@ -1562,13 +1550,13 @@ Package epstopdf Info: Source file: <CH2/figures/figure_s4.eps>
 (epstopdf)                    size: 157712 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH2/figures/figure_s4-eps-
 converted-to.pdf CH2/figures/figure_s4.eps>
-(epstopdf)             \includegraphics on input line 890.
+(epstopdf)             \includegraphics on input line 917.
 Package epstopdf Info: Output file is already uptodate.
-<CH2/figures/figure_s4-eps-converted-to.pdf, id=994, 236.885pt x 268.00125pt>
+<CH2/figures/figure_s4-eps-converted-to.pdf, id=1003, 236.885pt x 268.00125pt>
 File: CH2/figures/figure_s4-eps-converted-to.pdf Graphic file (type pdf)
 <use CH2/figures/figure_s4-eps-converted-to.pdf>
 Package pdftex.def Info: CH2/figures/figure_s4-eps-converted-to.pdf  used on in
-put line 890.
+put line 917.
 (pdftex.def)             Requested size: 328.82707pt x 372.034pt.
 
 
@@ -1632,7 +1620,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_S1.eps>
 converted-to.pdf CH3/figures/Figure_S1.eps>
 (epstopdf)             \includegraphics on input line 179.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_S1-eps-converted-to.pdf, id=1118, 325.215pt x 180.675pt>
+<CH3/figures/Figure_S1-eps-converted-to.pdf, id=1127, 325.215pt x 180.675pt>
 File: CH3/figures/Figure_S1-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_S1-eps-converted-to.pdf>
 Package pdftex.def Info: CH3/figures/Figure_S1-eps-converted-to.pdf  used on in
@@ -1649,7 +1637,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_S2.eps>
 converted-to.pdf CH3/figures/Figure_S2.eps>
 (epstopdf)             \includegraphics on input line 187.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_S2-eps-converted-to.pdf, id=1119, 722.7pt x 361.35pt>
+<CH3/figures/Figure_S2-eps-converted-to.pdf, id=1128, 722.7pt x 361.35pt>
 File: CH3/figures/Figure_S2-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_S2-eps-converted-to.pdf>
 Package pdftex.def Info: CH3/figures/Figure_S2-eps-converted-to.pdf  used on in
@@ -1701,7 +1689,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_1.eps>
 onverted-to.pdf CH3/figures/Figure_1.eps>
 (epstopdf)             \includegraphics on input line 272.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_1-eps-converted-to.pdf, id=1197, 289.08pt x 216.81pt>
+<CH3/figures/Figure_1-eps-converted-to.pdf, id=1206, 289.08pt x 216.81pt>
 File: CH3/figures/Figure_1-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_1-eps-converted-to.pdf>
 Package pdftex.def Info: CH3/figures/Figure_1-eps-converted-to.pdf  used on inp
@@ -1723,7 +1711,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_2.eps>
 onverted-to.pdf CH3/figures/Figure_2.eps>
 (epstopdf)             \includegraphics on input line 342.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_2-eps-converted-to.pdf, id=1229, 289.08pt x 216.81pt>
+<CH3/figures/Figure_2-eps-converted-to.pdf, id=1238, 289.08pt x 216.81pt>
 File: CH3/figures/Figure_2-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_2-eps-converted-to.pdf>
 Package pdftex.def Info: CH3/figures/Figure_2-eps-converted-to.pdf  used on inp
@@ -1745,7 +1733,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_3.eps>
 onverted-to.pdf CH3/figures/Figure_3.eps>
 (epstopdf)             \includegraphics on input line 388.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_3-eps-converted-to.pdf, id=1249, 289.08pt x 216.81pt>
+<CH3/figures/Figure_3-eps-converted-to.pdf, id=1258, 289.08pt x 216.81pt>
 File: CH3/figures/Figure_3-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_3-eps-converted-to.pdf>
 Package pdftex.def Info: CH3/figures/Figure_3-eps-converted-to.pdf  used on inp
@@ -1786,7 +1774,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_4.eps>
 onverted-to.pdf CH3/figures/Figure_4.eps>
 (epstopdf)             \includegraphics on input line 499.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_4-eps-converted-to.pdf, id=1289, 289.08pt x 289.08pt>
+<CH3/figures/Figure_4-eps-converted-to.pdf, id=1298, 289.08pt x 289.08pt>
 File: CH3/figures/Figure_4-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_4-eps-converted-to.pdf>
 Package pdftex.def Info: CH3/figures/Figure_4-eps-converted-to.pdf  used on inp
@@ -1808,7 +1796,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_5.eps>
 onverted-to.pdf CH3/figures/Figure_5.eps>
 (epstopdf)             \includegraphics on input line 518.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_5-eps-converted-to.pdf, id=1312, 335.2525pt x 247.92625pt>
+<CH3/figures/Figure_5-eps-converted-to.pdf, id=1322, 335.2525pt x 247.92625pt>
 File: CH3/figures/Figure_5-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_5-eps-converted-to.pdf>
 Package pdftex.def Info: CH3/figures/Figure_5-eps-converted-to.pdf  used on inp
@@ -1828,7 +1816,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_6.eps>
 onverted-to.pdf CH3/figures/Figure_6.eps>
 (epstopdf)             \includegraphics on input line 535.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_6-eps-converted-to.pdf, id=1328, 343.2825pt x 232.87pt>
+<CH3/figures/Figure_6-eps-converted-to.pdf, id=1337, 343.2825pt x 232.87pt>
 File: CH3/figures/Figure_6-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_6-eps-converted-to.pdf>
 Package pdftex.def Info: CH3/figures/Figure_6-eps-converted-to.pdf  used on inp
@@ -1862,7 +1850,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_7.eps>
 onverted-to.pdf CH3/figures/Figure_7.eps>
 (epstopdf)             \includegraphics on input line 649.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_7-eps-converted-to.pdf, id=1343, 276.03125pt x 516.93124pt>
+<CH3/figures/Figure_7-eps-converted-to.pdf, id=1352, 276.03125pt x 516.93124pt>
 
 File: CH3/figures/Figure_7-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_7-eps-converted-to.pdf>
@@ -1889,7 +1877,7 @@ Package epstopdf Info: Source file: <CH3/figures/Figure_8.eps>
 onverted-to.pdf CH3/figures/Figure_8.eps>
 (epstopdf)             \includegraphics on input line 685.
 Package epstopdf Info: Output file is already uptodate.
-<CH3/figures/Figure_8-eps-converted-to.pdf, id=1369, 337.26pt x 231.86626pt>
+<CH3/figures/Figure_8-eps-converted-to.pdf, id=1378, 337.26pt x 231.86626pt>
 File: CH3/figures/Figure_8-eps-converted-to.pdf Graphic file (type pdf)
 <use CH3/figures/Figure_8-eps-converted-to.pdf>
 Package pdftex.def Info: CH3/figures/Figure_8-eps-converted-to.pdf  used on inp
@@ -1934,7 +1922,7 @@ Package epstopdf Info: Source file: <CH4/figures/Figure_S1.eps>
 converted-to.pdf CH4/figures/Figure_S1.eps>
 (epstopdf)             \includegraphics on input line 170.
 Package epstopdf Info: Output file is already uptodate.
-<CH4/figures/Figure_S1-eps-converted-to.pdf, id=1459, 867.24pt x 578.16pt>
+<CH4/figures/Figure_S1-eps-converted-to.pdf, id=1470, 867.24pt x 578.16pt>
 File: CH4/figures/Figure_S1-eps-converted-to.pdf Graphic file (type pdf)
 <use CH4/figures/Figure_S1-eps-converted-to.pdf>
 Package pdftex.def Info: CH4/figures/Figure_S1-eps-converted-to.pdf  used on in
@@ -1949,10 +1937,6 @@ put line 170.
 
 ]
 
-[78
-
-]
-
 Package siunitx Info: Option "detect-all" has been deprecated in this release.
 (siunitx)             
 (siunitx)             Use "mode = match, propagate-math-font = true,
@@ -1962,19 +1946,12 @@ Package siunitx Info: Option "detect-all" has been deprecated in this release.
 (siunitx)             as a replacement.
 
 
-Overfull \hbox (53.72655pt too wide) in paragraph at lines 219--276
- [][] 
- []
 
-
-
-[79
-
+[78
 
 ]
 
-[80
-
+[79
 
 ]
 Package epstopdf Info: Source file: <CH4/figures/Figure_1.eps>
@@ -1986,41 +1963,39 @@ Package epstopdf Info: Source file: <CH4/figures/Figure_1.eps>
 (epstopdf)                    size: 29656 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH4/figures/Figure_1-eps-c
 onverted-to.pdf CH4/figures/Figure_1.eps>
-(epstopdf)             \includegraphics on input line 393.
+(epstopdf)             \includegraphics on input line 385.
 Package epstopdf Info: Output file is already uptodate.
-<CH4/figures/Figure_1-eps-converted-to.pdf, id=1502, 216.81pt x 216.81pt>
+<CH4/figures/Figure_1-eps-converted-to.pdf, id=1509, 216.81pt x 216.81pt>
 File: CH4/figures/Figure_1-eps-converted-to.pdf Graphic file (type pdf)
 <use CH4/figures/Figure_1-eps-converted-to.pdf>
 Package pdftex.def Info: CH4/figures/Figure_1-eps-converted-to.pdf  used on inp
-ut line 393.
+ut line 385.
 (pdftex.def)             Requested size: 216.80946pt x 216.80946pt.
 
 
-[81
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 426--426
+[80]
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 []|\T1/cmr/m/n/6 Hydration Bound-
  []
 
 
-Underfull \hbox (badness 5460) in paragraph at lines 426--426
+Underfull \hbox (badness 5460) in paragraph at lines 418--418
 []|\T1/cmr/m/n/6 Perfectly Ad-sorbed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--426
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 []|\T1/cmr/m/n/6 Imperfectly Ad-
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 426--426
+Underfull \hbox (badness 1360) in paragraph at lines 418--418
 []|\T1/cmr/m/n/6 Sterically Ad-sorbed
  []
 
 
 
-[82 <./CH4/figures/Figure_1-eps-converted-to.pdf>]
+[81 <./CH4/figures/Figure_1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <CH4/figures/Figure_2.eps>
 (epstopdf)                    date: 2025-09-04 12:53:53
 (epstopdf)                    size: 109729 bytes
@@ -2030,19 +2005,19 @@ Package epstopdf Info: Source file: <CH4/figures/Figure_2.eps>
 (epstopdf)                    size: 34127 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH4/figures/Figure_2-eps-c
 onverted-to.pdf CH4/figures/Figure_2.eps>
-(epstopdf)             \includegraphics on input line 445.
+(epstopdf)             \includegraphics on input line 437.
 Package epstopdf Info: Output file is already uptodate.
-<CH4/figures/Figure_2-eps-converted-to.pdf, id=1527, 289.08pt x 578.16pt>
+<CH4/figures/Figure_2-eps-converted-to.pdf, id=1534, 289.08pt x 578.16pt>
 File: CH4/figures/Figure_2-eps-converted-to.pdf Graphic file (type pdf)
 <use CH4/figures/Figure_2-eps-converted-to.pdf>
 Package pdftex.def Info: CH4/figures/Figure_2-eps-converted-to.pdf  used on inp
-ut line 445.
+ut line 437.
 (pdftex.def)             Requested size: 162.60709pt x 325.215pt.
 
 
-[83]
+[82]
 
-[84 <./CH4/figures/Figure_2-eps-converted-to.pdf>]
+[83 <./CH4/figures/Figure_2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <CH4/figures/Figure_3.eps>
 (epstopdf)                    date: 2025-09-04 12:53:53
 (epstopdf)                    size: 3395882 bytes
@@ -2052,19 +2027,19 @@ Package epstopdf Info: Source file: <CH4/figures/Figure_3.eps>
 (epstopdf)                    size: 215912 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH4/figures/Figure_3-eps-c
 onverted-to.pdf CH4/figures/Figure_3.eps>
-(epstopdf)             \includegraphics on input line 466.
+(epstopdf)             \includegraphics on input line 458.
 Package epstopdf Info: Output file is already uptodate.
-<CH4/figures/Figure_3-eps-converted-to.pdf, id=1549, 328.22626pt x 244.915pt>
+<CH4/figures/Figure_3-eps-converted-to.pdf, id=1555, 328.22626pt x 244.915pt>
 File: CH4/figures/Figure_3-eps-converted-to.pdf Graphic file (type pdf)
 <use CH4/figures/Figure_3-eps-converted-to.pdf>
 Package pdftex.def Info: CH4/figures/Figure_3-eps-converted-to.pdf  used on inp
-ut line 466.
+ut line 458.
 (pdftex.def)             Requested size: 435.8543pt x 325.215pt.
 
 
-[85]
+[84]
 
-[86 <./CH4/figures/Figure_3-eps-converted-to.pdf>]
+[85 <./CH4/figures/Figure_3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <CH4/figures/Figure_4.eps>
 (epstopdf)                    date: 2025-09-04 12:53:53
 (epstopdf)                    size: 176309 bytes
@@ -2074,17 +2049,17 @@ Package epstopdf Info: Source file: <CH4/figures/Figure_4.eps>
 (epstopdf)                    size: 79977 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH4/figures/Figure_4-eps-c
 onverted-to.pdf CH4/figures/Figure_4.eps>
-(epstopdf)             \includegraphics on input line 497.
+(epstopdf)             \includegraphics on input line 489.
 Package epstopdf Info: Output file is already uptodate.
-<CH4/figures/Figure_4-eps-converted-to.pdf, id=1569, 216.81pt x 216.81pt>
+<CH4/figures/Figure_4-eps-converted-to.pdf, id=1576, 216.81pt x 216.81pt>
 File: CH4/figures/Figure_4-eps-converted-to.pdf Graphic file (type pdf)
 <use CH4/figures/Figure_4-eps-converted-to.pdf>
 Package pdftex.def Info: CH4/figures/Figure_4-eps-converted-to.pdf  used on inp
-ut line 497.
+ut line 489.
 (pdftex.def)             Requested size: 325.2572pt x 325.215pt.
 
 
-[87]
+[86]
 Package epstopdf Info: Source file: <CH4/figures/Figure_5.eps>
 (epstopdf)                    date: 2025-09-04 12:53:53
 (epstopdf)                    size: 178964 bytes
@@ -2094,19 +2069,19 @@ Package epstopdf Info: Source file: <CH4/figures/Figure_5.eps>
 (epstopdf)                    size: 59482 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH4/figures/Figure_5-eps-c
 onverted-to.pdf CH4/figures/Figure_5.eps>
-(epstopdf)             \includegraphics on input line 507.
+(epstopdf)             \includegraphics on input line 499.
 Package epstopdf Info: Output file is already uptodate.
-<CH4/figures/Figure_5-eps-converted-to.pdf, id=1575, 325.215pt x 325.215pt>
+<CH4/figures/Figure_5-eps-converted-to.pdf, id=1582, 325.215pt x 325.215pt>
 File: CH4/figures/Figure_5-eps-converted-to.pdf Graphic file (type pdf)
 <use CH4/figures/Figure_5-eps-converted-to.pdf>
 Package pdftex.def Info: CH4/figures/Figure_5-eps-converted-to.pdf  used on inp
-ut line 507.
+ut line 499.
 (pdftex.def)             Requested size: 325.2142pt x 325.2142pt.
 
 
-[88 <./CH4/figures/Figure_4-eps-converted-to.pdf>]
+[87 <./CH4/figures/Figure_4-eps-converted-to.pdf>]
 
-[89 <./CH4/figures/Figure_5-eps-converted-to.pdf>]
+[88 <./CH4/figures/Figure_5-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <CH4/figures/op.eps>
 (epstopdf)                    date: 2025-09-05 16:57:04
 (epstopdf)                    size: 87491 bytes
@@ -2115,36 +2090,36 @@ Package epstopdf Info: Source file: <CH4/figures/op.eps>
 (epstopdf)                    size: 34006 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH4/figures/op-eps-convert
 ed-to.pdf CH4/figures/op.eps>
-(epstopdf)             \includegraphics on input line 535.
+(epstopdf)             \includegraphics on input line 527.
 Package epstopdf Info: Output file is already uptodate.
-<CH4/figures/op-eps-converted-to.pdf, id=1602, 289.08pt x 216.81pt>
+<CH4/figures/op-eps-converted-to.pdf, id=1610, 289.08pt x 216.81pt>
 File: CH4/figures/op-eps-converted-to.pdf Graphic file (type pdf)
 <use CH4/figures/op-eps-converted-to.pdf>
 Package pdftex.def Info: CH4/figures/op-eps-converted-to.pdf  used on input lin
-e 535.
+e 527.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
 
-[90]
+[89]
 
-[91 <./CH4/figures/op-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 578--578
+[90 <./CH4/figures/op-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 570--570
 []|$\OT1/cmr/m/n/6 2\OML/cmm/m/it/6 D[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--578
+Underfull \hbox (badness 10000) in paragraph at lines 570--570
 []|$\OML/cmm/m/it/6 A[]$ \T1/cmr/m/n/6 from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--578
+Underfull \hbox (badness 10000) in paragraph at lines 570--570
 []|$\OML/cmm/m/it/6 A[]$ \T1/cmr/m/n/6 from
  []
 
 
 
-[92]
+[91]
 Package epstopdf Info: Source file: <CH4/figures/Figure_6.eps>
 (epstopdf)                    date: 2025-09-04 12:53:53
 (epstopdf)                    size: 30407 bytes
@@ -2154,33 +2129,35 @@ Package epstopdf Info: Source file: <CH4/figures/Figure_6.eps>
 (epstopdf)                    size: 12163 bytes
 (epstopdf)             Command: <repstopdf --outfile=CH4/figures/Figure_6-eps-c
 onverted-to.pdf CH4/figures/Figure_6.eps>
-(epstopdf)             \includegraphics on input line 598.
+(epstopdf)             \includegraphics on input line 590.
 Package epstopdf Info: Output file is already uptodate.
-<CH4/figures/Figure_6-eps-converted-to.pdf, id=1641, 289.08pt x 289.08pt>
+<CH4/figures/Figure_6-eps-converted-to.pdf, id=1649, 289.08pt x 289.08pt>
 File: CH4/figures/Figure_6-eps-converted-to.pdf Graphic file (type pdf)
 <use CH4/figures/Figure_6-eps-converted-to.pdf>
 Package pdftex.def Info: CH4/figures/Figure_6-eps-converted-to.pdf  used on inp
-ut line 598.
+ut line 590.
 (pdftex.def)             Requested size: 325.23183pt x 325.215pt.
 
 
-[93]
+[92]
 
-[94 <./CH4/figures/Figure_6-eps-converted-to.pdf>])
+[93 <./CH4/figures/Figure_6-eps-converted-to.pdf>])
 
-[95]
+[94]
 Chapter 5.
 (./ch5.tex
 
-[96
+[95
 
 ]) (./paper.bbl
 
-[97]
+[96]
 
-[98
+[97
 
 ]
+
+[98]
 
 [99]
 
@@ -2201,9 +2178,7 @@ Chapter 5.
 [107]
 
 [108]
-
-[109]
-Overfull \hbox (149.86398pt too wide) in paragraph at lines 551--560
+Overfull \hbox (149.86398pt too wide) in paragraph at lines 556--565
 \T1/cmr/m/n/12 URL [][]$https : / / consensus . app / papers / hydration-[]shel
 l-[]structures-[]in-[]an-[]mgcl2-[]solution-[]from-[]xray-[]pálinkás-[]radnai
  /
@@ -2211,9 +2186,9 @@ l-[]structures-[]in-[]an-[]mgcl2-[]solution-[]from-[]xray-[]pálinkás-[]radnai
 
 
 
-[110]
+[109]
 
-[111])
+[110])
 \Changes@OutFile=\write8
 \openout8 = `paper.soc'.
 
@@ -2222,24 +2197,20 @@ l-[]structures-[]in-[]an-[]mgcl2-[]solution-[]from-[]xray-[]pálinkás-[]radnai
 
 
 
-[112] (./paper.aux)
+[111] (./paper.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: B06262E61069751A7DA980FCECC4FC8F;9667.
+(rerunfilecheck)             Checksum: 1DD373ABA8A54C320BC04E4459D1E952;9667.
  ) 
 Here is how much of TeX's memory you used:
- 33703 strings out of 473190
- 669815 string characters out of 5715801
- 1155058 words of memory out of 5000000
- 55995 multiletter control sequences out of 15000+600000
- 580058 words of font info for 91 fonts, out of 8000000 for 9000
+ 33700 strings out of 473190
+ 669784 string characters out of 5715801
+ 1161197 words of memory out of 5000000
+ 55994 multiletter control sequences out of 15000+600000
+ 579130 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,22n,135p,1002b,1209s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -2250,37 +2221,37 @@ b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-
-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2025/texmf-di
-st/fonts/type1/public/cm-super/sfbx0600.pfb></usr/local/texlive/2025/texmf-dist
-/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2025/texmf-dist/f
-onts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fon
-ts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2025/texmf-dist/fonts
-/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
-ype1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
-/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub
-lic/cm-super/sfti0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
-c/cm-super/sfti0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
-cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm
--super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-s
-uper/sftt1200.pfb>
-Output written on paper.pdf (119 pages, 4670800 bytes).
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2
+025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/cm-super/sfbx0600.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2025/texmf-dist/f
+onts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fon
+ts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
+/public/cm-super/sfti0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
+ublic/cm-super/sfti0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub
+lic/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/
+cm-super/sftt1200.pfb>
+Output written on paper.pdf (118 pages, 4675670 bytes).
 PDF statistics:
- 2040 PDF objects out of 2073 (max. 8388607)
- 1672 compressed objects within 17 object streams
- 390 named destinations out of 1000 (max. 500000)
- 14435 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 2049 PDF objects out of 2073 (max. 8388607)
+ 1682 compressed objects within 17 object streams
+ 391 named destinations out of 1000 (max. 500000)
+ 13923 words of extra memory for PDF output out of 14400 (max. 10000000)
 

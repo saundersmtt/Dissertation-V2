@@ -2,7 +2,7 @@
     The adsorption of ions to soft-porous interfaces plays a critical role in 
     many physical and biological processes, such as the function of electrochemical 
     energy storage devices or 
-    the attachment of membrane proteins to cells surfaces. 
+    the attachment of membrane proteins to cell surfaces. 
     In this work I characterize different adsorption modes, and
     describe the adsorption behavior of Na\textsuperscript{+}, Li\textsuperscript{+}, and Mg\textsuperscript{2+} 
     {onto a porous substrate}.
@@ -36,7 +36,7 @@ or taking the ions as a spherical entity surrounded
 by a neatly organized hydration shell~\cite{israelachvili:2011:intermol}.
 
 A simple way of defining adsorption of ions to a substrate 
-comes from the Poission-Boltzmann (PB) theory~\cite{israelachvili:2011:intermol}.
+comes from the Poisson-Boltzmann (PB) theory~\cite{israelachvili:2011:intermol}.
 {This mean-field approximation predicts accumulation
 of ions near a surface due to the mutual electrostatic repulsion
 of the ions and entropic factors.}
@@ -46,7 +46,7 @@ of the ions and entropic factors.}
 
 Experimental studies of ion adsorption can be broadly
 classified into two main groups --- methods that examine the electric field/surface potential
-produced by the adsorbed ions, e.g, electrophoretic mobility~\cite{smith:2017:zeta} or 
+produced by the adsorbed ions, e.g., electrophoretic mobility~\cite{smith:2017:zeta} or 
 measurement of the forces between 
 bilayers~\cite{marra:1985:direct}, and methods
 that can more directly characterize the location and dynamics of ions such 
@@ -105,18 +105,18 @@ force-field for \mg{} the predominant mode of adsorption
 of \mg{} to 1-palmitoyl-2-oleoyl-sn-glycero-3-phosphatidylcholine (POPC) is 
 {always} \emph{steric adsorption}.
 
-\begin{landscape}
+% \begin{swaplandscape}
 \section{Methods}
 Multiple simulations of POPC bilayers are performed
 with LiCl and MgCl$_{2}$ salt. Configurations for each simulation are listed in table~\ref{tabch3:ions}.
-\begin{table}[H]
+\begin{table}[h!tb]
     \caption[Simulation system details]{Simulation system details. Each simulated system is started with 200~mM salt, and the final bulk concentration 
     is computed from the average number density of ions 
     at the center of the solvent occupied region of the box, from the last 150~ns of simulation time. \nambnbfix{}
     simulation trajectories are published in our previous work, and are re-analyzed in this work. 
     The \mgmbnbfix{} system is extended to 2.5~$\mu$s to ascertain if any 
     exchange of waters from the first shell of \mg{} could be observed. \li{} (a) parameters are obtained from 
-    the work by Joung and Chetatham III~\cite{joung:2008}. \mg{} (b-c) parameters
+    the work by Joung and Cheatham III~\cite{joung:2008}. \mg{} (b-c) parameters
     are obtained from Li \etal{}~\cite{merzparams} and Grotz \etal{}~\cite{microparams}, respectively.}
     \label{tabch3:ions}
     \small{
@@ -130,7 +130,7 @@ with LiCl and MgCl$_{2}$ salt. Configurations for each simulation are listed in 
    \vspace{-0.75\skip\footins}
    \renewcommand{\footnoterule}{}
 \end{table}
-\end{landscape}
+% \end{swaplandscape}
 \subsection{Bilayer Construction}
 Bilayers are constructed as described in Chapter~1, with 200 POPC lipids
 (100 per leaflet) and 60,000 waters to provide sufficient bulk solvent.
@@ -323,7 +323,7 @@ The result of our parameter search are shown in table~\ref{tabch3:params}.
 %             OW    & 0.95709 & 0.22875 & 0.95709 & 0.22875 & 0.16659 & 0.27944 & 0.16659 & 0.27944& 13.75000& 0.21010\\\hline
 %     \end{tabularx}}
 %     \caption[Lennard-Jones cross-terms for \mg{}]{Lennard-Jones cross-terms used in each \mg{} simulation. LB-terms are computed using Lorentz-Berthelot (LB) mixing rules,
-%     starting with the self-terms for \li{} from Joung and Chetatham III\etal{}~\cite{joung:2008} and the self terms from \mg{} from the work of
+%     starting with the self-terms for \li{} from Joung and Cheatham III\etal{}~\cite{joung:2008} and the self terms from \mg{} from the work of
 %     Li \etal{}\cite{merzparams}. The \mbnbfix{} parameters are chosen following the procedure described in the methods section.
 %     The \mbnbfixmicro{} parameters for \mg{} only change the cross-term for OW-\mg, and were computed using LB-rules to mix the self-terms from
 %     Grotz \etal{}~\cite{microparams} with those of SPC/E water, without changing the cross-terms with anything else in the system.\ \eps{} are in
@@ -349,8 +349,8 @@ in our previous work~\cite{kruczek:2017}.
 The bilayer thickness \dhh{} is determined by measuring the distance between the
 peaks in the electron density, which roughly localize the electron-dense phosphates in the
 lipid headgroup --- the values for this can be seen in table~\ref{tabch3:struc}.
-\begin{landscape}
-\begin{table}
+% \begin{swaplandscape}
+\begin{table}[h!tb]
     \caption[Bilayer simulation details and structure]{Bilayer simulation details, and structural parameters. Here we detail the various
     structural measurements of each simulated bilayer.
     \dhh{} is the distance measured between the peaks in the electron density, which localize the electron-dense phosphate moiety in the lipid headgroup.
@@ -376,7 +376,7 @@ position of the hydration boundary of each system, which we compute as the point
         Hydration Boundary (nm) & 2.79 &3.69&3.63 &3.48&3.33  \\
 \end{tabularx}}
 \end{table}
-\end{landscape}
+% \end{swaplandscape}
 Experiments often report various types of thicknesses, volumes, and cross-sectional areas that are model dependent.
 We also compute these quantities to compare the simulation results with experiments. These values are presented in 
 table~\ref{tabch3:struc}.
@@ -526,7 +526,7 @@ These values are listed in table~\ref{tabch3:gctheory}.
     screening length, and $\rho_{0,i}$ is the number density of the particular 
     ion at the center of bulk solvent.}
     \label{tabch3:gctheory}
-    \begin{tabularx}{\textwidth}{|X|X|X|X|X|}\hline
+    \begin{tabularx}{\textwidth}{Y|Y|Y|Y|Y}\hline
         Parameter                    & \na{}  & \li{}    & \mgmbnbfix{}    & \mgmicro{} \\\hline
         \sig{} ($e/nm^{2}$)            &0.161 &0.182   &0.0690  &0.0476     \\\hline
         D~($nm$)                     &26.927&26.557  &26.658  &25.226     \\\hline
@@ -647,7 +647,7 @@ of \cl{} anions adsorbed can be seen in table~\ref{tabch3:anionfrac}.
     of the affinity of the ion to the lipid bilayer. Here, the number of \mg{}
     ions per lipid is fall smaller than that for the more perfectly adsorbed ions \li{} and Na\textsuperscript{+}.}
     \label{tabch3:cationfrac}
-    \begin{tabularx}{\textwidth}{|X|X|X|X|X|}\hline
+    \begin{tabularx}{\textwidth}{Y|Y|Y|Y|Y}\hline
     Adsorbed cations / lipid & \na{} & \li{} & \mgmbnbfix{}   & \mgmicro{} \\\hline
     Total     $\theta$       &{0.472}&{0.575}&{0.129}&{0.091}     \\\hline
     Steric    $\theta_s$     &{0.010}&{0.015}&{0.116}&{0.071}     \\\hline
@@ -661,14 +661,14 @@ of \cl{} anions adsorbed can be seen in table~\ref{tabch3:anionfrac}.
     by counting the number of waters in the first-coordination shell of every anion in the simulation box in every frame. For the total number
     of adsorbed anions, we
     only check if the anion is within the hydration boundary of the bilayer. We then subtract the number within this region that are
-    completely dehydrated --- these are the perfectly adsorbed anions. We futher subtract any ions that have lost
+    completely dehydrated --- these are the perfectly adsorbed anions. We further subtract any ions that have lost
     one or more waters --- the imperfectly adsorbed
     ions. The remaining are considered sterically adsorbed. We indicate each system by the cation name, as the anion in the system is always Cl\textsuperscript{-}.
     We note that the anion binding fractions follow the trend seen in the total number of cations bound for each system, due to the formation of the ionic double-layer
     at the bilayer-water interface.
     Most anions adsorb sterically in each system, with some adsorbing imperfectly as they approach the positively charged choline trimethylammonium in the lipid headgroup.}
     \label{tabch3:anionfrac}\small
-    \begin{tabularx}{\textwidth}{|X|X|X|X|X|}\hline
+    \begin{tabularx}{\textwidth}{Y|Y|Y|Y|Y}\hline
     Adsorbed anions / lipid     & \cl{} in \na{} System & \cl{} in \li{} System & \cl{} in \mgmbnbfix{} System& \cl{} in \mgmicro{} System\\\hline
     Total      $\theta  $&0.423&0.463& 0.186&0.208 \\\hline
     Steric     $\theta_s$&0.209&0.213& 0.107&0.126 \\\hline
@@ -789,7 +789,7 @@ parameters that can be verified experimentally via x-ray scattering, neutron
 scattering,
 or various NMR methods {(figures~\ref{figch3:eledens}, \ref{figch3:op}, and \ref{figch3:h2order} respectively).}
 While the effect on lipid bilayer structure is not obvious in
-the electron density {(figure~\ref{figch3:eledens})}, the pertubation can be seen in the \db~and water density --
+the electron density {(figure~\ref{figch3:eledens})}, the perturbation can be seen in the \db~and water density --
 the less hydrated ions induce slight thickening of the lipid bilayer. This
 is reinforced by the chain ordering, where these ions increase chain ordering {(figure~\ref{figch3:op})} 
 while the hydrated ions leave the lipid bilayer structure similar to that of the no-salt case.

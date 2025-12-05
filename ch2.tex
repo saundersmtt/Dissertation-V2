@@ -75,7 +75,7 @@ ion-lipid interactions are computed using FF mixing rules.
 In our previous MD simulations of POPC bilayers in salt solutions, 
 we employed our gromos43A1-S3 lipid FF parameters~\cite{chiu:2009} 
 that were developed for use with SPC/E water to determine lipid-lipid and lipid-water interactions. 
-Ion-ion and ion-water interactions were described using Joung and Chetham~\cite{joung:2008} parameters, 
+Ion-ion and ion-water interactions were described using Joung and Cheatham~\cite{joung:2008} parameters, 
 also developed for use with SPC/E water. 
 Lipid-ion interactions were estimated using Lorentz-Berthelot (LB) 
 mixing rules for Lennard-Jones (LJ) components
@@ -90,7 +90,7 @@ emerge if the high electric fields of ions induce
 cooperativity effects in lipid groups 
 differently from those in water. 
 Quantum mechanical (QM) studies, in fact, suggest that many-body 
-cooperativty effects, such as polarization depend \deleted{strongly} 
+cooperativity effects, such as polarization depend \deleted{strongly} 
 strongly on ion-coordinator chemistry~\cite{varma:2010,wineman:2019}. 
 It has also been postulated that these effects, and specifically 
 electronic 
@@ -194,7 +194,7 @@ reported in Tables~\ref{tabch2:qmbinding} and~\ref{tabch2:qmself}.
     These energies are computed by taking the total energy from the final step of geometry optimization on clusters of our selected small molecules 
     around a single \na following the procedure outlined in the methods section. We computed binding energies using these values.} 
     \label{tabch2:qmbinding} 
-    \begin{tabularx}{\textwidth}{X|X|X|X} Cluster Size & Water (kJ/mol)& MeAc (kJ/mol) & DePh (kJ/mol)\\\hline 
+    \begin{tabularx}{\textwidth}{Y|Y|Y|Y} Cluster Size & Water (kJ/mol)& MeAc (kJ/mol) & DePh (kJ/mol)\\\hline 
         1&$-9.048\times10^{5}$&$-1.130\times10^{6}$&$-2.528\times10^{6}$\\ \hline 
         2&$-1.609\times10^{6}$&$-1.834\times10^{6}$&$-4.630\times10^{6}$\\\hline 
         3&$-2.313\times10^{6}$&$-2.538\times10^{6}$& N/A \\\hline 
@@ -231,10 +231,10 @@ reference data from QM.
 Boundary constraints are imposed on \epsilonij{} and \sigmaij{} to keep
 the search space finite.  Table~\ref{tabch2:constraints} shows all of the
 constraints placed on the parameter search. 
-\begin{landscape}
-\begin{table}
+\begin{swaplandscape}
+\begin{table}[h!tb]
     {\small
-    \begin{tabularx}{\textwidth}{X|X|X|X|X|X|X|X|X|X|}
+    \begin{tabularx}{\textwidth}{Y|Y|Y|Y|Y|Y|Y|Y|Y|Y}
 	        &\tbxmulticol{2}{X|}{NA-CH3}&\tbxmulticol{2}{X|}{NA-CH2}&\tbxmulticol{2}{X|}{NA-CO*}&\tbxmulticol{2}{X|}{NA-OA,-OM*,-O*,-P}&Additional Constraints\\\hline
 		&Min&Max&Min&Max&Min&Max&Min&Max&N/A\\\hline
 	\sigmaij (nm)&0.2&0.5&0.2&0.5&0.2&0.5&0.2&0.5&$\sigma_{ij}^{\text{NA-OM*}}
@@ -251,21 +251,21 @@ by reassigning \sigmaij{} or \epsilonij{} values that violate the bound to the b
 Throughout optimization, constraint violations are monitored
 to ensure that a final parameter set 
 that is the result of a constraint violation is not selected.  High-dimensional optimizations of
-this nature may not have a unique solution; thus, 200 independant optimizations are performed,
+this nature may not have a unique solution; thus, 200 independent optimizations are performed,
 each initialized with random initial parameter values. Parameter sets that best improved the substitution energy
 without significantly compromising the conformational geometries are compared to select the final parameters that are
 used in the present work.
-\end{landscape}
+\end{swaplandscape}
 
 Figure~\ref{figch2:nmerror}a illustrates a representative
 NM-trajectory that follows NM-error as a function of optimization step. 
 \begin{figure}[h!tb]
     %\includegraphics[width=\textwidth,trim=-3cm 0 0 -3cm]{7_NA_RERUN_CCONSTRAINED_EQ_3.eps}
     \includegraphics[width=0.7\textwidth]{figure_2.eps}
-    \caption[Representative Nelder-Meade (NM) optimization run.]{(a) Representative Nelder-Meade (NM) optimization run. Each point
+    \caption[Representative Nelder-Mead (NM) optimization run.]{(a) Representative Nelder-Mead (NM) optimization run. Each point
     represents a move that the NM simplex can make while navigating the parameter space 
     (See Fogarty \etal~for a full description of the
-    Nelder-Meade algorithm and available moves~\cite{fogarty:2014:paropt}). The insert illustrates the 
+    Nelder-Mead algorithm and available moves~\cite{fogarty:2014:paropt}). The insert illustrates the 
     RMSD between the simplex vertices.
     The optimization is considered converged when the simplex collapses, which is defined by an RMSD~$\leq 10^{-10}$.
     (b) Map of all \sigmaij{} and \epsilonij{} tested for interactions of \na{} with non-carbon atom types 
@@ -333,7 +333,7 @@ alongside the original parameters computed using LB rules.
 on the search space can be seen in figure~\ref{tabch2:constraints}}
     \label{tabch2:paropt}
     {\footnotesize
-    \begin{tabularx}{\textwidth}{X|X|X|X|X|}
+    \begin{tabularx}{\textwidth}{Y|Y|Y|Y|Y}
               &\tbxmulticol{2}{X|}{Original}&\tbxmulticol{2}{X|}{Optimized}\\\hline
               &\sigmaij{} (nm) &\epsilonij{} (kJ/mol) &\sigmaij{} (nm) &\epsilonij{} (kJ/mol)\\\hline
         NA-CH3&0.295&1.100&0.235&0.700\\
@@ -387,7 +387,7 @@ the small molecules Methyl-Acetate (MeAc) and Diethyl-Phosphate (DePh)
 that were used to represent the major \na~interaction sites on the POPC molecule.}
     \label{figch2:energies}
 \end{figure}
-\begin{landscape}
+\begin{swaplandscape}
 \begin{figure}[h!tb]
     \centering
     \caption[Distances from \na{} to each component atom in sample clusters]{Distances from \na{} to each component 
@@ -402,7 +402,7 @@ error for the NM optimization.}
 It can be noted that for MeAc there is substantially improved substitution
 energies relative to those obtained from using LB mixing rules, 
 which started with an discrepancy of around 30--80~kJ/mol. The optimization has also
-improved the relative substitution between the clusters of various sizes. \end{landscape}
+improved the relative substitution between the clusters of various sizes. \end{swaplandscape}
 The substitution energies for DePh have also improved by a similar magnitude. 
 The conformational geometries are largely unchanged, 
 with a general trend of the binding distance to OM\* shrinking on the order of 0.25~\AA~in DePh. 
@@ -457,7 +457,7 @@ Bilayer structural parameters can be seen in table~\ref{tabch2:struc}.
     rate constant.}
     \label{tabch2:struc}
     {\footnotesize
-    \begin{tabularx}{\textwidth}{X|X|X|X}
+    \begin{tabularx}{\textwidth}{Y|Y|Y|Y}
          &Without salt      &LB                 &Optimized\\\hline
         $D_{HH}$~(\AA)&37.44 $\pm$ 1.07  &40.18 $\pm$ 1.04   &37.64 $\pm$ 0.88 \\
         $D_B$~(\AA)   &36.54 $\pm$ 0.47  &40.90 $\pm$ 0.31   &39.36 $\pm$ 0.43\\
@@ -768,7 +768,7 @@ to have a sufficiently long time for the MSD to become linear,
 while still maintaining a statistically significant number of waters in the slice. 
 A line is fit to the middle 80\% of the MSD, and the fitted
 slope is used to calculate the diffusion coefficient following
-Einstiein's relation for 2D diffusion
+Einstein's relation for 2D diffusion 
 \begin{equation}
 \lim_{t \to \infty}\frac{\big\langle (r(t) - r(0))^2 \big\rangle}{(t-t_0)} = 4D. 
 \end{equation}
@@ -789,7 +789,7 @@ We see that the optimized parameters result in slightly
 system.}
     \label{tabch2:diff}
     {\footnotesize
-    \begin{tabularx}{\textwidth}{X|X|X|}
+    \begin{tabularx}{\textwidth}{Y|Y|Y}
               &LB ($\times 10^{-10} m^2/s$)&Optimized ($\times 10^{-10} m^2/s$)\\\hline
         $B_{-1}$ &1.11 $\pm$ 1.10& 1.88 $\pm$ 2.41   \\
         $B_+$    &4.23 $\pm$ 1.14& 6.11 $\pm$ 2.83  \\
@@ -971,6 +971,3 @@ has potential to become an ideal solution for mixing force-fields, including
 polarizable and non-polarizable models in the same system 
 to construct simulations that are tractable yet accurate.
 \FloatBarrier
-
-
-

@@ -28,13 +28,45 @@
 \usepackage{flafter}
 \usepackage{floatrow}
 \usepackage{pdflscape}
-\newenvironment{landscapefigure}
-  {\begin{landscape}%
-   \begin{figure}[H]%
-   \centering}
-  {\end{figure}%
-   \end{landscape}%
-   \clearpage}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\newcommand{\rotatenextpagenumber}{%
+  \AddToShipoutPictureFG*{%
+    \AtPageCenter{%
+      \makebox[0pt][l]{%
+        \hspace*{\dimexpr 0.5\paperwidth - 1in\relax}%
+        \rotatebox{90}{\thepage}%
+      }%
+    }%
+  }%
+}
+
+
+
+\fancypagestyle{landscapepage}{%
+  \fancyhf{}
+  % \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+    }%
+  
+
+
+
+\newenvironment{swaplandscape}
+  {%
+  \begin{landscape}
+    \pagestyle{landscapepage}
+   \rotatenextpagenumber 
+  }
+  {%
+  \end{landscape}
+  \pagestyle{fancy}
+  }
+
+
 
 \usepackage{float}
 \floatstyle{plaintop}
@@ -58,6 +90,7 @@
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{appendix}
 \usepackage{amsmath}
+\usepackage{longtable}
 \usepackage{amssymb}
 \usepackage{cases}
 \usepackage{calc}
@@ -201,7 +234,7 @@
 
 % Level 3: Subsection — 1.0" indent
 \setlength{\cftsubsecindent}{1.0in}
-\setlength{\cftsubsecnumwidth}{2.3em}
+\setlength{\cftsubsecnumwidth}{2.5em}
 \renewcommand{\cftsubsecaftersnum}{\ }
 
 %------------------------------------------------------------------------------
@@ -275,7 +308,7 @@
 \newcommand{\mbnbfix}{MB-NB-fix~}
 \newcommand{\mbnbfixmicro}{Grotz \etal~}
 \newcommand{\nambnbfix}{Na\textsuperscript{+}--Saunders \etal}
-\newcommand{\limbnbfix}{Li\textsuperscript{+}--Joung and Chetatham}
+\newcommand{\limbnbfix}{Li\textsuperscript{+}--Joung and Cheatham}
 \newcommand{\mgmbnbfix}{Mg\textsuperscript{2+}--Li \etal}
 \newcommand{\mgmicro}{Mg\textsuperscript{2+}--Grotz \etal}
 \newcommand{\mglbrules}{Mg\textsuperscript{2+}--Li \etal}
@@ -311,7 +344,7 @@ by
 ~\\[3\baselineskip]
 Matthew W. Saunders
 ~\\[4\baselineskip]
-A thesis submitted in partial fufillment\\
+A thesis submitted in partial fulfillment\\
 of the requirements for the degree of\\
 Doctor of Philosophy\\
 Department of Molecular Biosciences\\
@@ -333,25 +366,28 @@ Copyright \textsuperscript\textcopyright~2025, Matthew W. Saunders\\
 
 \end{centering}
 \end{titlepage}
+% \begin{frontmatter}
 \tableofcontents
 \listoftables
 \listoffigures
 \bibliographystyle{elsarticle-num}
 \doublespacing
 \clearpage
-\pagenumbering{arabic}
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 \input{abstract.tex}
+% \end{frontmatter}
+\clearpage
+\pagenumbering{arabic}
 \chapter[Introduction]{Introduction\footnote{Portions reprinted with permission from Matthew Saunders, Vered Wineman-Fisher, and Eric Jakobsson, \textit{High-Dimensional Parameter Search Method to Determine Force Field Mixing Terms in Molecular Simulations}, 
 \textit{Langmuir}, American Chemical Society, March 1, 2022., from Matthew Saunders, Abibat Adekeye-Olowofela, and Sabrina Downing, \textit{Adsorption Modes of Na\textsuperscript{+}, Li\textsuperscript{+}, and Mg\textsuperscript{2+} to a Model Zwitterionic Lipid Bilayer}, 
-\textit{Langmuir}, American Chemical Society, December 1, 2024., and from Matthew Saunders, Sagar Pandit, and Sameer Varma, Alteration of Lipid Bilayer Structure by \mg{}, \textit{Langmuir}, American Chemical Society, manuscript in review, 2025.}}
+\textit{Langmuir}, American Chemical Society, December 1, 2024., and from Matthew Saunders, Sagar Pandit, and Sameer Varma, Alteration of Lipid Bilayer Structure by \mg{}, \textit{Langmuir}, American Chemical Society, manuscript in review, 2025. See appendix~\ref{app:permissions} for reuse permissions and author contributions.}}
  \graphicspath{{CH1/figures/}}
 \input{ch1.tex}
-\chapter[A High Dimensional Parameter Search Method to...]{A high dimensional parameter search method to determine force field mixing terms in molecular simulations\footnote{
+\chapter[A High Dimensional Parameter Search Method to...]{A High Dimensional Parameter Search Method to Determine Force Field Mixing Terms in Molecular Simulations\footnote{
 Portions reprinted with permission from Matthew Saunders, Vered Wineman-Fisher, and Eric Jakobsson, \textit{High-Dimensional Parameter Search Method to Determine Force Field Mixing Terms in Molecular Simulations}, 
 \textit{Langmuir}, American Chemical Society, March 1, 2022. 
-\textcopyright{} 2022 American Chemical Society. See appendix~\ref{app:permissions}
+\textcopyright{} 2022 American Chemical Society. See appendix~\ref{app:permissions1} for reuse permissions and author contributions.
 }}
 \graphicspath{{CH2/figures/}}
 
@@ -367,10 +403,7 @@ Portions reprinted with permission from Matthew Saunders, Vered Wineman-Fisher, 
 \renewenvironment{figure}[1][]{\origfigure[H]}{\endorigfigure}
 \renewenvironment{table}[1][]{\origtable[H]}{\endorigtable}
 \makeatother
-\section{Author Contributions}
-In this work I created geometries for target data, performed calculations for classical force-field target data.
-I set up and performed parameter searches, implemented the force-field parameters, and ran all classical molecular dynamics simulations.
-I performed all analysis and generated all figures, and wrote 90\% of the manuscript text.
+
 
 \input{ch2.tex}
 \makeatletter
@@ -382,43 +415,50 @@ I performed all analysis and generated all figures, and wrote 90\% of the manusc
 \endgroup
 
 
-\chapter[Adsorption Modes of \na{}, \li{}, and \mg{}...]{Adsorption modes of \na{}, \li{}, and \mg{} to a model zwitterionic lipid bilayer\footnote{
+\chapter[Adsorption Modes of \na{}, \li{}, and \mg{}...]{Adsorption Modes of \na{}, \li{}, and \mg{} to a Model Zwitterionic Lipid Bilayer\footnote{
     Portions reprinted with permission from Matthew Saunders, Abibat Adekeye-Olowofela, and Sabrina Downing, \textit{Adsorption Modes of Na\textsuperscript{+}, Li\textsuperscript{+}, and Mg\textsuperscript{2+} to a Model Zwitterionic Lipid Bilayer}, 
 \textit{Langmuir}, American Chemical Society, December 1, 2024. 
-\textcopyright{} 2024 American Chemical Society. See appendix~\ref{app:permissions}
+\textcopyright{} 2024 American Chemical Society. See appendix~\ref{app:permissions2} for reuse permissions and author contributions.
 }}
-\graphicspath{{CH3/figures/}}
-\section{Author Contributions}
-In this work I created geometries for target data, performed both \emph{ab inito} and 
-classical calculations target data.
-I set up and performed parameter searches, implemented the force-field parameters, and ran all classical molecular dynamics simulations.
-I performed all analysis and generated all figures, and wrote the manuscript text.
+\graphicspath{{CH3/Manuscript_REV1/}}
+
 \input{ch3.tex}
-\chapter[Alteration of Bilayer Structure by \mg{}]{Alteration of bilayer structure by \mg{}\footnote{Portions reprinted with permission from Matthew Saunders; Sagar A. Pandit; Sameer Varma.
+\chapter[Alteration of Bilayer Structure by \mg{}]{Alteration of Bilayer Structure by \mg{}\footnote{Portions reprinted with permission from Matthew Saunders; Sagar A. Pandit; Sameer Varma.
 Alteration of Lipid Bilayer Structure by Mg$^{2+}$.
-\textit{Langmuir}, American Chemical Society, manuscript in review, 2025.}}
+\textit{Langmuir}, American Chemical Society, manuscript in review, 2025. See appendix~\ref{app:permissions3} for author contributions.}}
 \graphicspath{{CH4/figures/}}
-\section{Author Contributions}
-In this work I created geometries for target data, performed both \emph{ab inito} and 
-classical calculations target data.
-I set up and performed parameter searches, implemented the force-field parameters, and ran all classical molecular dynamics simulations.
-I performed all analysis and generated all figures, and wrote the manuscript text.
+
 \input{ch4.tex}
 \chapter{Conclusions}
 \graphicspath{{CH5/figures/}}
 \input{ch5.tex}
+
+\begingroup
+\clubpenalty=10000
+\widowpenalty=10000
+\interlinepenalty=10000
+\sloppy
+\bibliography{refs}
+\endgroup
 %----------------------------------------------------------
 % Appendices
 %----------------------------------------------------------
 \appendix
-
-\chapter{Publisher Permission Letters}
+\chapter{Appendices}
+\section{Copyright Information and Author Contributions}
 \label{app:permissions}
 This appendix contains publisher permission agreements for reuse of material
-from Chapters~2–4.
+from Chapters~2–4, and author contributions for each included article.
+
 
 
 % Chapter 2 permissions
+\subsection{Matthew Saunders, Vered Wineman-Fisher, and Eric Jakobsson, \textit{High-Dimensional Parameter Search Method to Determine Force Field Mixing Terms in Molecular Simulations}, 
+\textit{Langmuir}, American Chemical Society, March 1, 2022}
+\label{app:permissions1}
+In this work I created geometries for target data, performed calculations for classical force-field target data.
+I set up and performed parameter searches, implemented the force-field parameters, and ran all classical molecular dynamics simulations.
+I performed all analysis and generated all figures, and wrote 90\% of the manuscript text.
 \includepdf[
   pages={1-4},
   nup=2x2,
@@ -428,6 +468,13 @@ from Chapters~2–4.
 ]{Permissionforreuse1.pdf}
 
 % Chapter 3 permissions
+\subsection{Matthew Saunders, Abibat Adekeye-Olowofela, and Sabrina Downing, \textit{Adsorption Modes of Na\textsuperscript{+}, Li\textsuperscript{+}, and Mg\textsuperscript{2+} to a Model Zwitterionic Lipid Bilayer}, 
+\textit{Langmuir}, American Chemical Society, December 1, 2024}
+\label{app:permissions2}
+In this work I created geometries for target data, performed both \emph{ab initio} and 
+classical calculations for the target data.
+I set up and performed parameter searches, implemented the force-field parameters, and ran all classical molecular dynamics simulations.
+I performed all analysis and generated all figures, and wrote the manuscript text.
 \includepdf[
   pages={1-4},
   nup=2x2,
@@ -437,19 +484,21 @@ from Chapters~2–4.
 ]{Permissionforreuse2.pdf}
 
 % Chapter 4 permissions
+\subsection{Matthew Saunders; Sagar A. Pandit; Sameer Varma.
+Alteration of Lipid Bilayer Structure by Mg$^{2+}$.
+\textit{Langmuir}, American Chemical Society, manuscript in review, 2025.}
+\label{app:permissions3}
+In this work I created geometries for target data, performed both \emph{ab initio} and 
+classical calculations for the target data.
+I set up and performed parameter searches, implemented the force-field parameters, and ran all classical molecular dynamics simulations.
+I performed all analysis and generated all figures, and wrote the manuscript text.
 % \includepdf[
 %   pages=-,
 %   pagecommand={},
 %   scale=0.95
 % ]{Permissionforreuse3.pdf}
 
-\begingroup
-\clubpenalty=10000
-\widowpenalty=10000
-\interlinepenalty=10000
-\sloppy
-\bibliography{refs}
-\endgroup
+
 
 \end{document}
 

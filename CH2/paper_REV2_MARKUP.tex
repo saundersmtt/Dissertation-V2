@@ -183,7 +183,7 @@ ion-lipid interactions are computed using FF mixing rules.
 In our previous MD simulations of POPC bilayers in salt solutions, 
 we employed our gromos43A1-S3 lipid FF parameters~\cite{chiu:2009} 
 that were developed for use with SPC/E water to determine lipid-lipid and lipid-water interactions. 
-Ion-ion and ion-water interactions were described using Joung and Chetham~\cite{joung:2008} parameters, 
+Ion-ion and ion-water interactions were described using Joung and Cheatham~\cite{joung:2008} parameters, 
 also developed for use with SPC/E water. 
 Lipid-ion interactions were estimated using Lorentz-Berthelot (LB) 
 mixing rules for Lennard-Jones (LJ) components
@@ -198,7 +198,7 @@ emerge if the high electric fields of ions induce
 cooperativity effects in lipid groups 
 differently from those in water. 
 Quantum mechanical (QM) studies, in fact, suggest that many-body 
-cooperativty effects, such as polarization depend \deleted{strongly} 
+cooperativity effects, such as polarization depend \deleted{strongly} 
 strongly on ion-coordinator chemistry~\cite{varma:2010,wineman:2019}. 
 It has also been postulated that these effects, and specifically 
 electronic 
@@ -318,7 +318,7 @@ Parameter optimization is performed using our ParOpt software package~
 \cite{fogarty:2014:paropt,fogarty:2014:thesis}.
 This software is available for download at
 \texttt{https://csmlabfs1.cas.usf.edu/Sites}.
-We utilized the Nelder-Meade method to perform a search to simultaneously optimize 
+We utilized the Nelder-Mead method to perform a search to simultaneously optimize 
 all \sigmaij~and \epsilonij~ cross terms of \na~ions with MeAc and DePh molecules. 
 Specifically, there are seven atom types in these two small molecules (table~\ref{tab:paropt}), and so we optimized
 14 cross terms for the 6-12 LJ potential.
@@ -748,7 +748,7 @@ to have a sufficiently long time for the MSD to become linear,
 while still maintaining a statistically significant number of waters in the slice. 
 A line is fit to the middle 80\% of the MSD, and the fitted
 slope is used to calculate the diffusion coefficient following
-Einstiein's relation for 2D diffusion
+Einstein's relation for 2D diffusion
 \begin{equation}
 \lim_{t \to \infty}\frac{\big\langle (r(t) - r(0))^2 \big\rangle}{(t-t_0)} = 4D. 
 \end{equation}

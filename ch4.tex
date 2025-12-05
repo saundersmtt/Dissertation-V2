@@ -161,7 +161,7 @@ These optimized parameters are provided in table~\ref{tabch4:params}. We denote 
 Saunders \etal{} 2024~\cite{saunders:2024}, which we will refer to as the \mg{ 2024} model.
 There are substantial differences between the \mg{ 2024} and \mg{ 2025} models, with the greatest changes in the size of the well depth \epsilonij{} for MG-OA, MG-P, and MG-OM\textsuperscript{*}
 
-\begin{landscape}
+\begin{swaplandscape}
 The substitution energies before and after optimization are compared to target QM values in Table~\ref{tabch4:subenergies}. The geometries before and after optimization are compared to QM geometries in figure~\ref{figch4:optres}. 
 \begin{figure}[h!bt]
     \centering
@@ -169,6 +169,8 @@ The substitution energies before and after optimization are compared to target Q
     \label{figch4:optres}
     \includegraphics[width=0.8\textwidth]{Figure_S1.eps}
 \end{figure}
+\end{swaplandscape}
+\begin{swaplandscape}
 We note substantial improvements in both substitution energies with a minimal loss of accuracy in geometries, 
 with parameter optimization reducing mean absolute error in $\Delta E_{sub}$ from 0.26 to 0.01. %, and reducing mean absolute error in distances of Mg from cluster atoms from XX to YY \AA.
 \begin{table}[h!bt]
@@ -211,66 +213,134 @@ MG-O\textsuperscript{*}  & 2.06827                            & 0.24468         
 % \end{table}
 
 % Combined comparison: LB Rules vs 2024 vs 2025
+
+\end{swaplandscape}
+\begin{swaplandscape}
 \begin{table}[h!bt]
 \begin{small}
 \centering
-\sisetup{round-mode=places,round-precision=3,detect-all}
-\begin{tabularx}{\textwidth}{X|X|XXX|XXX|XXX}
-\hline  
-& {PBE0 + VdW} 
-& \multicolumn{3}{c|}{LB Rules} 
-& \multicolumn{3}{c|}{2024} 
-& \multicolumn{3}{c}{2025} \\
+\sisetup{round-mode=places,round-precision=2,detect-all}
+
+\begin{tabularx}{\textwidth}{Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y}
 \hline
-{System} & {Ref.}
-& {Energy} & {Abs.\%} & {MAPE}
-& {Energy} & {Abs.\%} & {MAPE}
-& {Energy} & {Abs.\%} & {MAPE} \\
-\hline  
-1MeOAc    & -268.702 & -130.319 & 0.515 & {}
-                    & -299.844 & 0.116 & {}
-                    & -32.724  & 0.878 & {} \\
-2MeOAc    & -449.770 & -243.856 & 0.458 & {}
-                    & -545.386 & 0.213 & {}
-                    & -59.544  & 0.868 & {} \\
-3MeOAc    & -550.360 & -263.968 & 0.520 & {}
-                    & -598.606 & 0.088 & {}
-                    & -42.191  & 0.923 & {} \\
-4MeOAc    & -609.631 & -341.534 & 0.440 & 0.483
-                    & -690.483 & 0.133 & 0.137
-                    & -98.578  & 0.838 & 0.877 \\
-1DEPh     & -942.545 & -972.812 & 0.032 & {}
-                    & -1063.300& 0.128 & {}
-                    & -772.729 & 0.180 & {} \\
-2DEPh     & -1302.053& -1051.842& 0.192 & 0.112
-                    & -1488.761& 0.143 & 0.136
-                    & -1248.054& 0.041 & 0.111 \\
-5W 1MeOAc & -71.288  & -91.759  & 0.287 & {}
-                    & -165.829 & 1.326 & {}
-                    & -71.280  & 0.000 & {} \\
-4W 2MeOAc & -127.201 & -177.528 & 0.396 & {}
-                    & -316.012 & 1.484 & {}
-                    & -122.881 & 0.034 & {} \\
-3W 3MeOAc & -166.160 & -253.576 & 0.526 & {}
-                    & -402.648 & 1.423 & {}
-                    & -167.835 & 0.010 & {} \\
-2W 4MeOAc & -192.534 & -317.715 & 0.650 & 0.465
-                    & -507.049 & 1.634 & 1.467
-                    & -192.275 & 0.001 & 0.011 \\
-4W 1DEPh  & -775.546 & -640.060 & 0.175 & {}
-                    & -848.090 & 0.094 & {}
-                    & -754.821 & 0.027 & {} \\
-4W 2DEPh  & -1279.754& -1198.284& 0.064 & 0.119
-                    & -1519.772& 0.188 & 0.141
-                    & -1333.653& 0.042 & 0.034 \\
+System & 1MeOAc & 2MeOAc & 3MeOAc & 4MeOAc & 1DEPh & 2DEPh 
+       & {5W 1MeOAc} & {4W 2MeOAc} & {3W 3MeOAc} & {2W 4MeOAc} \\
+\hline
+PBE0 + VdW (Ref.) 
+& -268.702 & -449.770 & -550.360 & -609.631 
+& -942.545 & -1302.053
+& -71.288 & -127.201 & -166.160 & -192.534 \\
+\hline
+LB Energy 
+& -130.319 & -243.856 & -263.968 & -341.534
+& -972.812 & -1051.842
+& -91.759 & -177.528 & -253.576 & -317.715 \\
+ Abs.\% 
+& 0.515 & 0.458 & 0.520 & 0.440
+& 0.032 & 0.192
+& 0.287 & 0.396 & 0.526 & 0.650 \\
+ MAPE 
+& {} & {} & {} & 0.483
+& {} & 0.112
+& {} & {} & {} & 0.465 \\
+\hline
+2024 Energy 
+& -299.844 & -545.386 & -598.606 & -690.483
+& -1063.300 & -1488.761
+& -165.829 & -316.012 & -402.648 & -507.049 \\
+ Abs.\% 
+& 0.116 & 0.213 & 0.088 & 0.133
+& 0.128 & 0.143
+& 1.326 & 1.484 & 1.423 & 1.634 \\
+ MAPE 
+& {} & {} & {} & 0.137
+& {} & 0.136
+& {} & {} & {} & 1.467 \\
+\hline
+2025 Energy 
+& -32.724 & -59.544 & -42.191 & -98.578
+& -772.729 & -1248.054
+& -71.280 & -122.881 & -167.835 & -192.275 \\
+ Abs.\% 
+& 0.878 & 0.868 & 0.923 & 0.838
+& 0.180 & 0.041
+& 0.000 & 0.034 & 0.010 & 0.001 \\
+ MAPE 
+& {} & {} & {} & 0.877
+& {} & 0.111
+& {} & {} & {} & 0.011 \\
 \hline
 \end{tabularx}
-  \caption[Substitution energies]{Energies (kJ/mol) associated with substituting $n$ water molecules in low coordination clusters, and in 6-fold Mg-water clusters with $n$ methyl acetates (MeAcs) or $n$ diethyl phosphates (DEPhs). 
-  Substitution energies are defined in equation \ref{equ_2}.}
-  \label{tabch4:subenergies}
+
+\caption[Substitution energies]{Energies (kJ/mol) associated with substituting
+$n$ water molecules in low coordination clusters, and in 6-fold Mg-water
+clusters with $n$ methyl acetates (MeAcs) or $n$ diethyl phosphates (DEPhs).
+Substitution energies are defined in equation~\ref{equ_2}.}
+\label{tabch4:subenergies}
 \end{small}
 \end{table}
-\end{landscape}
+
+% \begin{table}[h!bt]
+% \begin{small}
+% \centering
+% \sisetup{round-mode=places,round-precision=2,detect-all}
+% \begin{tabularx}{\textwidth}{Y|Y|YYY|YYY|YYY}
+% \hline  
+% & {PBE0 + VdW} 
+% & \multicolumn{3}{c|}{LB Rules} 
+% & \multicolumn{3}{c|}{2024} 
+% & \multicolumn{3}{c}{2025} \\
+% \hline
+% {System} & {Ref.}
+% & {Energy} & {Abs.\%} & {MAPE}
+% & {Energy} & {Abs.\%} & {MAPE}
+% & {Energy} & {Abs.\%} & {MAPE} \\
+% \hline  
+% 1MeOAc    & -268.702 & -130.319 & 0.515 & {}
+%                     & -299.844 & 0.116 & {}
+%                     & -32.724  & 0.878 & {} \\
+% 2MeOAc    & -449.770 & -243.856 & 0.458 & {}
+%                     & -545.386 & 0.213 & {}
+%                     & -59.544  & 0.868 & {} \\
+% 3MeOAc    & -550.360 & -263.968 & 0.520 & {}
+%                     & -598.606 & 0.088 & {}
+%                     & -42.191  & 0.923 & {} \\
+% 4MeOAc    & -609.631 & -341.534 & 0.440 & 0.483
+%                     & -690.483 & 0.133 & 0.137
+%                     & -98.578  & 0.838 & 0.877 \\
+% 1DEPh     & -942.545 & -972.812 & 0.032 & {}
+%                     & -1063.300& 0.128 & {}
+%                     & -772.729 & 0.180 & {} \\
+% 2DEPh     & -1302.053& -1051.842& 0.192 & 0.112
+%                     & -1488.761& 0.143 & 0.136
+%                     & -1248.054& 0.041 & 0.111 \\
+% 5W 1MeOAc & -71.288  & -91.759  & 0.287 & {}
+%                     & -165.829 & 1.326 & {}
+%                     & -71.280  & 0.000 & {} \\
+% 4W 2MeOAc & -127.201 & -177.528 & 0.396 & {}
+%                     & -316.012 & 1.484 & {}
+%                     & -122.881 & 0.034 & {} \\
+% 3W 3MeOAc & -166.160 & -253.576 & 0.526 & {}
+%                     & -402.648 & 1.423 & {}
+%                     & -167.835 & 0.010 & {} \\
+% 2W 4MeOAc & -192.534 & -317.715 & 0.650 & 0.465
+%                     & -507.049 & 1.634 & 1.467
+%                     & -192.275 & 0.001 & 0.011 \\
+% 4W 1DEPh  & -775.546 & -640.060 & 0.175 & {}
+%                     & -848.090 & 0.094 & {}
+%                     & -754.821 & 0.027 & {} \\
+% 4W 2DEPh  & -1279.754& -1198.284& 0.064 & 0.119
+%                     & -1519.772& 0.188 & 0.141
+%                     & -1333.653& 0.042 & 0.034 \\
+% \hline
+% \end{tabularx}
+%   \caption[Substitution energies]{Energies (kJ/mol) associated with substituting $n$ water molecules in low coordination clusters, and in 6-fold Mg-water clusters with $n$ methyl acetates (MeAcs) or $n$ diethyl phosphates (DEPhs). 
+%   Substitution energies are defined in equation \ref{equ_2}.}
+%   \label{tabch4:subenergies}
+% \end{small}
+% \end{table}
+
+\end{swaplandscape}
 % \begin{table}[h!tbp]
 % \centering
 % \sisetup{round-mode=places,round-precision=3,detect-all}
@@ -307,7 +377,7 @@ and the 2025 \mg{} parameters reduce the energy of binding to MeAc while increas
 \begin{table}[h!bt]
 \centering
 \sisetup{round-mode=places,round-precision=3,detect-all}
-\begin{tabularx}{\textwidth}{|X|X|X|X|}
+\begin{tabularx}{\textwidth}{Y|Y|Y|Y}
 \hline  
 {Cluster} &
 {$\Delta E_{\text{sub}}^{2024}-\Delta E_{\text{sub}}^{\text{LB}}$} &
@@ -386,7 +456,7 @@ The histogram of $P_2$ is used to calculate the \emph{hydration boundary} of the
 region of negative ordering is fitted to an exponential function, and the length scale of the exponential is used to find the location where $P_2$ is considered to be effectively zero. 
 Lines to delimit these values are drawn on the plot in figure~\ref{figch4:h2order}, and these positions are noted for each bilayer
 in table~\ref{tabch4:struc}.
-\begin{landscape}
+\begin{swaplandscape}
 \begin{table}[h!bt]
 {\small
     \caption[Bilayer structural parameters]{Bilayer structural parameters. The bilayer hydration boundary is defined as the position away from the bilayer center beyond which solvent is isotropic, and denotes 
@@ -417,7 +487,8 @@ and perturbation of the bilayer structure from that of the simulation without sa
     \end{tabularx}
 }
 \end{table}
-\end{landscape}
+
+\end{swaplandscape}
 \section{\mg Adsorption Behavior}
 We classify any ion within the hydration boundary as at least sterically adsorbed, with further distinction -- steric, imperfect, or perfect -- based on how much dehydration the ion undergoes when approaching the bilayer center. A \emph{perfectly} adsorbed ion has lost all waters in its first hydration shell and an  \emph{imperfectly} adsorbed ion
 has lost at least one water from its first coordination shell. 
@@ -545,7 +616,6 @@ This is then used to compute both the area per lipid and the thickness of the ac
 \begin{equation}
    \langle A \rangle = q\frac{4V_{\text{CH}_2}}{D_M}\text{,}
 \end{equation}
-\begin{landscape}
 Using $V_{CH_2}$ computed from the number densities, and the bond length $D_M=2.54$.
 One can approximate the $V_{CH2}$ in two ways from the $v_{CH2\&CH1}$ -- first by directly using $V_{CH2}=v_{CH2\&CH1}$, and
 second by using the common approximation of $\frac{V_{CH2}=v_{CH3}}{2}$~\cite{nagle:2000}.
@@ -555,6 +625,7 @@ With all of this together, the acyl chain thickness is
 \end{equation}
 with $n_c=16$ as the number of carbons in the Sn-1 chain of POPC.
 These values can be seen in table~\ref{tabch4:opstruc}.
+\begin{swaplandscape}
 \begin{table}[h!bt]
 {\small
    \caption[\dc{} and \al{} from acyl chain ordering]{Area factor, acyl chain region thickness and area per lipid. These values are computed via the method described in Petrache \etal~\cite{petrache:2000:nmrarea}. This provides us with another
@@ -571,10 +642,11 @@ These values can be seen in table~\ref{tabch4:opstruc}.
    \end{tabularx}
 }
 \end{table}
-\end{landscape}
+  
 Notably, the \dc{} for all systems studied is slightly smaller than what we compute from the number densities, but follows similar trends.
 The \al{} computed here only relies on the volume of the CH2 moiety, and ends up with again
 quite different results than what we computed from $2V_C/2D_C$.
+\end{swaplandscape}
 
 We note that in the systems with the smallest number of adsorbed charges in non-steric modes (perfect and imperfect) -- in this case the 2024-\mg parameters, show 
 the smallest increase in \dc{}. The \mg{ 2025} systems have the greatest number of adsorbed charges in non-steric modes, 
@@ -587,7 +659,7 @@ bilayer thickness (figure~\ref{figch4:chargeperlipid})
     \caption[Adsorbed charge per adsorption modality]{Adsorbed charge per adsorption modality per lipid as a function of the lipid bilayer hydrocarbon thickness \dc{}. We compare both our results from this work, and our previous work with monovalent
         ions~\cite{saunders:2024}. There is a clear trend in the total number of adsorbed
         charges (i.e. any charges not in bulk solvent), where more charges results in a greater \dc{}. However, if one examines the sterically adsorbed charges, the trend is not as strong. This seems to indicate
-    that the non-steric charges are most responsible for the pertubation of the bilayer thickness from that of the no-salt simulation shown as the blue region on the plot.}
+    that the non-steric charges are most responsible for the perturbation of the bilayer thickness from that of the no-salt simulation shown as the blue region on the plot.}
     \label{figch4:chargeperlipid}
     \includegraphics[height=0.35\textheight]{Figure_6.eps}
 \end{figure}
